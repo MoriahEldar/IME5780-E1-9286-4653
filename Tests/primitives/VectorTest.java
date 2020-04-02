@@ -48,8 +48,6 @@ public class VectorTest {
         Vector v1 = new Vector(1, 1, 1);
         Vector v2 = new Vector(-1, 3, 1);
         assertEquals("Vector: subtract() wrong", new Vector(2, -2, 0), v1.subtract(v2));
-
-        // =============== Boundary Values Tests ==================
         // T2, 2 vectors that are the same
         try {
             v1.subtract(v1);
@@ -68,8 +66,6 @@ public class VectorTest {
         Vector v1 = new Vector(1, 1, 1);
         Vector v2 = new Vector(-1, 3, 1);
         assertEquals("Vector: add() wrong", new Vector(0, 4, 2), v1.add(v2));
-
-        // =============== Boundary Values Tests ==================
         // T2, 2 vectors that are the reversed
         try {
             v1.add(v1.scale(-1));
@@ -84,12 +80,10 @@ public class VectorTest {
     @Test
     public void testScale() {
         // ============ Equivalence Partitions Tests ==============
-        // T1, any scalar that is not zero and any vector
+        // T1, any scalar that is not zero with any vector
         Vector v1 = new Vector(1, -3, 1);
         assertEquals("Vector: scale() wrong", new Vector(-3, 9, -3), v1.scale(-3));
         assertEquals("Vector: scale() wrong", new Vector(3, -9, 3), v1.scale(3));
-
-        // =============== Boundary Values Tests ==================
         // T2, multiply by zero
         try {
             v1.scale(0);

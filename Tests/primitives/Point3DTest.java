@@ -20,7 +20,6 @@ public class Point3DTest {
         Point3D p1 = new Point3D(1, 1, 1);
         Point3D p2 = new Point3D(-3, 0, 1);
         assertEquals("Point3D: subtract() wrong", new Vector(4, 1, 0), p1.subtract(p2));
-        // =============== Boundary Values Tests ==================
         // T2, 2 points that equal
         p2 = new Point3D(1, 1, 1);
         try
