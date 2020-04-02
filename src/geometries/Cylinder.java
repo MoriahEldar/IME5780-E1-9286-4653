@@ -25,7 +25,7 @@ public class Cylinder extends Tube {
      */
     public Cylinder(double _radius, Ray _axisRay, double _height) {
         super(_radius, _axisRay);
-        this._axisRay = new Ray(_axisRay);
+        this._height = _height;
     }
 
     /**
@@ -40,7 +40,19 @@ public class Cylinder extends Tube {
     /*************** Admin *****************/
     @Override
     public Vector getNormal(Point3D point) {
-        return null;
+        // Creates the plane that the "lower" base (the base that contains the ray point) is on
+        Plane plane = new Plane(_axisRay.get_startPoint(), _axisRay.get_direction());
+        // Checks if the given point is on the plane (We know the point is on the cylinder, so if it's on the plane, it's on the base)
+        if(plane.isOnPlane(point))
+            return _axisRay.get_direction().scale(-1);
+        // Creates the plane that the "higher" base (the base that does not contain the ray point) is on
+        // The point on the plane (that we give the constructor) is the ray point plus the cylinder height in the ray direction
+        plane = new Plane(_axisRay.get_startPoint().add(_axisRay.get_direction().scale(_height)), _axisRay.get_direction());
+        // Checks if the given point is on the plane (We know the point is on the cylinder, so if it's on the plane, it's on the base)
+        if(plane.isOnPlane(point))
+            return _axisRay.get_direction();
+        // The point is on the casing
+        return super.getNormal(point);
     }
 
     @Override

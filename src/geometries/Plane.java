@@ -22,7 +22,12 @@ public class Plane implements Geometry {
      */
     public Plane(Point3D _p, Point3D _p1, Point3D _p2) {
         this._p = new Point3D(_p);
-        this._normal = null;
+        // Calculating the normal
+        Vector v1 = _p.subtract(_p1).normalize();
+        Vector v2 = _p.subtract(_p2).normalize();
+        if (v1.equals(v2) || v1.equals(v2.scale(-1))) // If the three points are on the same line
+            throw new IllegalArgumentException("The three points cannot be on the same line");
+        _normal = v1.crossProduct(v2).normalize();
     }
 
     /**
@@ -53,10 +58,27 @@ public class Plane implements Geometry {
         return new Vector(_normal);
     }
 
+    /**
+     * gets a 3D point and determent's whether the point is on the plane or not
+     *
+     * @param point, a 3D point
+     * @return True if the point is on the plane, False if not.
+     */
+    public boolean isOnPlane(Point3D point) {
+        // Makes the plane equation
+        double d = _normal.get_point().get_x().get() * _p.get_x().get() +
+                _normal.get_point().get_y().get() * _p.get_y().get() +
+                _normal.get_point().get_z().get() * _p.get_z().get();
+        // Checks if the point holds the equation
+        return _normal.get_point().get_x().get() * point.get_x().get() +
+                _normal.get_point().get_y().get() * point.get_y().get() +
+                _normal.get_point().get_z().get() * point.get_z().get() - d == 0;
+    }
+
     /*************** Admin *****************/
     @Override
     public Vector getNormal(Point3D point) {
-        return new Vector(_normal);
+        return get_normal();
     }
 
     @Override
