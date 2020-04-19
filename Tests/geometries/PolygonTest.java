@@ -1,15 +1,17 @@
 package geometries;
 
-import org.junit.jupiter.api.Test;
-import primitives.Point3D;
-import primitives.Vector;
+import org.junit.Test;
+import primitives.*;
 
+import java.util.List;
+
+import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * @author Dan Zilberstein
  */
-class PolygonTest {
+public class PolygonTest {
     /**
      * Test method for
      * {@link geometries.Polygon# Polygon(primitives.Point3D, primitives.Point3D, primitives.Point3D, primitives.Point3D)}.
@@ -31,21 +33,24 @@ class PolygonTest {
             new Polygon(new Point3D(0, 0, 1), new Point3D(0, 1, 0),
                     new Point3D(1, 0, 0), new Point3D(-1, 1, 1));
             fail("Constructed a polygon with wrong order of vertices");
-        } catch (IllegalArgumentException e) {}
+        } catch (IllegalArgumentException e) {
+        }
 
         // TC03: Not in the same plane
         try {
             new Polygon(new Point3D(0, 0, 1), new Point3D(1, 0, 0),
                     new Point3D(0, 1, 0), new Point3D(0, 2, 2));
             fail("Constructed a polygon with vertices that are not in the same plane");
-        } catch (IllegalArgumentException e) {}
+        } catch (IllegalArgumentException e) {
+        }
 
         // TC04: Concave quadrangular
         try {
             new Polygon(new Point3D(0, 0, 1), new Point3D(1, 0, 0),
                     new Point3D(0, 1, 0), new Point3D(0.5, 0.25, 0.5));
             fail("Constructed a concave polygon");
-        } catch (IllegalArgumentException e) {}
+        } catch (IllegalArgumentException e) {
+        }
 
         // =============== Boundary Values Tests ==================
 
@@ -54,21 +59,24 @@ class PolygonTest {
             new Polygon(new Point3D(0, 0, 1), new Point3D(1, 0, 0),
                     new Point3D(0, 1, 0), new Point3D(0, 0.5, 0.5));
             fail("Constructed a polygon with vertix on a side");
-        } catch (IllegalArgumentException e) {}
+        } catch (IllegalArgumentException e) {
+        }
 
         // TC11: Last point = first point
         try {
             new Polygon(new Point3D(0, 0, 1), new Point3D(1, 0, 0),
                     new Point3D(0, 1, 0), new Point3D(0, 0, 1));
             fail("Constructed a polygon with vertice on a side");
-        } catch (IllegalArgumentException e) {}
+        } catch (IllegalArgumentException e) {
+        }
 
         // TC12: Collocated points
         try {
             new Polygon(new Point3D(0, 0, 1), new Point3D(1, 0, 0),
                     new Point3D(0, 1, 0), new Point3D(0, 1, 0));
             fail("Constructed a polygon with vertice on a side");
-        } catch (IllegalArgumentException e) {}
+        } catch (IllegalArgumentException e) {
+        }
 
     }
 
@@ -82,10 +90,47 @@ class PolygonTest {
         Polygon pl = new Polygon(new Point3D(0, 0, 1), new Point3D(1, 0, 0), new Point3D(0, 1, 0),
                 new Point3D(-1, 1, 1));
         double sqrt3 = Math.sqrt(1d / 3);
-        Vector expected =  new Vector(sqrt3, sqrt3, sqrt3);
+        Vector expected = new Vector(sqrt3, sqrt3, sqrt3);
         // at this point we are assuming that each plane can have
         // two opposite normals.
         assertTrue(expected.equals(pl.getNormal(null)) || expected.equals(pl.getNormal(null).scale(-1)));
 //        assertEquals( new Vector(sqrt3, sqrt3, sqrt3), pl.getNormal(new Point3D(0, 0, 1)),"Bad normal to trinagle");
+    }
+
+    /**
+     * Test method for {@link geometries.Polygon#findIntersections(primitives.Ray)}.
+     *
+     * @author Moriah and Shahar
+     */
+    @Test
+    public void testFindIntersections() {
+        Polygon pl = new Polygon(new Point3D(0, 0, 1), new Point3D(1, 0, 0), new Point3D(0, 1, 0),
+                new Point3D(-1, 1, 1));
+
+        // ============ Equivalence Partitions Tests ==============
+
+        // TC01: ray intersects with the polygon
+        assertEquals("Ray does not intersects with the polygon correctly", List.of(new Point3D(0, 0.5, 0.5)),
+                pl.findIntersections(new Ray(new Point3D(0, 1, 2), new Vector(0, -0.5, -1.5))));
+        // TC02: ray intersects with the plane outside the polygon against edge
+        assertEquals("Wrong when ray intersects with the plane outside the polygon against edge", null,
+                pl.findIntersections(new Ray(new Point3D(0, 1, 2), new Vector(1.5, -2, -1.5))));
+        // TC03: ray intersects with the plane outside the polygon against vertex
+        assertEquals("Wrong when ray intersects with the plane outside the polygon against vertex", null,
+                pl.findIntersections(new Ray(new Point3D(0, 1, 2), new Vector(3, -2, -3))));
+
+        // =============== Boundary Values Tests ==================
+
+        // TC11: ray intersects with the polygon on edge
+        assertEquals("Wrong when ray intersects with the polygon on edge", null,
+                pl.findIntersections(new Ray(new Point3D(0, 1, 2), new Vector(-0.5, 0, -1.5))));
+
+        // TC12: ray intersects with the polygon in vertex
+        assertEquals("Wrong when ray intersects with the polygon in vertex", null,
+                pl.findIntersections(new Ray(new Point3D(0, 1, 2), new Vector(0, -1, -1))));
+
+        // TC13: ray intersects with the polygon on edge's continuation
+        assertEquals("Wrong when ray intersects with the polygon on edge's continuation", null,
+                pl.findIntersections(new Ray(new Point3D(0, 1, 2), new Vector(1, -1, -1))));
     }
 }

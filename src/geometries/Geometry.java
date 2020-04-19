@@ -8,7 +8,7 @@ import primitives.*;
  * @author Moriah and Shahar
  */
 
-public interface Geometry {
+public interface Geometry extends Intersectable {
     /**
      * returns the normal (normalized) to the geometry shape in the given point
      *

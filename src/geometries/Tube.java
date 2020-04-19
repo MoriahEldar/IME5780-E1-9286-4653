@@ -4,6 +4,8 @@ import primitives.Point3D;
 import primitives.Ray;
 import primitives.Vector;
 
+import java.util.List;
+
 /**
  * Tube class represents a 3D tube (an infinity cylinder) in 3D Cartesian coordinate
  * system
@@ -50,5 +52,10 @@ public class Tube extends RadialGeometry {
                 "axis Ray = " + _axisRay +
                 ", R = " + _radius +
                 '}';
+    }
+
+    @Override
+    public List<Point3D> findIntersections(Ray ray) {
+        return null;
     }
 }

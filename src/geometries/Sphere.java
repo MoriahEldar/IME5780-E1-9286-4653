@@ -1,7 +1,12 @@
 package geometries;
 
 import primitives.Point3D;
+import primitives.Ray;
 import primitives.Vector;
+
+import java.util.List;
+
+import static primitives.Util.alignZero;
 
 /**
  * Sphere class represents a 3D sphere in 3D Cartesian coordinate
@@ -47,5 +52,32 @@ public class Sphere extends RadialGeometry {
                 "center = " + _center +
                 ", R = " + _radius +
                 '}';
+    }
+
+    @Override
+    public List<Point3D> findIntersections(Ray ray) {
+        Vector u;
+        try {
+            u = _center.subtract(ray.get_startPoint());
+        }
+        catch (IllegalArgumentException e) {
+            return List.of(ray.get_startPoint().add(ray.get_direction().scale(_radius)));
+        }
+        double tm = alignZero(ray.get_direction().dotProduct(u));
+        double d = alignZero(Math.sqrt(u.lengthSquared() - tm * tm));
+        if (d >= _radius)
+            return null;
+        double th = alignZero(Math.sqrt(_radius * _radius - d * d));
+        if (tm - th <= 0) {
+            if (tm + th <= 0)
+                return null;
+            else
+                return List.of(ray.get_startPoint().add(ray.get_direction().scale(tm + th)));
+        }
+        if (tm + th <= 0)
+            return List.of(ray.get_startPoint().add(ray.get_direction().scale(tm - th)));
+        if (th == 0)
+            return List.of(ray.get_startPoint().add(ray.get_direction().scale(tm)));
+        return List.of(ray.get_startPoint().add(ray.get_direction().scale(tm + th)), ray.get_startPoint().add(ray.get_direction().scale(tm - th)));
     }
 }

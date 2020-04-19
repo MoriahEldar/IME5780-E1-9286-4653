@@ -1,6 +1,10 @@
 package geometries;
 import primitives.*;
 
+import java.util.List;
+
+import static primitives.Util.isZero;
+
 /**
  * Plane class represents a plane in 3D Cartesian coordinate
  * system
@@ -65,14 +69,18 @@ public class Plane implements Geometry {
      * @return True if the point is on the plane, False if not.
      */
     public boolean isOnPlane(Point3D point) {
-        // Makes the plane equation
-        double d = _normal.get_point().get_x().get() * _p.get_x().get() +
-                _normal.get_point().get_y().get() * _p.get_y().get() +
-                _normal.get_point().get_z().get() * _p.get_z().get();
-        // Checks if the point holds the equation
-        return _normal.get_point().get_x().get() * point.get_x().get() +
-                _normal.get_point().get_y().get() * point.get_y().get() +
-                _normal.get_point().get_z().get() * point.get_z().get() - d == 0;
+        try {
+            // make a vector between the given point and the point on the plane
+            Vector vecBetweenPoints = point.subtract(_p);
+            // check if the vector is in the plane - orthogonal to the normal
+            return isZero(vecBetweenPoints.dotProduct(_normal));
+        }
+        catch(IllegalArgumentException e) {
+            // if the given point is the same point as the point on the plane (approximately),
+            // the vector will be the zero vector, so there will be an exception.
+            // but in that case, the point is on the plane
+            return true;
+        }
     }
 
     /*************** Admin *****************/
@@ -90,5 +98,23 @@ public class Plane implements Geometry {
         return _normal.get_point().get_x().toString() + "x + " +
                 _normal.get_point().get_y().toString() + "y + " +
                 _normal.get_point().get_z().toString() + "z + " + -d + " = 0";
+    }
+
+    @Override
+    public List<Point3D> findIntersections(Ray ray) {
+        double denominator = _normal.dotProduct(ray.get_direction());
+        // If ray is parallel to the plane
+        if (isZero(denominator))
+            return null;
+        try {
+            double t = _normal.dotProduct(_p.subtract(ray.get_startPoint())) / denominator;
+            if (t <= 0)
+                return null;
+            return List.of(ray.get_startPoint().add(ray.get_direction().scale(t)));
+        }
+        catch (IllegalArgumentException e) {
+            // _p is the same point as ray.get_startPoint()
+            return null;
+        }
     }
 }

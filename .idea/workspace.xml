@@ -10,9 +10,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="JUnit5 Test Class" />
         <option value="JUnit4 Test Class" />
       </list>
     </option>
@@ -51,7 +51,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in IME5780-E1-9286-4653">
+  <component name="RunManager" selected="JUnit.GeometriesTest.testFindIntersections">
     <configuration name="All in IME5780-E1-9286-4653" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IME5780-E1-9286-4653" />
       <option name="PACKAGE_NAME" value="" />
@@ -60,39 +60,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Point3DTest.testDistance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="IME5780-E1-9286-4653" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="primitives.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="primitives" />
-      <option name="MAIN_CLASS_NAME" value="primitives.Point3DTest" />
-      <option name="METHOD_NAME" value="testDistance" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Point3DTest.testDistanceSquared" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="IME5780-E1-9286-4653" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="primitives.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="primitives" />
-      <option name="MAIN_CLASS_NAME" value="primitives.Point3DTest" />
-      <option name="METHOD_NAME" value="testDistanceSquared" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TubeTest.testGetNormal" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GeometriesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IME5780-E1-9286-4653" />
       <extension name="coverage">
         <pattern>
@@ -101,24 +69,54 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="geometries" />
-      <option name="MAIN_CLASS_NAME" value="geometries.TubeTest" />
-      <option name="METHOD_NAME" value="testGetNormal" />
+      <option name="MAIN_CLASS_NAME" value="geometries.GeometriesTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GeometriesTest.testFindIntersections" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="IME5780-E1-9286-4653" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="geometries.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="geometries" />
+      <option name="MAIN_CLASS_NAME" value="geometries.GeometriesTest" />
+      <option name="METHOD_NAME" value="testFindIntersections" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VectorTest.normalize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PolygonTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IME5780-E1-9286-4653" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="primitives.*" />
+          <option name="PATTERN" value="geometries.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="primitives" />
-      <option name="MAIN_CLASS_NAME" value="primitives.VectorTest" />
-      <option name="METHOD_NAME" value="normalize" />
+      <option name="PACKAGE_NAME" value="geometries" />
+      <option name="MAIN_CLASS_NAME" value="geometries.PolygonTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PolygonTest.testFindIntersections" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="IME5780-E1-9286-4653" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="geometries.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="geometries" />
+      <option name="MAIN_CLASS_NAME" value="geometries.PolygonTest" />
+      <option name="METHOD_NAME" value="testFindIntersections" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -126,11 +124,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GeometriesTest.testFindIntersections" />
+        <item itemvalue="JUnit.GeometriesTest" />
         <item itemvalue="JUnit.All in IME5780-E1-9286-4653" />
-        <item itemvalue="JUnit.VectorTest.normalize" />
-        <item itemvalue="JUnit.Point3DTest.testDistanceSquared" />
-        <item itemvalue="JUnit.Point3DTest.testDistance" />
-        <item itemvalue="JUnit.TubeTest.testGetNormal" />
+        <item itemvalue="JUnit.PolygonTest" />
+        <item itemvalue="JUnit.PolygonTest.testFindIntersections" />
       </list>
     </recent_temporary>
   </component>
@@ -168,10 +166,18 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.690@0.0.1280.690" timestamp="1585150828566" />
-    <state x="447" y="72" key="#com.intellij.ide.util.MemberChooser" timestamp="1585150728151">
+    <state x="93" y="93" width="1093" height="503" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1587306338200">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="447" y="72" key="#com.intellij.ide.util.MemberChooser/0.0.1280.690@0.0.1280.690" timestamp="1585150728151" />
+    <state x="93" y="93" width="1093" height="503" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1280.690@0.0.1280.690" timestamp="1587306338200" />
+    <state x="447" y="72" key="#com.intellij.ide.util.MemberChooser" timestamp="1587337428248">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="447" y="72" key="#com.intellij.ide.util.MemberChooser/0.0.1280.690@0.0.1280.690" timestamp="1587337428248" />
+    <state x="435" y="205" width="408" height="286" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1587319843213">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="435" y="205" width="408" height="286" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.690@0.0.1280.690" timestamp="1587319843213" />
     <state x="33" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585144581362">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
@@ -184,38 +190,38 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="483" y="249" key="Github.ShareDialog/0.0.1280.690@0.0.1280.690" timestamp="1585152230517" />
-    <state width="1238" height="290" key="GridCell.Tab.0.bottom" timestamp="1585866482790">
+    <state width="1009" height="236" key="GridCell.Tab.0.bottom" timestamp="1587340065023">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="290" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1585866482790" />
-    <state width="1238" height="290" key="GridCell.Tab.0.center" timestamp="1585866482790">
+    <state width="1009" height="236" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1587340065023" />
+    <state width="1009" height="236" key="GridCell.Tab.0.center" timestamp="1587340065022">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="290" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1585866482790" />
-    <state width="1238" height="290" key="GridCell.Tab.0.left" timestamp="1585866482790">
+    <state width="1009" height="236" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1587340065022" />
+    <state width="1009" height="236" key="GridCell.Tab.0.left" timestamp="1587340065022">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="290" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1585866482790" />
-    <state width="1238" height="290" key="GridCell.Tab.0.right" timestamp="1585866482790">
+    <state width="1009" height="236" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1587340065022" />
+    <state width="1009" height="236" key="GridCell.Tab.0.right" timestamp="1587340065022">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="290" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1585866482790" />
-    <state width="1238" height="187" key="GridCell.Tab.1.bottom" timestamp="1585859889217">
+    <state width="1009" height="236" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1587340065022" />
+    <state width="619" height="187" key="GridCell.Tab.1.bottom" timestamp="1587335337676">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="187" key="GridCell.Tab.1.bottom/0.0.1280.690@0.0.1280.690" timestamp="1585859889217" />
-    <state width="1238" height="187" key="GridCell.Tab.1.center" timestamp="1585859889216">
+    <state width="619" height="187" key="GridCell.Tab.1.bottom/0.0.1280.690@0.0.1280.690" timestamp="1587335337676" />
+    <state width="619" height="187" key="GridCell.Tab.1.center" timestamp="1587335337675">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="187" key="GridCell.Tab.1.center/0.0.1280.690@0.0.1280.690" timestamp="1585859889216" />
-    <state width="1238" height="187" key="GridCell.Tab.1.left" timestamp="1585859889216">
+    <state width="619" height="187" key="GridCell.Tab.1.center/0.0.1280.690@0.0.1280.690" timestamp="1587335337675" />
+    <state width="619" height="187" key="GridCell.Tab.1.left" timestamp="1587335337675">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="187" key="GridCell.Tab.1.left/0.0.1280.690@0.0.1280.690" timestamp="1585859889216" />
-    <state width="1238" height="187" key="GridCell.Tab.1.right" timestamp="1585859889217">
+    <state width="619" height="187" key="GridCell.Tab.1.left/0.0.1280.690@0.0.1280.690" timestamp="1587335337675" />
+    <state width="619" height="187" key="GridCell.Tab.1.right" timestamp="1587335337676">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="187" key="GridCell.Tab.1.right/0.0.1280.690@0.0.1280.690" timestamp="1585859889217" />
+    <state width="619" height="187" key="GridCell.Tab.1.right/0.0.1280.690@0.0.1280.690" timestamp="1587335337676" />
     <state x="143" y="0" key="SettingsEditor" timestamp="1585680535766">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
@@ -232,21 +238,24 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="448" y="262" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.690@0.0.1280.690" timestamp="1585860409932" />
-    <state x="358" y="81" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1585846270236">
+    <state x="358" y="81" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1587337973338">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="358" y="81" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1280.690@0.0.1280.690" timestamp="1585846270236" />
+    <state x="358" y="81" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1280.690@0.0.1280.690" timestamp="1587337973338" />
     <state x="493" y="0" width="744" height="690" key="find.popup" timestamp="1585842671140">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="493" y="0" width="744" height="690" key="find.popup/0.0.1280.690@0.0.1280.690" timestamp="1585842671140" />
-    <state x="299" y="155" key="run.anything.popup" timestamp="1585145069754">
+    <state x="300" y="156" key="run.anything.popup" timestamp="1587320976436">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="299" y="155" key="run.anything.popup/0.0.1280.690@0.0.1280.690" timestamp="1585145069754" />
-    <state x="303" y="11" width="672" height="678" key="search.everywhere.popup" timestamp="1585138564988">
+    <state x="300" y="156" key="run.anything.popup/0.0.1280.690@0.0.1280.690" timestamp="1587320976436" />
+    <state x="306" y="14" width="672" height="678" key="search.everywhere.popup" timestamp="1587328982509">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="303" y="11" width="672" height="678" key="search.everywhere.popup/0.0.1280.690@0.0.1280.690" timestamp="1585138564988" />
+    <state x="306" y="14" width="672" height="678" key="search.everywhere.popup/0.0.1280.690@0.0.1280.690" timestamp="1587328982509" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/IME5780_E1_9286_4653$All_in_IME5780_E1_9286_4653.ic" NAME="All in IME5780-E1-9286-4653 Coverage Results" MODIFIED="1587297150158" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
