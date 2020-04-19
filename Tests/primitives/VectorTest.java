@@ -22,20 +22,20 @@ public class VectorTest {
         try {
             Vector vec = new Vector(0, 0, 0);
             fail("Vector: doubleConstructor() doesn't throw error to a zero vector");
+        } catch (IllegalArgumentException e) {
         }
-        catch (IllegalArgumentException e) {}
         // T2, on Vector(primitives.Coordinate, primitives.Coordinate, primitives.Coordinate), ERROR when it's the ZERO vector
         try {
             Vector vec = new Vector(new Coordinate(0), new Coordinate(0), new Coordinate(0));
             fail("Vector: CoordinateConstructor() doesn't throw error to a zero vector");
+        } catch (IllegalArgumentException e) {
         }
-        catch (IllegalArgumentException e) {}
         // T3, on Vector(primitives.Point3D), ERROR when it's the ZERO vector
         try {
             Vector vec = new Vector(Point3D.ZERO);
             fail("Vector: pointConstructor() doesn't throw error to a zero vector");
+        } catch (IllegalArgumentException e) {
         }
-        catch (IllegalArgumentException e) {}
     }
 
     /**
@@ -52,8 +52,8 @@ public class VectorTest {
         try {
             v1.subtract(v1);
             fail("Vector: subtract() doesn't throw error to a zero vector");
+        } catch (IllegalArgumentException e) {
         }
-        catch (IllegalArgumentException e) {}
     }
 
     /**
@@ -70,8 +70,8 @@ public class VectorTest {
         try {
             v1.add(v1.scale(-1));
             fail("Vector: add() doesn't throw error to a zero vector");
+        } catch (IllegalArgumentException e) {
         }
-        catch (IllegalArgumentException e) {}
     }
 
     /**
@@ -80,11 +80,14 @@ public class VectorTest {
     @Test
     public void testScale() {
         // ============ Equivalence Partitions Tests ==============
-        // T1, any scalar that is not zero with any vector
+        // T1, any scalar that is smaller than zero with any vector
         Vector v1 = new Vector(1, -3, 1);
         assertEquals("Vector: scale() wrong", new Vector(-3, 9, -3), v1.scale(-3));
+        // T2, any scalar that is bigger that zero with any vector
         assertEquals("Vector: scale() wrong", new Vector(3, -9, 3), v1.scale(3));
-        // T2, multiply by zero
+
+        // =============== Boundary Values Tests ==================
+        // T3, multiply by zero
         try {
             v1.scale(0);
             fail("Vector: scale() doesn't throw error to a zero vector");
@@ -126,34 +129,39 @@ public class VectorTest {
     @Test
     public void testCrossProduct() {
         // ============ Equivalence Partitions Tests ==============
-        // T1, 2 vectors with the same direction
-        Vector v1 = new Vector(1, 2, -3);
-        Vector v2 = new Vector(2, 4, -6);
-        try {
-            v1.crossProduct(v2);
-            fail("Vector: crossProduct() does not throw exception with 2 vectors in the same direction");
-        }
-        catch (IllegalArgumentException e) {}
-        // T2, 2 vectors with a sharp angle
-        v1 = new Vector(1, 0, 0);
-        v2 = new Vector(2, 1, 0);
+        // T1, 2 vectors with a sharp angle
+        Vector v1 = new Vector(1, 0, 0);
+        Vector v2 = new Vector(2, 1, 0);
         assertEquals("Vector: crossProduct() wrong with 2 vectors with sharp angle", new Vector(0, 0, 1), v1.crossProduct(v2));
-        // T3, 2 orthogonal vectors
+        // T2, 2 orthogonal vectors
         v1 = new Vector(1, 3, -2);
         v2 = new Vector(2, 2, 4);
         assertEquals("Vector: crossProduct() wrong with 2 orthogonal vectors", new Vector(16, -8, -4), v1.crossProduct(v2));
-        // T4, 2 vectors with obtuse angle
+        // T3, 2 vectors with obtuse angle
         v1 = new Vector(1, 0, 0);
         v2 = new Vector(-2, -2, 0);
         assertEquals("Vector: crossProduct() wrong with 2 vectors with obtuse angle", new Vector(0, 0, -2), v1.crossProduct(v2));
-        // T5, 2 vectors in opposite directions
+        // T4, Test that length of cross-product is proper (orthogonal vectors taken for simplicity)
+        v1 = new Vector(1, 2, 3);
+        v2 = new Vector(0, 3, -2);
+        assertTrue("crossProduct() wrong result length", isZero(v1.length() * v2.length() - v1.crossProduct(v2).length()));
+
+
+        // =============== Boundary Values Tests ==================
+        // T5, 2 vectors with the same direction
+        v1 = new Vector(1, 2, -3);
+        v2 = new Vector(2, 4, -6);
+        try {
+            v1.crossProduct(v2);
+            fail("Vector: crossProduct() does not throw exception with 2 vectors in the same direction");
+        } catch (IllegalArgumentException e) {}
+        // T6, 2 vectors in opposite directions
         v1 = new Vector(3, -5, 2);
         v2 = new Vector(-6, 10, -4);
         try {
             v1.crossProduct(v2);
             fail("Vector: crossProduct() does not throw exception with 2 vectors in the opposite direction");
-        }
-        catch (IllegalArgumentException e) {}
+        } catch (IllegalArgumentException e) {}
     }
 
     /**
@@ -184,11 +192,24 @@ public class VectorTest {
     @Test
     public void normalize() {
         // ============ Equivalence Partitions Tests ==============
-        // T1, any vector
+        // T1, vector with length bigger than 1
         Vector v1 = new Vector(Math.PI, 10, 5);
         Vector v2 = v1.normalize();
-        assertTrue("Vector: normalize() wrong", isZero(1 - v2.length()));
-        assertSame("Vector: normalize() creates a new vector", v1, v2);
+        assertTrue("Vector: normalize() wrong when length > 1", isZero(1 - v2.length()));
+        assertSame("Vector: normalize() creates a new vector when length > 1", v1, v2);
+        // T2, vector with length smaller than 1
+        v1 = new Vector(0.5, 0.009, 0.2);
+        v2 = v1.normalize();
+        assertTrue("Vector: normalize() wrong when length < 1", isZero(1 - v2.length()));
+        assertSame("Vector: normalize() creates a new vector when length < 1", v1, v2);
+
+        // =============== Boundary Values Tests ==================
+        // T3, vector with length 1
+        // v1 is already normalize from T2
+        Vector copy = new Vector(v1);
+        v2 = v1.normalize();
+        assertEquals("Vector: normalize() wrong when length = 1", copy, v2);
+        assertSame("Vector: normalize() creates a new vector when length = 1", v1, v2);
     }
 
     /**
@@ -197,10 +218,23 @@ public class VectorTest {
     @Test
     public void normalized() {
         // ============ Equivalence Partitions Tests ==============
-        // T1, any Vector
+        // T1, vector with length bigger than 1
         Vector v1 = new Vector(Math.PI, 10, 5);
         Vector v2 = v1.normalized();
-        assertTrue("Vector: normalized() wrong", isZero(1 - v2.length()));
-        assertNotSame("Vector: normalized() changes it self and does not crate a new vector", v1, v2);
+        assertTrue("Vector: normalized() wrong when length > 1", isZero(1 - v2.length()));
+        assertNotSame("Vector: normalized() does not create a new vector when length > 1", v1, v2);
+        // T2, vector with length smaller than 1
+        v1 = new Vector(0.5, 0.009, 0.2);
+        v2 = v1.normalized();
+        assertTrue("Vector: normalized() wrong when length < 1", isZero(1 - v2.length()));
+        assertNotSame("Vector: normalized() does not create a new vector when length < 1", v1, v2);
+
+        // =============== Boundary Values Tests ==================
+        // T3, vector with length 1
+        // v1 is already normalize from T2
+        v1 = new Vector(0.3, 0.4, Math.sqrt(0.75));
+        v2 = v1.normalized();
+        assertEquals("Vector: normalized() wrong when length = 1", v1, v2);
+        assertNotSame("Vector: normalized() does not create a new vector when length = 1", v1, v2);
     }
 }
