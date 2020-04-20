@@ -110,7 +110,7 @@ public class Plane implements Geometry {
             double t = _normal.dotProduct(_p.subtract(ray.get_startPoint())) / denominator;
             if (t <= 0)
                 return null;
-            return List.of(ray.get_startPoint().add(ray.get_direction().scale(t)));
+            return List.of(ray.getPoint(t));
         }
         catch (IllegalArgumentException e) {
             // _p is the same point as ray.get_startPoint()

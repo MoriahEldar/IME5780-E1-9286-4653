@@ -61,7 +61,7 @@ public class Sphere extends RadialGeometry {
             u = _center.subtract(ray.get_startPoint());
         }
         catch (IllegalArgumentException e) {
-            return List.of(ray.get_startPoint().add(ray.get_direction().scale(_radius)));
+            return List.of(ray.getPoint(_radius));
         }
         double tm = alignZero(ray.get_direction().dotProduct(u));
         double d = alignZero(Math.sqrt(u.lengthSquared() - tm * tm));
@@ -72,12 +72,12 @@ public class Sphere extends RadialGeometry {
             if (tm + th <= 0)
                 return null;
             else
-                return List.of(ray.get_startPoint().add(ray.get_direction().scale(tm + th)));
+                return List.of(ray.getPoint(tm + th));
         }
         if (tm + th <= 0)
-            return List.of(ray.get_startPoint().add(ray.get_direction().scale(tm - th)));
+            return List.of(ray.getPoint(tm - th));
         if (th == 0)
-            return List.of(ray.get_startPoint().add(ray.get_direction().scale(tm)));
-        return List.of(ray.get_startPoint().add(ray.get_direction().scale(tm + th)), ray.get_startPoint().add(ray.get_direction().scale(tm - th)));
+            return List.of(ray.getPoint(tm));
+        return List.of(ray.getPoint(tm + th), ray.getPoint(tm - th));
     }
 }

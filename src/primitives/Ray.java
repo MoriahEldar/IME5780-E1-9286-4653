@@ -34,7 +34,7 @@ public class Ray {
     public Ray(Point3D _startPoint, Point3D pointOnTheRay) {
         this._startPoint = new Point3D(_startPoint);
         try {
-            this._direction = _startPoint.subtract(pointOnTheRay).normalize();
+            this._direction = pointOnTheRay.subtract(_startPoint).normalize();
         }
         catch (IllegalArgumentException e)
         {
@@ -68,6 +68,24 @@ public class Ray {
      */
     public Vector get_direction() {
         return new Vector(_direction);
+    }
+
+    /**
+     * Gets a scalar and returns the point on the ray according to the scalar (P0 + tv)
+     *
+     * @param t, the scalar
+     * @return The point on the ray
+     */
+    public Point3D getPoint(double t) {
+        if (t < 0)
+            throw new IllegalArgumentException("t (the scalar) cannot be negative");
+        try
+        {
+            return _startPoint.add(_direction.scale(t));
+        }
+        catch (IllegalArgumentException e) {
+            return get_startPoint();
+        }
     }
 
     /*************** Admin *****************/

@@ -51,7 +51,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GeometriesTest.testFindIntersections">
+  <component name="RunManager" selected="JUnit.TubeTest">
     <configuration name="All in IME5780-E1-9286-4653" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IME5780-E1-9286-4653" />
       <option name="PACKAGE_NAME" value="" />
@@ -106,7 +106,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PolygonTest.testFindIntersections" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TubeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IME5780-E1-9286-4653" />
       <extension name="coverage">
         <pattern>
@@ -115,20 +115,19 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="geometries" />
-      <option name="MAIN_CLASS_NAME" value="geometries.PolygonTest" />
-      <option name="METHOD_NAME" value="testFindIntersections" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="geometries.TubeTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TubeTest" />
+        <item itemvalue="JUnit.All in IME5780-E1-9286-4653" />
         <item itemvalue="JUnit.GeometriesTest.testFindIntersections" />
         <item itemvalue="JUnit.GeometriesTest" />
-        <item itemvalue="JUnit.All in IME5780-E1-9286-4653" />
         <item itemvalue="JUnit.PolygonTest" />
-        <item itemvalue="JUnit.PolygonTest.testFindIntersections" />
       </list>
     </recent_temporary>
   </component>
@@ -190,38 +189,38 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="483" y="249" key="Github.ShareDialog/0.0.1280.690@0.0.1280.690" timestamp="1585152230517" />
-    <state width="1009" height="236" key="GridCell.Tab.0.bottom" timestamp="1587340065023">
+    <state width="1007" height="236" key="GridCell.Tab.0.bottom" timestamp="1587414574987">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1009" height="236" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1587340065023" />
-    <state width="1009" height="236" key="GridCell.Tab.0.center" timestamp="1587340065022">
+    <state width="1007" height="236" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1587414574987" />
+    <state width="1007" height="236" key="GridCell.Tab.0.center" timestamp="1587414574986">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1009" height="236" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1587340065022" />
-    <state width="1009" height="236" key="GridCell.Tab.0.left" timestamp="1587340065022">
+    <state width="1007" height="236" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1587414574986" />
+    <state width="1007" height="236" key="GridCell.Tab.0.left" timestamp="1587414574986">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1009" height="236" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1587340065022" />
-    <state width="1009" height="236" key="GridCell.Tab.0.right" timestamp="1587340065022">
+    <state width="1007" height="236" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1587414574986" />
+    <state width="1007" height="236" key="GridCell.Tab.0.right" timestamp="1587414574986">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1009" height="236" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1587340065022" />
-    <state width="619" height="187" key="GridCell.Tab.1.bottom" timestamp="1587335337676">
+    <state width="1007" height="236" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1587414574986" />
+    <state width="619" height="187" key="GridCell.Tab.1.bottom" timestamp="1587409963724">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="619" height="187" key="GridCell.Tab.1.bottom/0.0.1280.690@0.0.1280.690" timestamp="1587335337676" />
-    <state width="619" height="187" key="GridCell.Tab.1.center" timestamp="1587335337675">
+    <state width="619" height="187" key="GridCell.Tab.1.bottom/0.0.1280.690@0.0.1280.690" timestamp="1587409963724" />
+    <state width="619" height="187" key="GridCell.Tab.1.center" timestamp="1587409963724">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="619" height="187" key="GridCell.Tab.1.center/0.0.1280.690@0.0.1280.690" timestamp="1587335337675" />
-    <state width="619" height="187" key="GridCell.Tab.1.left" timestamp="1587335337675">
+    <state width="619" height="187" key="GridCell.Tab.1.center/0.0.1280.690@0.0.1280.690" timestamp="1587409963724" />
+    <state width="619" height="187" key="GridCell.Tab.1.left" timestamp="1587409963723">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="619" height="187" key="GridCell.Tab.1.left/0.0.1280.690@0.0.1280.690" timestamp="1587335337675" />
-    <state width="619" height="187" key="GridCell.Tab.1.right" timestamp="1587335337676">
+    <state width="619" height="187" key="GridCell.Tab.1.left/0.0.1280.690@0.0.1280.690" timestamp="1587409963723" />
+    <state width="619" height="187" key="GridCell.Tab.1.right" timestamp="1587409963724">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="619" height="187" key="GridCell.Tab.1.right/0.0.1280.690@0.0.1280.690" timestamp="1587335337676" />
+    <state width="619" height="187" key="GridCell.Tab.1.right/0.0.1280.690@0.0.1280.690" timestamp="1587409963724" />
     <state x="143" y="0" key="SettingsEditor" timestamp="1585680535766">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
@@ -238,10 +237,10 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="448" y="262" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.690@0.0.1280.690" timestamp="1585860409932" />
-    <state x="358" y="81" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1587337973338">
+    <state x="358" y="81" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1587407424784">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="358" y="81" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1280.690@0.0.1280.690" timestamp="1587337973338" />
+    <state x="358" y="81" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1280.690@0.0.1280.690" timestamp="1587407424784" />
     <state x="493" y="0" width="744" height="690" key="find.popup" timestamp="1585842671140">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
