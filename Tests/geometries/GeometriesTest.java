@@ -7,6 +7,10 @@ import primitives.Vector;
 
 import static org.junit.Assert.*;
 
+/**
+ * Unit tests for geometries.Geometries class
+ * @author Moriah and Shahar
+ */
 public class GeometriesTest {
     /**
      * Test method for {@link geometries.Geometries#findIntersections(primitives.Ray)}

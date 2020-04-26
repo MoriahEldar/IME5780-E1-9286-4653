@@ -24,7 +24,8 @@ public class Tube extends RadialGeometry {
     /**
      * Tube constructor receiving radius and a Ray which is the center line of the sphere
      *
-     * @param _radius double, _axisRay the Ray
+     * @param _radius double
+     * @param _axisRay the Ray
      */
     public Tube(double _radius, Ray _axisRay) {
         super(_radius);
