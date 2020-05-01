@@ -44,6 +44,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="renderer" />
       <recent name="elements" />
       <recent name="geometries" />
       <recent name="primitives" />
@@ -52,58 +53,11 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in IME5780-E1-9286-4653">
+  <component name="RunManager" selected="JUnit.RenderTests.basicRenderTwoColorTest">
     <configuration name="All in IME5780-E1-9286-4653" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IME5780-E1-9286-4653" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CameraIntegrationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="IME5780-E1-9286-4653" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="elements.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="elements" />
-      <option name="MAIN_CLASS_NAME" value="elements.CameraIntegrationTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CameraIntegrationTests.testCameraIntegrationPlane" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="IME5780-E1-9286-4653" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="elements.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="elements" />
-      <option name="MAIN_CLASS_NAME" value="elements.CameraIntegrationTests" />
-      <option name="METHOD_NAME" value="testCameraIntegrationPlane" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CameraIntegrationTests.testCameraIntegrationSphere" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="IME5780-E1-9286-4653" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="elements.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="elements" />
-      <option name="MAIN_CLASS_NAME" value="elements.CameraIntegrationTests" />
-      <option name="METHOD_NAME" value="testCameraIntegrationSphere" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -124,13 +78,60 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ImageWriterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="IME5780-E1-9286-4653" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="renderer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="renderer" />
+      <option name="MAIN_CLASS_NAME" value="renderer.ImageWriterTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ImageWriterTest.imageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="IME5780-E1-9286-4653" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="renderer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="renderer" />
+      <option name="MAIN_CLASS_NAME" value="renderer.ImageWriterTest" />
+      <option name="METHOD_NAME" value="imageTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RenderTests.basicRenderTwoColorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="IME5780-E1-9286-4653" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="renderer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="renderer" />
+      <option name="MAIN_CLASS_NAME" value="renderer.RenderTests" />
+      <option name="METHOD_NAME" value="basicRenderTwoColorTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RenderTests.basicRenderTwoColorTest" />
+        <item itemvalue="JUnit.ImageWriterTest.imageTest" />
+        <item itemvalue="JUnit.ImageWriterTest" />
         <item itemvalue="JUnit.All in IME5780-E1-9286-4653" />
         <item itemvalue="JUnit.CameraTest.testConstructRayThroughPixel" />
-        <item itemvalue="JUnit.CameraIntegrationTests" />
-        <item itemvalue="JUnit.CameraIntegrationTests.testCameraIntegrationPlane" />
-        <item itemvalue="JUnit.CameraIntegrationTests.testCameraIntegrationSphere" />
       </list>
     </recent_temporary>
   </component>
@@ -172,10 +173,10 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="93" y="93" width="1093" height="503" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1280.690@0.0.1280.690" timestamp="1587306338200" />
-    <state x="447" y="72" key="#com.intellij.ide.util.MemberChooser" timestamp="1587901803360">
+    <state x="447" y="72" key="#com.intellij.ide.util.MemberChooser" timestamp="1588287381530">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="447" y="72" key="#com.intellij.ide.util.MemberChooser/0.0.1280.690@0.0.1280.690" timestamp="1587901803360" />
+    <state x="447" y="72" key="#com.intellij.ide.util.MemberChooser/0.0.1280.690@0.0.1280.690" timestamp="1588287381530" />
     <state x="435" y="205" width="408" height="286" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1587319843213">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
@@ -192,46 +193,46 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="483" y="249" key="Github.ShareDialog/0.0.1280.690@0.0.1280.690" timestamp="1585152230517" />
-    <state width="1238" height="147" key="GridCell.Tab.0.bottom" timestamp="1587923769367">
+    <state width="1238" height="147" key="GridCell.Tab.0.bottom" timestamp="1588289896731">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="147" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1587923769367" />
-    <state width="1238" height="147" key="GridCell.Tab.0.center" timestamp="1587923769366">
+    <state width="1238" height="147" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1588289896731" />
+    <state width="1238" height="147" key="GridCell.Tab.0.center" timestamp="1588289896730">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="147" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1587923769366" />
-    <state width="1238" height="147" key="GridCell.Tab.0.left" timestamp="1587923769366">
+    <state width="1238" height="147" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1588289896730" />
+    <state width="1238" height="147" key="GridCell.Tab.0.left" timestamp="1588289896730">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="147" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1587923769366" />
-    <state width="1238" height="147" key="GridCell.Tab.0.right" timestamp="1587923769367">
+    <state width="1238" height="147" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1588289896730" />
+    <state width="1238" height="147" key="GridCell.Tab.0.right" timestamp="1588289896731">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="147" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1587923769367" />
-    <state width="619" height="187" key="GridCell.Tab.1.bottom" timestamp="1587409963724">
+    <state width="1238" height="147" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1588289896731" />
+    <state width="1238" height="187" key="GridCell.Tab.1.bottom" timestamp="1588288517351">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="619" height="187" key="GridCell.Tab.1.bottom/0.0.1280.690@0.0.1280.690" timestamp="1587409963724" />
-    <state width="619" height="187" key="GridCell.Tab.1.center" timestamp="1587409963724">
+    <state width="1238" height="187" key="GridCell.Tab.1.bottom/0.0.1280.690@0.0.1280.690" timestamp="1588288517351" />
+    <state width="1238" height="187" key="GridCell.Tab.1.center" timestamp="1588288517349">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="619" height="187" key="GridCell.Tab.1.center/0.0.1280.690@0.0.1280.690" timestamp="1587409963724" />
-    <state width="619" height="187" key="GridCell.Tab.1.left" timestamp="1587409963723">
+    <state width="1238" height="187" key="GridCell.Tab.1.center/0.0.1280.690@0.0.1280.690" timestamp="1588288517349" />
+    <state width="1238" height="187" key="GridCell.Tab.1.left" timestamp="1588288517349">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="619" height="187" key="GridCell.Tab.1.left/0.0.1280.690@0.0.1280.690" timestamp="1587409963723" />
-    <state width="619" height="187" key="GridCell.Tab.1.right" timestamp="1587409963724">
+    <state width="1238" height="187" key="GridCell.Tab.1.left/0.0.1280.690@0.0.1280.690" timestamp="1588288517349" />
+    <state width="1238" height="187" key="GridCell.Tab.1.right" timestamp="1588288517350">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="619" height="187" key="GridCell.Tab.1.right/0.0.1280.690@0.0.1280.690" timestamp="1587409963724" />
+    <state width="1238" height="187" key="GridCell.Tab.1.right/0.0.1280.690@0.0.1280.690" timestamp="1588288517350" />
     <state x="143" y="0" key="SettingsEditor" timestamp="1585680535766">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="143" y="0" key="SettingsEditor/0.0.1280.690@0.0.1280.690" timestamp="1585680535766" />
-    <state x="336" y="180" key="com.intellij.ide.util.TipDialog" timestamp="1587254728350">
+    <state x="336" y="180" key="com.intellij.ide.util.TipDialog" timestamp="1588288595053">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="336" y="180" key="com.intellij.ide.util.TipDialog/0.0.1280.690@0.0.1280.690" timestamp="1587254728350" />
+    <state x="336" y="180" key="com.intellij.ide.util.TipDialog/0.0.1280.690@0.0.1280.690" timestamp="1588288595053" />
     <state x="364" y="239" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1585680970337">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
@@ -240,18 +241,22 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="448" y="262" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.690@0.0.1280.690" timestamp="1585860409932" />
-    <state x="358" y="81" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1587907882226">
+    <state x="358" y="81" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1588290902207">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="358" y="81" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1280.690@0.0.1280.690" timestamp="1587907882226" />
+    <state x="358" y="81" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1280.690@0.0.1280.690" timestamp="1588290902207" />
     <state x="493" y="0" width="744" height="690" key="find.popup" timestamp="1585842671140">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="493" y="0" width="744" height="690" key="find.popup/0.0.1280.690@0.0.1280.690" timestamp="1585842671140" />
-    <state x="300" y="156" key="run.anything.popup" timestamp="1587320976436">
+    <state x="347" y="0" key="refactoring.ChangeSignatureDialog" timestamp="1588288483650">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="300" y="156" key="run.anything.popup/0.0.1280.690@0.0.1280.690" timestamp="1587320976436" />
+    <state x="347" y="0" key="refactoring.ChangeSignatureDialog/0.0.1280.690@0.0.1280.690" timestamp="1588288483650" />
+    <state x="301" y="157" key="run.anything.popup" timestamp="1588288500040">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="301" y="157" key="run.anything.popup/0.0.1280.690@0.0.1280.690" timestamp="1588288500040" />
     <state x="306" y="14" width="672" height="678" key="search.everywhere.popup" timestamp="1587328982509">
       <screen x="0" y="0" width="1280" height="690" />
     </state>

@@ -21,7 +21,9 @@ public class Cylinder extends Tube {
      * Cylinder constructor receiving radius and a Ray which is the center line of the sphere
      * and a double that is the height of the cylinder
      *
-     * @param _radius double, _axisRay the Ray, _height double
+     * @param _radius double
+     * @param _axisRay the Ray
+     * @param _height double
      */
     public Cylinder(double _radius, Ray _axisRay, double _height) {
         super(_radius, _axisRay);
