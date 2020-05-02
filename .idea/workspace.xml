@@ -12,8 +12,8 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="Interface" />
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -53,27 +53,11 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RenderTests.basicRenderTwoColorTest">
+  <component name="RunManager" selected="JUnit.RenderTest.getClosestPoint">
     <configuration name="All in IME5780-E1-9286-4653" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IME5780-E1-9286-4653" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CameraTest.testConstructRayThroughPixel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="IME5780-E1-9286-4653" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="elements.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="elements" />
-      <option name="MAIN_CLASS_NAME" value="elements.CameraTest" />
-      <option name="METHOD_NAME" value="testConstructRayThroughPixel" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -109,7 +93,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RenderTests.basicRenderTwoColorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RenderTest.basicRenderTwoColorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IME5780-E1-9286-4653" />
       <extension name="coverage">
         <pattern>
@@ -118,8 +102,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="renderer" />
-      <option name="MAIN_CLASS_NAME" value="renderer.RenderTests" />
+      <option name="MAIN_CLASS_NAME" value="renderer.RenderTest" />
       <option name="METHOD_NAME" value="basicRenderTwoColorTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RenderTest.getClosestPoint" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="IME5780-E1-9286-4653" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="renderer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="renderer" />
+      <option name="MAIN_CLASS_NAME" value="renderer.RenderTest" />
+      <option name="METHOD_NAME" value="getClosestPoint" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -127,11 +127,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RenderTests.basicRenderTwoColorTest" />
+        <item itemvalue="JUnit.RenderTest.getClosestPoint" />
+        <item itemvalue="JUnit.RenderTest.basicRenderTwoColorTest" />
         <item itemvalue="JUnit.ImageWriterTest.imageTest" />
         <item itemvalue="JUnit.ImageWriterTest" />
         <item itemvalue="JUnit.All in IME5780-E1-9286-4653" />
-        <item itemvalue="JUnit.CameraTest.testConstructRayThroughPixel" />
       </list>
     </recent_temporary>
   </component>
@@ -193,22 +193,22 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="483" y="249" key="Github.ShareDialog/0.0.1280.690@0.0.1280.690" timestamp="1585152230517" />
-    <state width="1238" height="147" key="GridCell.Tab.0.bottom" timestamp="1588289896731">
+    <state width="1238" height="147" key="GridCell.Tab.0.bottom" timestamp="1588443300272">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="147" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1588289896731" />
-    <state width="1238" height="147" key="GridCell.Tab.0.center" timestamp="1588289896730">
+    <state width="1238" height="147" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1588443300272" />
+    <state width="1238" height="147" key="GridCell.Tab.0.center" timestamp="1588443300272">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="147" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1588289896730" />
-    <state width="1238" height="147" key="GridCell.Tab.0.left" timestamp="1588289896730">
+    <state width="1238" height="147" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1588443300272" />
+    <state width="1238" height="147" key="GridCell.Tab.0.left" timestamp="1588443300271">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="147" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1588289896730" />
-    <state width="1238" height="147" key="GridCell.Tab.0.right" timestamp="1588289896731">
+    <state width="1238" height="147" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1588443300271" />
+    <state width="1238" height="147" key="GridCell.Tab.0.right" timestamp="1588443300272">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="147" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1588289896731" />
+    <state width="1238" height="147" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1588443300272" />
     <state width="1238" height="187" key="GridCell.Tab.1.bottom" timestamp="1588288517351">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
@@ -241,10 +241,10 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="448" y="262" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.690@0.0.1280.690" timestamp="1585860409932" />
-    <state x="358" y="81" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1588290902207">
+    <state x="358" y="81" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1588442253892">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="358" y="81" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1280.690@0.0.1280.690" timestamp="1588290902207" />
+    <state x="358" y="81" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1280.690@0.0.1280.690" timestamp="1588442253892" />
     <state x="493" y="0" width="744" height="690" key="find.popup" timestamp="1585842671140">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
@@ -257,10 +257,10 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="301" y="157" key="run.anything.popup/0.0.1280.690@0.0.1280.690" timestamp="1588288500040" />
-    <state x="306" y="14" width="672" height="678" key="search.everywhere.popup" timestamp="1587328982509">
+    <state x="307" y="15" width="672" height="678" key="search.everywhere.popup" timestamp="1588443564513">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="306" y="14" width="672" height="678" key="search.everywhere.popup/0.0.1280.690@0.0.1280.690" timestamp="1587328982509" />
+    <state x="307" y="15" width="672" height="678" key="search.everywhere.popup/0.0.1280.690@0.0.1280.690" timestamp="1588443564513" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/IME5780_E1_9286_4653$All_in_IME5780_E1_9286_4653.ic" NAME="All in IME5780-E1-9286-4653 Coverage Results" MODIFIED="1587297150158" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

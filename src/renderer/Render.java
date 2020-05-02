@@ -39,10 +39,10 @@ public class Render {
                         _scene.getDistance(), _imageWriter.getWidth(), _imageWriter.getHeight());
                 List<Point3D> intersectionPoints = _scene.getGeometries().findIntersections(ray);
                 if (intersectionPoints == null)
-                    _imageWriter.writePixel(j, i, _scene.getBackground());
+                    _imageWriter.writePixel(j, i, _scene.getBackground().getColor());
                 else {
                     Point3D closestPoint = getClosestPoint(intersectionPoints);
-                    _imageWriter.writePixel(j, i, calcColor(closestPoint));
+                    _imageWriter.writePixel(j, i, calcColor(closestPoint).getColor());
                 }
             }
     }
@@ -66,12 +66,12 @@ public class Render {
     private Point3D getClosestPoint(List<Point3D> points) {
         if (points == null)
             return null;
-        Point3D biggest = points.get(0);
+        Point3D smallest = points.get(0);
         for (int i = 1; i < points.size(); i++) {
-            if (points.get(i).distance(_scene.getCamera().get_p0()) > biggest.distance(_scene.getCamera().get_p0()))
-                biggest = points.get(i);
+            if (points.get(i).distance(_scene.getCamera().get_p0()) < smallest.distance(_scene.getCamera().get_p0()))
+                smallest = points.get(i);
         }
-        return biggest;
+        return smallest;
     }
 
     /**
@@ -84,7 +84,7 @@ public class Render {
         for (int i = 0; i < _imageWriter.getNy(); i++)
             for (int j = 0; j < _imageWriter.getNx(); j++) {
                 if (i % interval == 0 || j % interval == 0)
-                    _imageWriter.writePixel(j, i, new Color(color));
+                    _imageWriter.writePixel(j, i, color);
             }
     }
 

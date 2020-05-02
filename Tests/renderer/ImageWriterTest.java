@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
 
 public class ImageWriterTest {
     /**
-     * Test method for {@link renderer.ImageWriter#writePixel(int, int, primitives.Color)}
+     * Test method for {@link renderer.ImageWriter#writePixel(int, int, java.awt.Color)}
      */
     @Test
     public void writePixelTest() {
@@ -23,9 +23,9 @@ public class ImageWriterTest {
         for (int i = 0; i < 500; i++)
             for (int j = 0; j < 800; j++) {
                 if (i % 50 == 0 || j % 50 == 0)
-                    imageWriter.writePixel(j, i, new primitives.Color(Color.YELLOW));
+                    imageWriter.writePixel(j, i, Color.YELLOW);
                 else
-                    imageWriter.writePixel(j, i, new primitives.Color(Color.PINK));
+                    imageWriter.writePixel(j, i, Color.PINK);
             }
         imageWriter.writeToImage();
     }
