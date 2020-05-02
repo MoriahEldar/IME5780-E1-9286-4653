@@ -21,7 +21,9 @@ public class Point3D {
     /**
      * Point3D constructor receiving 3 coordinates
      *
-     * @param _x coordinate x, _y coordinate y, z coordinate z
+     * @param _x coordinate x
+     * @param _y coordinate y
+     * @param _z coordinate z
      */
     public Point3D(Coordinate _x, Coordinate _y, Coordinate _z) {
         this._x = new Coordinate(_x);
@@ -32,7 +34,9 @@ public class Point3D {
     /**
      * Point3D constructor receiving 3 coordinate values
      *
-     * @param _x coordinate x value, _y coordinate y value, _z coordinate z value
+     * @param _x coordinate x value
+     * @param _y coordinate y value
+     * @param _z coordinate z value
      */
     public Point3D(double _x, double _y, double _z) {
         this._x = new Coordinate(_x);

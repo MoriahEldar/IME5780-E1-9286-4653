@@ -24,7 +24,8 @@ public class Sphere extends RadialGeometry {
     /**
      * Sphere constructor receiving radius and a 3D point which is the center of the sphere
      *
-     * @param _radius double, _center the 3D point
+     * @param _radius double
+     * @param _center the 3D point
      */
     public Sphere(double _radius, Point3D _center) {
         super(_radius);

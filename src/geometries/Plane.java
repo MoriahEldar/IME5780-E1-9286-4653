@@ -22,7 +22,10 @@ public class Plane implements Geometry {
     /**
      * Vector constructor receiving 3 3D points in the plane
      *
-     * @param _p, _p1, _p2 are all points in the plane
+     * @param _p point in the plane (the point we will save as represents the plane)
+     * @param _p1 point in the plane
+     * @param _p2 point in the plane
+     * @throws IllegalArgumentException if the 3 points are on the same line
      */
     public Plane(Point3D _p, Point3D _p1, Point3D _p2) {
         this._p = new Point3D(_p);
@@ -37,7 +40,8 @@ public class Plane implements Geometry {
     /**
      * Vector constructor receiving a 3D point in the plane and a normal to the plane
      *
-     * @param _p the point and _normal a vector that is a _normal to the plane
+     * @param _p the point in the plane
+     * @param _normal a vector that is a normal to the plane
      */
     public Plane(Point3D _p, Vector _normal) {
         this._p = new Point3D(_p);
@@ -65,7 +69,7 @@ public class Plane implements Geometry {
     /**
      * gets a 3D point and determent's whether the point is on the plane or not
      *
-     * @param point, a 3D point
+     * @param point a 3D point
      * @return True if the point is on the plane, False if not.
      */
     public boolean isOnPlane(Point3D point) {

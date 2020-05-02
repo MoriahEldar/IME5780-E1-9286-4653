@@ -19,7 +19,8 @@ public class Ray {
     /**
      * Ray constructor receiving a start point and the direction
      *
-     * @param _startPoint and a direction vector
+     * @param _startPoint of the ray
+     * @param _direction vector of the ray
      */
     public Ray(Point3D _startPoint, Vector _direction) {
         this._startPoint = new Point3D(_startPoint);
@@ -29,7 +30,9 @@ public class Ray {
     /**
      * Ray constructor receiving a start point and a point on the ray
      *
-     * @param _startPoint and a point on the ray
+     * @param _startPoint a point that is the point we will save on the ray
+     * @param pointOnTheRay a different point on the ray
+     * @throws IllegalArgumentException if the points are the same point
      */
     public Ray(Point3D _startPoint, Point3D pointOnTheRay) {
         this._startPoint = new Point3D(_startPoint);
@@ -73,7 +76,7 @@ public class Ray {
     /**
      * Gets a scalar and returns the point on the ray according to the scalar (P0 + tv)
      *
-     * @param t, the scalar
+     * @param t the scalar
      * @return The point on the ray
      */
     public Point3D getPoint(double t) {

@@ -15,7 +15,10 @@ public class Vector {
     /**
      * Vector constructor receiving point coordinates
      *
-     * @param x point coordinate x, y point coordinate y, z point coordinate z
+     * @param x point coordinate x
+     * @param y point coordinate y
+     * @param z point coordinate z
+     * @throws IllegalArgumentException if the point from the coordinates is the ZERO point
      */
     public Vector(Coordinate x, Coordinate y, Coordinate z) {
         Point3D temp = new Point3D(x, y ,z);
@@ -27,7 +30,10 @@ public class Vector {
     /**
      * Vector constructor receiving point coordinates values
      *
-     * @param x point coordinate x value, y point coordinate y value, z point coordinate z value
+     * @param x point coordinate x value
+     * @param y point coordinate y value
+     * @param z point coordinate z value
+     * @throws IllegalArgumentException if the point from the coordinates value is the ZERO point
      */
     public Vector(double x, double y, double z) {
         Point3D temp = new Point3D(x, y ,z);
@@ -39,7 +45,8 @@ public class Vector {
     /**
      * Vector constructor receiving point
      *
-     * @param _point
+     * @param _point that is the vector point
+     * @throws IllegalArgumentException if the point is the ZERO point
      */
     public Vector(Point3D _point) {
         if(_point.equals(Point3D.ZERO))
@@ -78,7 +85,7 @@ public class Vector {
     /**
      * Makes a new vector that its point is the addition between the received vector point and this vector point
      *
-     * @param vec, the second vector
+     * @param vec the second vector
      * @return a new vector with the new point
      */
     public Vector add(Vector vec) {
@@ -88,7 +95,7 @@ public class Vector {
     /**
      * Multiplies the vector with a scalar
      *
-     * @param num, the scalar value
+     * @param num the scalar value
      * @return a new vector the is multiplied with the scale
      */
     public Vector scale(double num) {
@@ -98,7 +105,7 @@ public class Vector {
     /**
      * Does a dot product between a received vector and this vector
      *
-     * @param vec, the second vector
+     * @param vec the second vector
      * @return double, the value of the dot production between the vectors
      */
     public double dotProduct(Vector vec) {
@@ -110,7 +117,7 @@ public class Vector {
     /**
      * Does a cross product between a received vector and this vector
      *
-     * @param vec, the second vector
+     * @param vec the second vector
      * @return a new vector, which is the outcome of the cross production between the vectors
      */
     public Vector crossProduct(Vector vec) {

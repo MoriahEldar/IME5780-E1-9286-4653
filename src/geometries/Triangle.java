@@ -15,7 +15,9 @@ public class Triangle extends Polygon {
     /**
      * Triangle constructor receiving 3 3D points that are the vertices of the triangle
      *
-     * @param p1 point p1, p2 point p2, p3 point p3
+     * @param p1 point p1
+     * @param p2 point p2
+     * @param p3 point p3
      */
     public Triangle(Point3D p1, Point3D p2, Point3D p3) {
         super(p1, p2, p3);
