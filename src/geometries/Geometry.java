@@ -8,12 +8,63 @@ import primitives.*;
  * @author Moriah and Shahar
  */
 
-public interface Geometry extends Intersectable {
+public abstract class Geometry implements Intersectable {
+    /**
+     * The color of the geometry's shapes
+      */
+    protected Color _emission;
+    /**
+     * The material the the geometry is created from
+     */
+    protected Material _material;
+
+    /**
+     * Geometry constructor. Gets the shapes color and put it in _emission
+     * Sets material to new Material(0, 0, 0)
+     *
+     * @param _emission the color
+     */
+    public Geometry(Color _emission) {
+        this(_emission, new Material(0, 0, 0));
+    }
+
+    /**
+     * Geometry default constructor. Puts in _emission the color black. Puts in material new Material(0, 0, 0)
+     */
+    public Geometry() {
+        this(Color.BLACK, new Material(0, 0, 0));
+    }
+
+    /**
+     * Geometry constructor. Gets the shapes color and put it in _emission
+     * Gets shape material and puts it in _material
+     *
+     * @param _emission shapes color
+     * @param _material shapes material
+     */
+    public Geometry(Color _emission, Material _material) {
+        this._emission = new Color(_emission);
+        this._material = _material;
+    }
+
     /**
      * returns the normal (normalized) to the geometry shape in the given point
      *
-     * @param point
+     * @param point Point3D
      * @return vector that represent the normal (normalized)
      */
-    public Vector getNormal(Point3D point);
+    public abstract Vector getNormal(Point3D point);
+
+    /**
+     * _emission getter
+     *
+     * @return a new color with emission value
+     */
+    public Color get_emission() {
+        return new Color(_emission);
+    }
+
+    public Material get_material() {
+        return _material;
+    }
 }

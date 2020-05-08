@@ -1,8 +1,6 @@
 package geometries;
 
-import primitives.Point3D;
-import primitives.Ray;
-import primitives.Vector;
+import primitives.*;
 
 import java.util.List;
 
@@ -23,12 +21,40 @@ public class Tube extends RadialGeometry {
 
     /**
      * Tube constructor receiving radius and a Ray which is the center line of the sphere
+     * Sets tube's color (_emission) to black
+     * Sets the material to (0, 0, 0)
      *
      * @param _radius double
      * @param _axisRay the Ray
      */
     public Tube(double _radius, Ray _axisRay) {
-        super(_radius);
+        this(Color.BLACK, _radius, _axisRay);
+    }
+
+    /**
+     * Tube constructor receiving a color which is the tube's color, a radius and a Ray which is the center line of the sphere
+     * Sets the material to (0, 0, 0)
+     *
+     * @param _emission the color
+     * @param _radius double
+     * @param _axisRay the Ray
+     */
+    public Tube(Color _emission, double _radius, Ray _axisRay) {
+        this(_emission, new Material(0, 0, 0), _radius, _axisRay);
+    }
+
+    /**
+     * Tube constructor receiving a color which is the tube's color,
+     * a material which is the material that the tube is made from,
+     * a radius and a Ray which is the center line of the sphere
+     *
+     * @param _emission the color
+     * @param _material material, the tube material
+     * @param _radius double
+     * @param _axisRay the Ray
+     */
+    public Tube(Color _emission, Material _material, double _radius, Ray _axisRay) {
+        super(_emission, _material, _radius);
         this._axisRay = new Ray(_axisRay);
     }
 
@@ -50,7 +76,7 @@ public class Tube extends RadialGeometry {
     }
 
     @Override
-    public List<Point3D> findIntersections(Ray ray) {
+    public List<GeoPoint> findIntersections(Ray ray) {
         // ray: (a, b, c) + t(x, y, z)
         // _axisRay: (a1, b1, c1) + t1(x1, y1, z1)
         Point3D dots;
@@ -110,7 +136,7 @@ public class Tube extends RadialGeometry {
                 double t = alignZero((-c) / b);
                 if (t <= 0)
                     return null;
-                return List.of(ray.getPoint(t));
+                return List.of(new GeoPoint(this, ray.getPoint(t)));
             }
         }
         // Whats under the sqrt in the quadratic equation
@@ -121,18 +147,18 @@ public class Tube extends RadialGeometry {
             double t = alignZero((-b) / (2 * a));
             if (t <= 0)
                 return null;
-            return List.of(ray.getPoint(t));
+            return List.of(new GeoPoint(this, ray.getPoint(t)));
         }
         double t_1 = alignZero((-b + Math.sqrt(det)) / (2 * a));
         double t_2 = alignZero((-b - Math.sqrt(det)) / (2 * a));
         if (t_1 <= 0) {
             if (t_2 <= 0)
                 return null;
-            return List.of(ray.getPoint(t_2));
+            return List.of(new GeoPoint(this, ray.getPoint(t_2)));
         }
         if (t_2 <= 0)
-            return List.of(ray.getPoint(t_1));
-        return List.of(ray.getPoint(t_1), ray.getPoint(t_2));
+            return List.of(new GeoPoint(this, ray.getPoint(t_1)));
+        return List.of(new GeoPoint(this, ray.getPoint(t_1)), new GeoPoint(this, ray.getPoint(t_2)));
     }
 
     @Override

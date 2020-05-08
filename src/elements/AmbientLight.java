@@ -9,28 +9,15 @@ import primitives.Color;
  * @author Moriah and Shahar
  */
 
-public class AmbientLight {
-    /**
-     * The color of the environment
-     */
-    Color _intensity;
+public class AmbientLight extends Light{
 
     /**
-     * Ambientlight constructed. Calculates the _intensity according to _kA * _IA
+     * Ambientlight constructor. Calculates the _intensity according to _kA * _IA
      *
      * @param _IA The color
      * @param _kA Fixed attenuation (Because of the distance)
      */
     public AmbientLight(Color _IA, double _kA) {
-        this._intensity = _IA.scale(_kA);
-    }
-
-    /**
-     * Getter function for _intensity
-     *
-     * @return A copy of the _intensity color
-     */
-    public Color getIntensity() {
-        return new Color(_intensity);
+        super( _IA.scale(_kA));
     }
 }

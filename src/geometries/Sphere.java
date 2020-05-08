@@ -1,8 +1,6 @@
 package geometries;
 
-import primitives.Point3D;
-import primitives.Ray;
-import primitives.Vector;
+import primitives.*;
 
 import java.util.List;
 
@@ -23,12 +21,41 @@ public class Sphere extends RadialGeometry {
 
     /**
      * Sphere constructor receiving radius and a 3D point which is the center of the sphere
+     * Sets sphere's color (_emission) to black
+     * Sets the material to (0, 0, 0)
      *
      * @param _radius double
      * @param _center the 3D point
      */
     public Sphere(double _radius, Point3D _center) {
-        super(_radius);
+        this(Color.BLACK, _radius, _center);
+    }
+
+    /**
+     * Sphere constructor receiving a color which is the sphere's color,
+     * a radius and a 3D point which is the center of the sphere
+     * Sets the material to (0, 0, 0)
+     *
+     * @param _emission the color
+     * @param _radius double
+     * @param _center the 3D point
+     */
+    public Sphere(Color _emission, double _radius, Point3D _center) {
+        this(_emission, new Material(0, 0, 0), _radius, _center);
+    }
+
+    /**
+     * Sphere constructor receiving a color which is the sphere's color,
+     * a material which is the material that the sphere is made from,
+     * a radius and a 3D point which is the center of the sphere
+     *
+     * @param _emission the color
+     * @param _material material, the sphere material
+     * @param _radius double
+     * @param _center the 3D point
+     */
+    public Sphere(Color _emission, Material _material, double _radius, Point3D _center) {
+        super(_emission, _material, _radius);
         this._center = new Point3D(_center);
     }
 
@@ -56,13 +83,13 @@ public class Sphere extends RadialGeometry {
     }
 
     @Override
-    public List<Point3D> findIntersections(Ray ray) {
+    public List<GeoPoint> findIntersections(Ray ray) {
         Vector u;
         try {
             u = _center.subtract(ray.get_startPoint());
         }
         catch (IllegalArgumentException e) {
-            return List.of(ray.getPoint(_radius));
+            return List.of(new GeoPoint(this, ray.getPoint(_radius)));
         }
         double tm = alignZero(ray.get_direction().dotProduct(u));
         double d = alignZero(Math.sqrt(u.lengthSquared() - tm * tm));
@@ -73,12 +100,12 @@ public class Sphere extends RadialGeometry {
             if (tm + th <= 0)
                 return null;
             else
-                return List.of(ray.getPoint(tm + th));
+                return List.of(new GeoPoint(this, ray.getPoint(tm + th)));
         }
         if (tm + th <= 0)
-            return List.of(ray.getPoint(tm - th));
+            return List.of(new GeoPoint(this, ray.getPoint(tm - th)));
         if (th == 0)
-            return List.of(ray.getPoint(tm));
-        return List.of(ray.getPoint(tm + th), ray.getPoint(tm - th));
+            return List.of(new GeoPoint(this, ray.getPoint(tm)));
+        return List.of(new GeoPoint(this, ray.getPoint(tm + th)), new GeoPoint(this, ray.getPoint(tm - th)));
     }
 }

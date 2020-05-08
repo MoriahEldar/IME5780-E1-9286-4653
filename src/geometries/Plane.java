@@ -12,7 +12,7 @@ import static primitives.Util.isZero;
  * @author Moriah and Shahar
  */
 
-public class Plane implements Geometry {
+public class Plane extends Geometry {
     /**
      * The plane is represented by a 3D point in the plane and a normal (normalized) to the plane
      */
@@ -20,14 +20,18 @@ public class Plane implements Geometry {
     Vector _normal;
 
     /**
-     * Vector constructor receiving 3 3D points in the plane
+     * Plane constructor receiving a color which is the plane's color,
+     * a material which is the material that the plane is made from, and 3 3D points in the plane
      *
+     * @param _emission the color of the plane
+     * @param _material the material the plane is made of
      * @param _p point in the plane (the point we will save as represents the plane)
      * @param _p1 point in the plane
      * @param _p2 point in the plane
      * @throws IllegalArgumentException if the 3 points are on the same line
      */
-    public Plane(Point3D _p, Point3D _p1, Point3D _p2) {
+    public Plane(Color _emission, Material _material, Point3D _p, Point3D _p1, Point3D _p2) {
+        super(_emission, _material);
         this._p = new Point3D(_p);
         // Calculating the normal
         Vector v1 = _p.subtract(_p1).normalize();
@@ -38,14 +42,70 @@ public class Plane implements Geometry {
     }
 
     /**
-     * Vector constructor receiving a 3D point in the plane and a normal to the plane
+     * Plane constructor receiving a color which is the plane's color, and 3 3D points in the plane
+     * Sets the material to (0, 0, 0)
+     *
+     * @param _emission the color of the plane
+     * @param _p point in the plane (the point we will save as represents the plane)
+     * @param _p1 point in the plane
+     * @param _p2 point in the plane
+     * @throws IllegalArgumentException if the 3 points are on the same line
+     */
+    public Plane(Color _emission, Point3D _p, Point3D _p1, Point3D _p2) {
+        this(Color.BLACK, new Material(0, 0, 0), _p, _p1, _p2);
+    }
+
+    /**
+     * Plane constructor receiving 3 3D points in the plane
+     * Sets plane's color (_emission) to black
+     * Sets the material to (0, 0, 0)
+     *
+     * @param _p point in the plane (the point we will save as represents the plane)
+     * @param _p1 point in the plane
+     * @param _p2 point in the plane
+     * @throws IllegalArgumentException if the 3 points are on the same line
+     */
+    public Plane(Point3D _p, Point3D _p1, Point3D _p2) {
+        this(Color.BLACK, _p, _p1, _p2);
+    }
+
+    /**
+     * Plane constructor receiving a color which is the plane's color,
+     * a material which is the material that the plane is made from,
+     * 3D point in the plane, and a normal to the plane
+     *
+     * @param _emission the plane color
+     * @param _material the material the plane is made of
+     * @param _p the point in the plane
+     * @param _normal a vector that is a normal to the plane
+     */
+    public Plane(Color _emission, Material _material, Point3D _p, Vector _normal) {
+        super(_emission, _material);
+        this._p = new Point3D(_p);
+        this._normal = new Vector(_normal.normalize());
+    }
+
+    /**
+     * Plane constructor receiving a color which is the plane's color, 3D point in the plane, and a normal to the plane
+     * Sets the material to (0, 0, 0)
+     *
+     * @param _emission the plane color
+     * @param _p the point in the plane
+     * @param _normal a vector that is a normal to the plane
+     */
+    public Plane(Color _emission, Point3D _p, Vector _normal) {
+        this(_emission, new Material(0, 0, 0), _p, _normal);
+    }
+
+    /**
+     * Plane constructor receiving a 3D point in the plane, and a normal to the plane
+     * Sets plane's color (_emission) to black. Sets the material to (0, 0, 0)
      *
      * @param _p the point in the plane
      * @param _normal a vector that is a normal to the plane
      */
     public Plane(Point3D _p, Vector _normal) {
-        this._p = new Point3D(_p);
-        this._normal = new Vector(_normal.normalize());
+        this(Color.BLACK, _p, _normal);
     }
 
     /**
@@ -105,7 +165,7 @@ public class Plane implements Geometry {
     }
 
     @Override
-    public List<Point3D> findIntersections(Ray ray) {
+    public List<GeoPoint> findIntersections(Ray ray) {
         double denominator = _normal.dotProduct(ray.get_direction());
         // If ray is parallel to the plane
         if (isZero(denominator))
@@ -114,7 +174,7 @@ public class Plane implements Geometry {
             double t = _normal.dotProduct(_p.subtract(ray.get_startPoint())) / denominator;
             if (t <= 0)
                 return null;
-            return List.of(ray.getPoint(t));
+            return List.of(new GeoPoint(this, ray.getPoint(t)));
         }
         catch (IllegalArgumentException e) {
             // _p is the same point as ray.get_startPoint()

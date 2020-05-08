@@ -11,8 +11,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="Interface" />
         <option value="JUnit4 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -53,7 +53,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RenderTest.getClosestPoint">
+  <component name="RunManager" selected="JUnit.LightsTests.trianglesPoint">
     <configuration name="All in IME5780-E1-9286-4653" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IME5780-E1-9286-4653" />
       <option name="PACKAGE_NAME" value="" />
@@ -62,64 +62,65 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ImageWriterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LightsTests.sphereAllLights" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IME5780-E1-9286-4653" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="renderer.*" />
+          <option name="PATTERN" value="elements.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="renderer" />
-      <option name="MAIN_CLASS_NAME" value="renderer.ImageWriterTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ImageWriterTest.imageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="IME5780-E1-9286-4653" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="renderer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="renderer" />
-      <option name="MAIN_CLASS_NAME" value="renderer.ImageWriterTest" />
-      <option name="METHOD_NAME" value="imageTest" />
+      <option name="PACKAGE_NAME" value="elements" />
+      <option name="MAIN_CLASS_NAME" value="elements.LightsTests" />
+      <option name="METHOD_NAME" value="sphereAllLights" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RenderTest.basicRenderTwoColorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LightsTests.trianglesAllLights" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IME5780-E1-9286-4653" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="renderer.*" />
+          <option name="PATTERN" value="elements.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="renderer" />
-      <option name="MAIN_CLASS_NAME" value="renderer.RenderTest" />
-      <option name="METHOD_NAME" value="basicRenderTwoColorTest" />
+      <option name="PACKAGE_NAME" value="elements" />
+      <option name="MAIN_CLASS_NAME" value="elements.LightsTests" />
+      <option name="METHOD_NAME" value="trianglesAllLights" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RenderTest.getClosestPoint" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LightsTests.trianglesPoint" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IME5780-E1-9286-4653" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="renderer.*" />
+          <option name="PATTERN" value="elements.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="renderer" />
-      <option name="MAIN_CLASS_NAME" value="renderer.RenderTest" />
-      <option name="METHOD_NAME" value="getClosestPoint" />
+      <option name="PACKAGE_NAME" value="elements" />
+      <option name="MAIN_CLASS_NAME" value="elements.LightsTests" />
+      <option name="METHOD_NAME" value="trianglesPoint" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LightsTests.trianglesSpot" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="IME5780-E1-9286-4653" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="elements.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="elements" />
+      <option name="MAIN_CLASS_NAME" value="elements.LightsTests" />
+      <option name="METHOD_NAME" value="trianglesSpot" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -127,11 +128,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RenderTest.getClosestPoint" />
-        <item itemvalue="JUnit.RenderTest.basicRenderTwoColorTest" />
-        <item itemvalue="JUnit.ImageWriterTest.imageTest" />
-        <item itemvalue="JUnit.ImageWriterTest" />
+        <item itemvalue="JUnit.LightsTests.trianglesPoint" />
         <item itemvalue="JUnit.All in IME5780-E1-9286-4653" />
+        <item itemvalue="JUnit.LightsTests.sphereAllLights" />
+        <item itemvalue="JUnit.LightsTests.trianglesAllLights" />
+        <item itemvalue="JUnit.LightsTests.trianglesSpot" />
       </list>
     </recent_temporary>
   </component>
@@ -157,6 +158,10 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="233" y="4" key="#Inspections/0.0.1280.690@0.0.1280.690" timestamp="1587907290988" />
+    <state x="236" y="12" key="#LightsTests" timestamp="1588868937512">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="236" y="12" key="#LightsTests/0.0.1280.690@0.0.1280.690" timestamp="1588868937512" />
     <state x="233" y="4" key="#Notifications" timestamp="1585680147028">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
@@ -173,18 +178,18 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="93" y="93" width="1093" height="503" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1280.690@0.0.1280.690" timestamp="1587306338200" />
-    <state x="447" y="72" key="#com.intellij.ide.util.MemberChooser" timestamp="1588287381530">
+    <state x="447" y="72" key="#com.intellij.ide.util.MemberChooser" timestamp="1588882624196">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="447" y="72" key="#com.intellij.ide.util.MemberChooser/0.0.1280.690@0.0.1280.690" timestamp="1588287381530" />
-    <state x="435" y="205" width="408" height="286" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1587319843213">
+    <state x="447" y="72" key="#com.intellij.ide.util.MemberChooser/0.0.1280.690@0.0.1280.690" timestamp="1588882624196" />
+    <state x="435" y="205" width="408" height="286" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1588859023194">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="435" y="205" width="408" height="286" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.690@0.0.1280.690" timestamp="1587319843213" />
-    <state x="33" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1587909470772">
+    <state x="435" y="205" width="408" height="286" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.690@0.0.1280.690" timestamp="1588859023194" />
+    <state x="33" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1588890002872">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="33" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.690@0.0.1280.690" timestamp="1587909470772" />
+    <state x="33" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.690@0.0.1280.690" timestamp="1588890002872" />
     <state x="422" y="101" key="FileChooserDialogImpl" timestamp="1585680529000">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
@@ -193,38 +198,38 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="483" y="249" key="Github.ShareDialog/0.0.1280.690@0.0.1280.690" timestamp="1585152230517" />
-    <state width="1238" height="147" key="GridCell.Tab.0.bottom" timestamp="1588443300272">
+    <state width="1238" height="147" key="GridCell.Tab.0.bottom" timestamp="1588899925366">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="147" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1588443300272" />
-    <state width="1238" height="147" key="GridCell.Tab.0.center" timestamp="1588443300272">
+    <state width="1238" height="147" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1588899925366" />
+    <state width="1238" height="147" key="GridCell.Tab.0.center" timestamp="1588899925366">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="147" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1588443300272" />
-    <state width="1238" height="147" key="GridCell.Tab.0.left" timestamp="1588443300271">
+    <state width="1238" height="147" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1588899925366" />
+    <state width="1238" height="147" key="GridCell.Tab.0.left" timestamp="1588899925366">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="147" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1588443300271" />
-    <state width="1238" height="147" key="GridCell.Tab.0.right" timestamp="1588443300272">
+    <state width="1238" height="147" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1588899925366" />
+    <state width="1238" height="147" key="GridCell.Tab.0.right" timestamp="1588899925366">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="147" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1588443300272" />
-    <state width="1238" height="187" key="GridCell.Tab.1.bottom" timestamp="1588288517351">
+    <state width="1238" height="147" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1588899925366" />
+    <state width="1238" height="187" key="GridCell.Tab.1.bottom" timestamp="1588898330439">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="187" key="GridCell.Tab.1.bottom/0.0.1280.690@0.0.1280.690" timestamp="1588288517351" />
-    <state width="1238" height="187" key="GridCell.Tab.1.center" timestamp="1588288517349">
+    <state width="1238" height="187" key="GridCell.Tab.1.bottom/0.0.1280.690@0.0.1280.690" timestamp="1588898330439" />
+    <state width="1238" height="187" key="GridCell.Tab.1.center" timestamp="1588898330439">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="187" key="GridCell.Tab.1.center/0.0.1280.690@0.0.1280.690" timestamp="1588288517349" />
-    <state width="1238" height="187" key="GridCell.Tab.1.left" timestamp="1588288517349">
+    <state width="1238" height="187" key="GridCell.Tab.1.center/0.0.1280.690@0.0.1280.690" timestamp="1588898330439" />
+    <state width="1238" height="187" key="GridCell.Tab.1.left" timestamp="1588898330439">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="187" key="GridCell.Tab.1.left/0.0.1280.690@0.0.1280.690" timestamp="1588288517349" />
-    <state width="1238" height="187" key="GridCell.Tab.1.right" timestamp="1588288517350">
+    <state width="1238" height="187" key="GridCell.Tab.1.left/0.0.1280.690@0.0.1280.690" timestamp="1588898330439" />
+    <state width="1238" height="187" key="GridCell.Tab.1.right" timestamp="1588898330439">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="187" key="GridCell.Tab.1.right/0.0.1280.690@0.0.1280.690" timestamp="1588288517350" />
+    <state width="1238" height="187" key="GridCell.Tab.1.right/0.0.1280.690@0.0.1280.690" timestamp="1588898330439" />
     <state x="143" y="0" key="SettingsEditor" timestamp="1585680535766">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
@@ -249,14 +254,14 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="493" y="0" width="744" height="690" key="find.popup/0.0.1280.690@0.0.1280.690" timestamp="1585842671140" />
-    <state x="347" y="0" key="refactoring.ChangeSignatureDialog" timestamp="1588288483650">
+    <state x="347" y="0" key="refactoring.ChangeSignatureDialog" timestamp="1588884551426">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="347" y="0" key="refactoring.ChangeSignatureDialog/0.0.1280.690@0.0.1280.690" timestamp="1588288483650" />
-    <state x="301" y="157" key="run.anything.popup" timestamp="1588288500040">
+    <state x="347" y="0" key="refactoring.ChangeSignatureDialog/0.0.1280.690@0.0.1280.690" timestamp="1588884551425" />
+    <state x="303" y="159" key="run.anything.popup" timestamp="1588879310802">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="301" y="157" key="run.anything.popup/0.0.1280.690@0.0.1280.690" timestamp="1588288500040" />
+    <state x="303" y="159" key="run.anything.popup/0.0.1280.690@0.0.1280.690" timestamp="1588879310802" />
     <state x="307" y="15" width="672" height="678" key="search.everywhere.popup" timestamp="1588443564513">
       <screen x="0" y="0" width="1280" height="690" />
     </state>

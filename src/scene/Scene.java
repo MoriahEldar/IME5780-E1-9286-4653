@@ -4,6 +4,10 @@ import elements.*;
 import geometries.*;
 import primitives.*;
 
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * Scene class represents the whole scene that is making the picture - The camera and the picture arguments
  * system
@@ -24,15 +28,19 @@ public class Scene {
     Camera _camera;
     // The distance from the camera to the view plane
     double _distance;
+    // All the light sources in the scene
+    List<LightSource> _lights;
 
     /**
      * Scene constructor. Sets the name of the scene with a given name, and resets the geometries to an empty list
+     * Resets the _lights list
      *
      * @param _name the scenes name
      */
     public Scene(String _name) {
         this._name = _name;
         this._geometries = new Geometries();
+        this._lights = new LinkedList<LightSource>();
     }
 
     /**
@@ -90,6 +98,15 @@ public class Scene {
     }
 
     /**
+     * _lights getter
+     *
+     * @return a list of all the light sources in the scene.
+     */
+    public List<LightSource> getLights() {
+        return _lights;
+    }
+
+    /**
      * _background Setter
      *
      * @param _background the background color of the scene (an Color type variable)
@@ -132,5 +149,14 @@ public class Scene {
      */
     public void addGeometries(Intersectable... geometries) {
         this._geometries.add(geometries);
+    }
+
+    /**
+     * Adds light sources to the scene (to _lights list)
+     *
+     * @param lights a list of the new light sources to add
+     */
+    public void addLights(LightSource... lights) {
+        this._lights.addAll(Arrays.asList(lights));
     }
 }

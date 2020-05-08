@@ -63,7 +63,7 @@ public class PlaneTest {
         // ============ Equivalence Partitions Tests ==============
 
         // TC01: Ray intersects the plane
-        assertEquals("Plane: findIntersections() wrong when ray intersects the plane", List.of(new Point3D(0, 1, 0)),
+        assertEquals("Plane: findIntersections() wrong when ray intersects the plane", List.of(new Intersectable.GeoPoint(plane, new Point3D(0, 1, 0))),
                 thisPlane.findIntersections(new Ray(new Point3D(0, 0, -1), new Vector(0, 1, 1))));
 
         // TC02: Ray does not intersect the plane
@@ -82,7 +82,7 @@ public class PlaneTest {
 
         // **** Group: Ray is orthogonal to the plane
         // TC13: Ray starts before the plane
-        assertEquals("Plane: findIntersections() wrong when ray is orthogonal and starts before the plane", List.of(new Point3D(0, 1, 0)),
+        assertEquals("Plane: findIntersections() wrong when ray is orthogonal and starts before the plane", List.of(new Intersectable.GeoPoint(plane, new Point3D(0, 1, 0))),
                 thisPlane.findIntersections(new Ray(new Point3D(0, 1, -1), new Vector(0, 0, 1))));
         // TC14: Ray starts at the plane
         assertEquals("Plane: findIntersections() wrong when ray is orthogonal and starts at the plane", null,

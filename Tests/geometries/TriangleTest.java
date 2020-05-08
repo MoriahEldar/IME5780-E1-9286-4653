@@ -35,7 +35,7 @@ public class TriangleTest {
         // ============ Equivalence Partitions Tests ==============
 
         // TC01: ray intersects with the triangle
-        assertEquals("Ray does not intersects with the triangle correctly", List.of(new Point3D(0.25, 0.25, 0.5)),
+        assertEquals("Ray does not intersects with the triangle correctly", List.of(new Intersectable.GeoPoint(tr, new Point3D(0.25, 0.25, 0.5))),
                 tr.findIntersections(new Ray(new Point3D(0, 1, 2), new Vector(0.25, -0.75, -1.5))));
         // TC02: ray intersects with the plane outside the triangle against edge
         assertEquals("Wrong when ray intersects with the plane outside the triangle against edge", null,

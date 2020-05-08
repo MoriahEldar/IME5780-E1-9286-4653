@@ -110,7 +110,7 @@ public class PolygonTest {
         // ============ Equivalence Partitions Tests ==============
 
         // TC01: ray intersects with the polygon
-        assertEquals("Ray does not intersects with the polygon correctly", List.of(new Point3D(0, 0.5, 0.5)),
+        assertEquals("Ray does not intersects with the polygon correctly", List.of(new Intersectable.GeoPoint(pl, new Point3D(0, 0.5, 0.5))),
                 pl.findIntersections(new Ray(new Point3D(0, 1, 2), new Vector(0, -0.5, -1.5))));
         // TC02: ray intersects with the plane outside the polygon against edge
         assertEquals("Wrong when ray intersects with the plane outside the polygon against edge", null,

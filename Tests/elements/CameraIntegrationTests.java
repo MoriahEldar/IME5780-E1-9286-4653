@@ -1,5 +1,6 @@
 package elements;
 
+import geometries.Intersectable.GeoPoint;
 import geometries.Plane;
 import geometries.Sphere;
 import geometries.Triangle;
@@ -28,7 +29,7 @@ public class CameraIntegrationTests {
         int count = 0;
         for (int i = 0; i < 3; i++)
             for (int j = 0; j < 3; j++) {
-                List<Point3D> intersections = sphere.findIntersections(camera.constructRayThroughPixel(3, 3, j, i, 1, 3, 3));
+                List<GeoPoint> intersections = sphere.findIntersections(camera.constructRayThroughPixel(3, 3, j, i, 1, 3, 3));
                 if (intersections != null)
                     count += intersections.size();
             }
@@ -39,7 +40,7 @@ public class CameraIntegrationTests {
         count = 0;
         for (int i = 0; i < 3; i++)
             for (int j = 0; j < 3; j++) {
-                List<Point3D> intersections = sphere.findIntersections(camera.constructRayThroughPixel(3, 3, j, i, 1, 3, 3));
+                List<GeoPoint> intersections = sphere.findIntersections(camera.constructRayThroughPixel(3, 3, j, i, 1, 3, 3));
                 if (intersections != null)
                     count += intersections.size();
             }
@@ -49,7 +50,7 @@ public class CameraIntegrationTests {
         count = 0;
         for (int i = 0; i < 3; i++)
             for (int j = 0; j < 3; j++) {
-                List<Point3D> intersections = sphere.findIntersections(camera.constructRayThroughPixel(3, 3, j, i, 1, 3, 3));
+                List<GeoPoint> intersections = sphere.findIntersections(camera.constructRayThroughPixel(3, 3, j, i, 1, 3, 3));
                 if (intersections != null)
                     count += intersections.size();
             }
@@ -59,7 +60,7 @@ public class CameraIntegrationTests {
         count = 0;
         for (int i = 0; i < 3; i++)
             for (int j = 0; j < 3; j++) {
-                List<Point3D> intersections = sphere.findIntersections(camera.constructRayThroughPixel(3, 3, j, i, 1, 3, 3));
+                List<GeoPoint> intersections = sphere.findIntersections(camera.constructRayThroughPixel(3, 3, j, i, 1, 3, 3));
                 if (intersections != null)
                     count += intersections.size();
             }
@@ -70,7 +71,7 @@ public class CameraIntegrationTests {
         count = 0;
         for (int i = 0; i < 3; i++)
             for (int j = 0; j < 3; j++) {
-                List<Point3D> intersections = sphere.findIntersections(camera.constructRayThroughPixel(3, 3, j, i, 1, 3, 3));
+                List<GeoPoint> intersections = sphere.findIntersections(camera.constructRayThroughPixel(3, 3, j, i, 1, 3, 3));
                 if (intersections != null)
                     count += intersections.size();
             }
@@ -89,7 +90,7 @@ public class CameraIntegrationTests {
         int count = 0;
         for (int i = 0; i < 3; i++)
             for (int j = 0; j < 3; j++) {
-                List<Point3D> intersections = plane.findIntersections(camera.constructRayThroughPixel(3, 3, j, i, 1, 3, 3));
+                List<GeoPoint> intersections = plane.findIntersections(camera.constructRayThroughPixel(3, 3, j, i, 1, 3, 3));
                 if (intersections != null)
                     count += intersections.size();
             }
@@ -99,7 +100,7 @@ public class CameraIntegrationTests {
         count = 0;
         for (int i = 0; i < 3; i++)
             for (int j = 0; j < 3; j++) {
-                List<Point3D> intersections = plane.findIntersections(camera.constructRayThroughPixel(3, 3, j, i, 1, 3, 3));
+                List<GeoPoint> intersections = plane.findIntersections(camera.constructRayThroughPixel(3, 3, j, i, 1, 3, 3));
                 if (intersections != null)
                     count += intersections.size();
             }
@@ -111,7 +112,7 @@ public class CameraIntegrationTests {
         count = 0;
         for (int i = 0; i < 3; i++)
             for (int j = 0; j < 3; j++) {
-                List<Point3D> intersections = plane.findIntersections(camera.constructRayThroughPixel(3, 3, j, i, 1, 3, 3));
+                List<GeoPoint> intersections = plane.findIntersections(camera.constructRayThroughPixel(3, 3, j, i, 1, 3, 3));
                 if (intersections != null)
                     count += intersections.size();
             }
@@ -121,7 +122,7 @@ public class CameraIntegrationTests {
         count = 0;
         for (int i = 0; i < 3; i++)
             for (int j = 0; j < 3; j++) {
-                List<Point3D> intersections = plane.findIntersections(camera.constructRayThroughPixel(3, 3, j, i, 1, 3, 3));
+                List<GeoPoint> intersections = plane.findIntersections(camera.constructRayThroughPixel(3, 3, j, i, 1, 3, 3));
                 if (intersections != null)
                     count += intersections.size();
             }
@@ -140,7 +141,7 @@ public class CameraIntegrationTests {
         int count = 0;
         for (int i = 0; i < 3; i++)
             for (int j = 0; j < 3; j++) {
-                List<Point3D> intersections = triangle.findIntersections(camera.constructRayThroughPixel(3, 3, j, i, 1, 3, 3));
+                List<GeoPoint> intersections = triangle.findIntersections(camera.constructRayThroughPixel(3, 3, j, i, 1, 3, 3));
                 if (intersections != null)
                     count += intersections.size();
             }
@@ -150,7 +151,7 @@ public class CameraIntegrationTests {
         count = 0;
         for (int i = 0; i < 3; i++)
             for (int j = 0; j < 3; j++) {
-                List<Point3D> intersections = triangle.findIntersections(camera.constructRayThroughPixel(3, 3, j, i, 1, 3, 3));
+                List<GeoPoint> intersections = triangle.findIntersections(camera.constructRayThroughPixel(3, 3, j, i, 1, 3, 3));
                 if (intersections != null)
                     count += intersections.size();
             }

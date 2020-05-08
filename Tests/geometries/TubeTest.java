@@ -37,15 +37,15 @@ public class TubeTest {
         // TC02: Ray starts before and crosses the tube (2 points)
         Point3D p1 = new Point3D(0.2587520733765, -0.6712313396113, 1.552512440259);
         Point3D p2 = new Point3D(0.4241747558918, 0.8175728030259, 2.545048535351);
-        List<Point3D> result = tube.findIntersections(new Ray(new Point3D(0, -3, 0),
+        List<Intersectable.GeoPoint> result = tube.findIntersections(new Ray(new Point3D(0, -3, 0),
                 new Vector(0.3, 2.7, 1.8)));
         assertEquals("Wrong number of points", 2, result.size());
-        if (result.get(0).get_x().get() > result.get(1).get_x().get())
+        if (result.get(0).point.get_x().get() > result.get(1).point.get_x().get())
             result = List.of(result.get(1), result.get(0));
-        assertEquals("Ray crosses tube wrong", List.of(p1, p2), result);
+        assertEquals("Ray crosses tube wrong", List.of(new Intersectable.GeoPoint(tube, p1), new Intersectable.GeoPoint(tube, p2)), result);
 
         // TC03: Ray starts inside the tube (1 point)
-        assertEquals("Not good when ray starts inside the tube", List.of(new Point3D(0.4241747558918, 0.8175728030259, 2.545048535351)),
+        assertEquals("Not good when ray starts inside the tube", List.of(new Intersectable.GeoPoint(tube, new Point3D(0.4241747558918, 0.8175728030259, 2.545048535351))),
                 tube.findIntersections(new Ray(new Point3D(0.3, -0.3, 1.8), new Vector(0.3, 2.7, 1.8))));
 
         // TC04: Ray starts after the tube (0 points)
@@ -56,7 +56,7 @@ public class TubeTest {
 
         // **** Group: Ray's line crosses the tube (but not the center)
         // TC11: Ray starts at tube and goes inside (1 points)
-        assertEquals("Not good when ray starts at the tube", List.of(new Point3D(0.4241747558918, 0.8175728030259, 2.545048535351)),
+        assertEquals("Not good when ray starts at the tube", List.of(new Intersectable.GeoPoint(tube, new Point3D(0.4241747558918, 0.8175728030259, 2.545048535351))),
                 tube.findIntersections(new Ray(new Point3D(0.2587520733765, -0.6712313396113, 1.552512440259), new Vector(0.3, 2.7, 1.8))));
         // TC12: Ray starts at tube and goes outside (0 points)
         assertEquals("Not good when ray starts at the tube and outside", null,
@@ -69,17 +69,17 @@ public class TubeTest {
         result = tube.findIntersections(new Ray(new Point3D(1, -3, -1),
                 new Vector(0, 3, 1)));
         assertEquals("Wrong number of points when through the center", 2, result.size());
-        if (result.get(0).get_y().get() > result.get(1).get_y().get())
+        if (result.get(0).point.get_y().get() > result.get(1).point.get_y().get())
             result = List.of(result.get(1), result.get(0));
-        assertEquals("Ray crosses tube wrong when through the center", List.of(p1, p2), result);
+        assertEquals("Ray crosses tube wrong when through the center", List.of(new Intersectable.GeoPoint(tube, p1), new Intersectable.GeoPoint(tube,  p2)), result);
         // TC14: Ray starts at tube and goes inside (1 points)
-        assertEquals("Not good when ray starts at the tube throw center", List.of(new Point3D(1, 1,1.0/3)),
+        assertEquals("Not good when ray starts at the tube throw center", List.of(new Intersectable.GeoPoint(tube, new Point3D(1, 1,1.0/3))),
                 tube.findIntersections(new Ray(new Point3D(1, -1, -1.0/3), new Vector(0, 3, 1))));
         // TC15: Ray starts inside (1 points)
-        assertEquals("Not good when ray starts inside the sphere throw center", List.of(new Point3D(1, 1, 1.0/3)),
+        assertEquals("Not good when ray starts inside the sphere throw center", List.of(new Intersectable.GeoPoint(tube, new Point3D(1, 1, 1.0/3))),
                 tube.findIntersections(new Ray(new Point3D(1, -2.0/3, -2.0/9), new Vector(0, 3, 1))));
         // TC16: Ray starts at the center (1 points)
-        assertEquals("Not good when ray starts on the center", List.of(new Point3D(1, 1, 1.0/3)),
+        assertEquals("Not good when ray starts on the center", List.of(new Intersectable.GeoPoint(tube, new Point3D(1, 1, 1.0/3))),
                 tube.findIntersections(new Ray(new Point3D(1, 0, 0), new Vector(0, 3, 1))));
         // TC17: Ray starts at tube and goes outside (0 points)
         assertEquals("Not good when ray starts at the tube and outside, center direction", null,
@@ -126,21 +126,20 @@ public class TubeTest {
         result = tube.findIntersections(new Ray(new Point3D(0.5, -2, 0),
                 new Vector(0, 1, 0)));
         assertEquals("Wrong number of points when orthogonal", 2, result.size());
-        if (result.get(0).get_y().get() > result.get(1).get_y().get())
+        if (result.get(0).point.get_y().get() > result.get(1).point.get_y().get())
             result = List.of(result.get(1), result.get(0));
-        assertEquals("Ray crosses tube wrong when orthogonal", List.of(p1, p2), result);
+        assertEquals("Ray crosses tube wrong when orthogonal", List.of(new Intersectable.GeoPoint(tube, p1), new Intersectable.GeoPoint(tube, p2)), result);
         // TC29: Ray has 2 intersections throw middle point
         p1 = new Point3D(1, -1, 0);
         p2 = new Point3D(1, 1, 0);
         result = tube.findIntersections(new Ray(new Point3D(1, -2, 0),
                 new Vector(0, 1, 0)));
         assertEquals("Wrong number of points when orthogonal throw middle", 2, result.size());
-        if (result.get(0).get_y().get() > result.get(1).get_y().get())
+        if (result.get(0).point.get_y().get() > result.get(1).point.get_y().get())
             result = List.of(result.get(1), result.get(0));
-        assertEquals("Ray crosses tube wrong when orthogonal throw middle", List.of(p1, p2), result);
+        assertEquals("Ray crosses tube wrong when orthogonal throw middle", List.of(new Intersectable.GeoPoint(tube, p1), new Intersectable.GeoPoint(tube, p2)), result);
         // TC30: Ray starts inside
-        assertEquals("Not good when ray is orthogonal inside middle point", List.of(new Point3D(1, 1, 0)),
+        assertEquals("Not good when ray is orthogonal inside middle point", List.of(new Intersectable.GeoPoint(tube, new Point3D(1, 1, 0))),
                 tube.findIntersections(new Ray(new Point3D(1, 0, 0), new Vector(0, 1, 0))));
-
     }
 }
