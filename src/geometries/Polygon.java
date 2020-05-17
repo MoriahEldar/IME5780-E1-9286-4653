@@ -92,8 +92,8 @@ public class Polygon implements Geometry {
         if (point == null)
             return null;
         List<Vector> v = new ArrayList<Vector>();
-        for (int i = 0; i < _vertices.size(); i++)
-            v.add(_vertices.get(i).subtract(ray.get_startPoint()));
+        for (Point3D thisV : _vertices)
+            v.add(thisV.subtract(ray.get_startPoint()));
         List<Vector> N = new ArrayList<Vector>();
         for (int i = 0; i < _vertices.size() - 1; i++)
             N.add(v.get(i).crossProduct(v.get(i + 1)).normalize());
