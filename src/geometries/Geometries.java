@@ -23,7 +23,7 @@ public class Geometries implements Intersectable {
      * Geometries default constructor. Puts in elements an empty list
      */
     public Geometries() {
-        this._elements = new ArrayList<Intersectable>();
+        this._elements = new LinkedList<Intersectable>();
     }
 
     /**
@@ -48,8 +48,8 @@ public class Geometries implements Intersectable {
     @Override
     public List<Point3D> findIntersections(Ray ray) {
         List<Point3D> Intersections = new ArrayList<Point3D>();
-        for (int i = 0; i < _elements.size(); i++) {
-            List<Point3D> temp = _elements.get(i).findIntersections(ray);
+        for (Intersectable element : _elements) {
+            List<Point3D> temp = element.findIntersections(ray);
             if (temp != null)
                 Intersections.addAll(temp);
         }
