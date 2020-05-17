@@ -1,6 +1,6 @@
 package geometries;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import primitives.*;
 import static primitives.Util.*;
@@ -151,10 +151,10 @@ public class Polygon extends Geometry {
         List<GeoPoint> point = _plane.findIntersections(ray);
         if (point == null)
             return null;
-        List<Vector> v = new ArrayList<Vector>();
-        for (int i = 0; i < _vertices.size(); i++)
-            v.add(_vertices.get(i).subtract(ray.get_startPoint()));
-        List<Vector> N = new ArrayList<Vector>();
+        List<Vector> v = new LinkedList<Vector>();
+        for (Point3D thisV : _vertices)
+            v.add(thisV.subtract(ray.get_startPoint()));
+        List<Vector> N = new LinkedList<Vector>();
         for (int i = 0; i < _vertices.size() - 1; i++)
             N.add(v.get(i).crossProduct(v.get(i + 1)).normalize());
         N.add(v.get(_vertices.size() - 1).crossProduct(v.get(0)).normalize());

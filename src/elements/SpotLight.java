@@ -2,6 +2,9 @@ package elements;
 
 import primitives.*;
 
+import static primitives.Util.alignZero;
+import static primitives.Util.isZero;
+
 /**
  * SpotLight class represents the lights in the scene that are models point light source with direction (such as a luxo lamp)
  * (They have a point of the light, with direction direction, and the light weakens as it goes further, or off the direction)

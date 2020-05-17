@@ -53,7 +53,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.LightsTests.trianglesPoint">
+  <component name="RunManager" selected="JUnit.All in IME5780-E1-9286-4653">
     <configuration name="All in IME5780-E1-9286-4653" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IME5780-E1-9286-4653" />
       <option name="PACKAGE_NAME" value="" />
@@ -62,7 +62,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LightsTests.sphereAllLights" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LightsTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IME5780-E1-9286-4653" />
       <extension name="coverage">
         <pattern>
@@ -72,13 +72,12 @@
       </extension>
       <option name="PACKAGE_NAME" value="elements" />
       <option name="MAIN_CLASS_NAME" value="elements.LightsTests" />
-      <option name="METHOD_NAME" value="sphereAllLights" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LightsTests.trianglesAllLights" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LightsTests.sphereSpot" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IME5780-E1-9286-4653" />
       <extension name="coverage">
         <pattern>
@@ -88,7 +87,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="elements" />
       <option name="MAIN_CLASS_NAME" value="elements.LightsTests" />
-      <option name="METHOD_NAME" value="trianglesAllLights" />
+      <option name="METHOD_NAME" value="sphereSpot" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -128,11 +127,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.LightsTests.trianglesPoint" />
         <item itemvalue="JUnit.All in IME5780-E1-9286-4653" />
-        <item itemvalue="JUnit.LightsTests.sphereAllLights" />
-        <item itemvalue="JUnit.LightsTests.trianglesAllLights" />
+        <item itemvalue="JUnit.LightsTests" />
+        <item itemvalue="JUnit.LightsTests.sphereSpot" />
         <item itemvalue="JUnit.LightsTests.trianglesSpot" />
+        <item itemvalue="JUnit.LightsTests.trianglesPoint" />
       </list>
     </recent_temporary>
   </component>
@@ -198,46 +197,46 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="483" y="249" key="Github.ShareDialog/0.0.1280.690@0.0.1280.690" timestamp="1585152230517" />
-    <state width="1238" height="147" key="GridCell.Tab.0.bottom" timestamp="1588899925366">
+    <state width="1238" height="147" key="GridCell.Tab.0.bottom" timestamp="1589701832759">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="147" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1588899925366" />
-    <state width="1238" height="147" key="GridCell.Tab.0.center" timestamp="1588899925366">
+    <state width="1238" height="147" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1589701832759" />
+    <state width="1238" height="147" key="GridCell.Tab.0.center" timestamp="1589701832758">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="147" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1588899925366" />
-    <state width="1238" height="147" key="GridCell.Tab.0.left" timestamp="1588899925366">
+    <state width="1238" height="147" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1589701832758" />
+    <state width="1238" height="147" key="GridCell.Tab.0.left" timestamp="1589701832758">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="147" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1588899925366" />
-    <state width="1238" height="147" key="GridCell.Tab.0.right" timestamp="1588899925366">
+    <state width="1238" height="147" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1589701832758" />
+    <state width="1238" height="147" key="GridCell.Tab.0.right" timestamp="1589701832759">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="147" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1588899925366" />
-    <state width="1238" height="187" key="GridCell.Tab.1.bottom" timestamp="1588898330439">
+    <state width="1238" height="147" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1589701832759" />
+    <state width="1238" height="187" key="GridCell.Tab.1.bottom" timestamp="1589064191122">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="187" key="GridCell.Tab.1.bottom/0.0.1280.690@0.0.1280.690" timestamp="1588898330439" />
-    <state width="1238" height="187" key="GridCell.Tab.1.center" timestamp="1588898330439">
+    <state width="1238" height="187" key="GridCell.Tab.1.bottom/0.0.1280.690@0.0.1280.690" timestamp="1589064191122" />
+    <state width="1238" height="187" key="GridCell.Tab.1.center" timestamp="1589064191122">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="187" key="GridCell.Tab.1.center/0.0.1280.690@0.0.1280.690" timestamp="1588898330439" />
-    <state width="1238" height="187" key="GridCell.Tab.1.left" timestamp="1588898330439">
+    <state width="1238" height="187" key="GridCell.Tab.1.center/0.0.1280.690@0.0.1280.690" timestamp="1589064191122" />
+    <state width="1238" height="187" key="GridCell.Tab.1.left" timestamp="1589064191122">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="187" key="GridCell.Tab.1.left/0.0.1280.690@0.0.1280.690" timestamp="1588898330439" />
-    <state width="1238" height="187" key="GridCell.Tab.1.right" timestamp="1588898330439">
+    <state width="1238" height="187" key="GridCell.Tab.1.left/0.0.1280.690@0.0.1280.690" timestamp="1589064191122" />
+    <state width="1238" height="187" key="GridCell.Tab.1.right" timestamp="1589064191122">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="187" key="GridCell.Tab.1.right/0.0.1280.690@0.0.1280.690" timestamp="1588898330439" />
+    <state width="1238" height="187" key="GridCell.Tab.1.right/0.0.1280.690@0.0.1280.690" timestamp="1589064191122" />
     <state x="143" y="0" key="SettingsEditor" timestamp="1585680535766">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="143" y="0" key="SettingsEditor/0.0.1280.690@0.0.1280.690" timestamp="1585680535766" />
-    <state x="336" y="180" key="com.intellij.ide.util.TipDialog" timestamp="1588288595053">
+    <state x="336" y="180" key="com.intellij.ide.util.TipDialog" timestamp="1589700422727">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="336" y="180" key="com.intellij.ide.util.TipDialog/0.0.1280.690@0.0.1280.690" timestamp="1588288595053" />
+    <state x="336" y="180" key="com.intellij.ide.util.TipDialog/0.0.1280.690@0.0.1280.690" timestamp="1589700422727" />
     <state x="364" y="239" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1585680970337">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
@@ -250,10 +249,14 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="358" y="81" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1280.690@0.0.1280.690" timestamp="1588442253892" />
-    <state x="493" y="0" width="744" height="690" key="find.popup" timestamp="1585842671140">
+    <state x="493" y="0" width="744" height="690" key="find.popup" timestamp="1589701781050">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="493" y="0" width="744" height="690" key="find.popup/0.0.1280.690@0.0.1280.690" timestamp="1585842671140" />
+    <state x="493" y="0" width="744" height="690" key="find.popup/0.0.1280.690@0.0.1280.690" timestamp="1589701781050" />
+    <state width="602" height="414" key="javadoc.popup" timestamp="1589061839649">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state width="602" height="414" key="javadoc.popup/0.0.1280.690@0.0.1280.690" timestamp="1589061839649" />
     <state x="347" y="0" key="refactoring.ChangeSignatureDialog" timestamp="1588884551426">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
