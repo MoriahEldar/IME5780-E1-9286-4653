@@ -91,10 +91,10 @@ public class Polygon implements Geometry {
         List<Point3D> point = _plane.findIntersections(ray);
         if (point == null)
             return null;
-        List<Vector> v = new ArrayList<Vector>();
+        List<Vector> v = new LinkedList<Vector>();
         for (Point3D thisV : _vertices)
             v.add(thisV.subtract(ray.get_startPoint()));
-        List<Vector> N = new ArrayList<Vector>();
+        List<Vector> N = new LinkedList<Vector>();
         for (int i = 0; i < _vertices.size() - 1; i++)
             N.add(v.get(i).crossProduct(v.get(i + 1)).normalize());
         N.add(v.get(_vertices.size() - 1).crossProduct(v.get(0)).normalize());
