@@ -15,6 +15,10 @@ public class Ray {
      * A normalized vector the represents the ray direction
      */
     Vector _direction;
+    /**
+     * Const for how much to move the beginning of the ray for shading, transparency and reflection rays
+     */
+    private static final double DELTA = 0.1;
 
     /**
      * Ray constructor receiving a start point and the direction
@@ -43,6 +47,18 @@ public class Ray {
         {
             throw new IllegalArgumentException("Cannot get the same point as a direction");
         }
+    }
+
+    /**
+     * Makes a new ray that starts delta on top (in normal direction) the given point, and in the given direction
+     * for shading, transparency and reflection rays so they don't start on the geometry
+     *
+     * @param point original point of ray (where the ray has intersection with the geometry)
+     * @param dir ray's direction
+     * @param n normal to the geometry
+     */
+    public Ray(Point3D point, Vector dir, Vector n) {
+        this(point.add(n.scale(n.dotProduct(dir) > 0 ? DELTA : - DELTA)), dir);
     }
 
     /**

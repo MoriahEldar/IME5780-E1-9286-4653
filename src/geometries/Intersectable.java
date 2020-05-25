@@ -15,7 +15,7 @@ public interface Intersectable {
     /**
      * finds the points where the given ray "hit" the shape
      *
-     * @param ray
+     * @param ray the given ray
      * @return a list of points where the ray "hit" the shape
      */
     List<GeoPoint> findIntersections(Ray ray);

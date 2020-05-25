@@ -62,64 +62,64 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LightsTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AllEffectsTest.TestAllEffects" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IME5780-E1-9286-4653" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="elements.*" />
+          <option name="PATTERN" value="renderer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="elements" />
-      <option name="MAIN_CLASS_NAME" value="elements.LightsTests" />
+      <option name="PACKAGE_NAME" value="renderer" />
+      <option name="MAIN_CLASS_NAME" value="renderer.AllEffectsTest" />
+      <option name="METHOD_NAME" value="TestAllEffects" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReflectionRefractionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="IME5780-E1-9286-4653" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="renderer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="renderer" />
+      <option name="MAIN_CLASS_NAME" value="renderer.ReflectionRefractionTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LightsTests.sphereSpot" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ShadowTest.SphereTriangleSpot1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IME5780-E1-9286-4653" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="elements.*" />
+          <option name="PATTERN" value="renderer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="elements" />
-      <option name="MAIN_CLASS_NAME" value="elements.LightsTests" />
-      <option name="METHOD_NAME" value="sphereSpot" />
+      <option name="PACKAGE_NAME" value="renderer" />
+      <option name="MAIN_CLASS_NAME" value="renderer.ShadowTest" />
+      <option name="METHOD_NAME" value="SphereTriangleSpot1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LightsTests.trianglesPoint" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ShadowTest.SphereTriangleSpot2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IME5780-E1-9286-4653" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="elements.*" />
+          <option name="PATTERN" value="renderer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="elements" />
-      <option name="MAIN_CLASS_NAME" value="elements.LightsTests" />
-      <option name="METHOD_NAME" value="trianglesPoint" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LightsTests.trianglesSpot" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="IME5780-E1-9286-4653" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="elements.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="elements" />
-      <option name="MAIN_CLASS_NAME" value="elements.LightsTests" />
-      <option name="METHOD_NAME" value="trianglesSpot" />
+      <option name="PACKAGE_NAME" value="renderer" />
+      <option name="MAIN_CLASS_NAME" value="renderer.ShadowTest" />
+      <option name="METHOD_NAME" value="SphereTriangleSpot2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -128,10 +128,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in IME5780-E1-9286-4653" />
-        <item itemvalue="JUnit.LightsTests" />
-        <item itemvalue="JUnit.LightsTests.sphereSpot" />
-        <item itemvalue="JUnit.LightsTests.trianglesSpot" />
-        <item itemvalue="JUnit.LightsTests.trianglesPoint" />
+        <item itemvalue="JUnit.AllEffectsTest.TestAllEffects" />
+        <item itemvalue="JUnit.ReflectionRefractionTest" />
+        <item itemvalue="JUnit.ShadowTest.SphereTriangleSpot2" />
+        <item itemvalue="JUnit.ShadowTest.SphereTriangleSpot1" />
       </list>
     </recent_temporary>
   </component>
@@ -177,10 +177,10 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="93" y="93" width="1093" height="503" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1280.690@0.0.1280.690" timestamp="1587306338200" />
-    <state x="447" y="72" key="#com.intellij.ide.util.MemberChooser" timestamp="1588882624196">
+    <state x="447" y="72" key="#com.intellij.ide.util.MemberChooser" timestamp="1590145424355">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="447" y="72" key="#com.intellij.ide.util.MemberChooser/0.0.1280.690@0.0.1280.690" timestamp="1588882624196" />
+    <state x="447" y="72" key="#com.intellij.ide.util.MemberChooser/0.0.1280.690@0.0.1280.690" timestamp="1590145424355" />
     <state x="435" y="205" width="408" height="286" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1588859023194">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
@@ -189,30 +189,30 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="33" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.690@0.0.1280.690" timestamp="1588890002872" />
-    <state x="422" y="101" key="FileChooserDialogImpl" timestamp="1585680529000">
+    <state x="422" y="101" key="FileChooserDialogImpl" timestamp="1590449450855">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="422" y="101" key="FileChooserDialogImpl/0.0.1280.690@0.0.1280.690" timestamp="1585680529000" />
+    <state x="422" y="101" key="FileChooserDialogImpl/0.0.1280.690@0.0.1280.690" timestamp="1590449450855" />
     <state x="483" y="249" key="Github.ShareDialog" timestamp="1585152230517">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="483" y="249" key="Github.ShareDialog/0.0.1280.690@0.0.1280.690" timestamp="1585152230517" />
-    <state width="1238" height="147" key="GridCell.Tab.0.bottom" timestamp="1589701832759">
+    <state width="1238" height="148" key="GridCell.Tab.0.bottom" timestamp="1590266868499">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="147" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1589701832759" />
-    <state width="1238" height="147" key="GridCell.Tab.0.center" timestamp="1589701832758">
+    <state width="1238" height="148" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1590266868499" />
+    <state width="1238" height="148" key="GridCell.Tab.0.center" timestamp="1590266868499">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="147" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1589701832758" />
-    <state width="1238" height="147" key="GridCell.Tab.0.left" timestamp="1589701832758">
+    <state width="1238" height="148" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1590266868499" />
+    <state width="1238" height="148" key="GridCell.Tab.0.left" timestamp="1590266868499">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="147" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1589701832758" />
-    <state width="1238" height="147" key="GridCell.Tab.0.right" timestamp="1589701832759">
+    <state width="1238" height="148" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1590266868499" />
+    <state width="1238" height="148" key="GridCell.Tab.0.right" timestamp="1590266868499">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="147" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1589701832759" />
+    <state width="1238" height="148" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1590266868499" />
     <state width="1238" height="187" key="GridCell.Tab.1.bottom" timestamp="1589064191122">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
@@ -229,22 +229,22 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state width="1238" height="187" key="GridCell.Tab.1.right/0.0.1280.690@0.0.1280.690" timestamp="1589064191122" />
-    <state x="143" y="0" key="SettingsEditor" timestamp="1585680535766">
+    <state x="143" y="0" key="SettingsEditor" timestamp="1590449463634">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="143" y="0" key="SettingsEditor/0.0.1280.690@0.0.1280.690" timestamp="1585680535766" />
-    <state x="336" y="180" key="com.intellij.ide.util.TipDialog" timestamp="1589700422727">
+    <state x="143" y="0" key="SettingsEditor/0.0.1280.690@0.0.1280.690" timestamp="1590449463634" />
+    <state x="336" y="180" key="com.intellij.ide.util.TipDialog" timestamp="1589886627185">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="336" y="180" key="com.intellij.ide.util.TipDialog/0.0.1280.690@0.0.1280.690" timestamp="1589700422727" />
+    <state x="336" y="180" key="com.intellij.ide.util.TipDialog/0.0.1280.690@0.0.1280.690" timestamp="1589886627185" />
     <state x="364" y="239" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1585680970337">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="364" y="239" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1280.690@0.0.1280.690" timestamp="1585680970337" />
-    <state x="448" y="262" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585860409932">
+    <state x="448" y="262" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590449414199">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="448" y="262" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.690@0.0.1280.690" timestamp="1585860409932" />
+    <state x="448" y="262" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.690@0.0.1280.690" timestamp="1590449414199" />
     <state x="358" y="81" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1588442253892">
       <screen x="0" y="0" width="1280" height="690" />
     </state>

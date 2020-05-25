@@ -20,6 +20,26 @@ public class Material {
      * Shininess Level of the material
      */
     int _nShininess;
+    /**
+     * Transparency Level of the material
+     */
+    double _kT;
+    /**
+     * Reflection Level of the material
+     */
+    double _kR;
+
+    /**
+     * Material constructor. Gets the material details, and puts them in their variables
+     * puts in _kT and _kR zero
+     *
+     * @param _kD Diffusion Level of the material (double)
+     * @param _kS Specular Level of the material (double)
+     * @param _nShininess Shininess Level of the material (int)
+     */
+    public Material(double _kD, double _kS, int _nShininess) {
+        this(_kD, _kS, _nShininess, 0, 0);
+    }
 
     /**
      * Material constructor. Gets the material details, and puts them in their variables
@@ -27,11 +47,15 @@ public class Material {
      * @param _kD Diffusion Level of the material (double)
      * @param _kS Specular Level of the material (double)
      * @param _nShininess Shininess Level of the material (int)
+     * @param _kR Transparency Level of the material (double)
+     * @param _kT Reflection Level of the material (double)
      */
-    public Material(double _kD, double _kS, int _nShininess) {
+    public Material(double _kD, double _kS, int _nShininess, double _kT, double _kR) {
         this._kD = _kD;
         this._kS = _kS;
         this._nShininess = _nShininess;
+        this._kT = _kT;
+        this._kR = _kR;
     }
 
     /**
@@ -59,5 +83,23 @@ public class Material {
      */
     public int get_nShininess() {
         return _nShininess;
+    }
+
+    /**
+     * _kT getter
+     *
+     * @return transparency Level of the material
+     */
+    public double get_kT() {
+        return _kT;
+    }
+
+    /**
+     * _kR getter
+     *
+     * @return reflection Level of the material
+     */
+    public double get_kR() {
+        return _kR;
     }
 }
