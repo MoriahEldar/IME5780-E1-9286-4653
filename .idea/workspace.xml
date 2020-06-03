@@ -53,27 +53,18 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AllEffectsTest.TestAllEffectsBonus">
-    <configuration name="All in IME5780-E1-9286-4653" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="IME5780-E1-9286-4653" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AllEffectsTest.TestAllEffects" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in IME5780-E1-9286-4653" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IME5780-E1-9286-4653" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="renderer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="renderer" />
-      <option name="MAIN_CLASS_NAME" value="renderer.AllEffectsTest" />
-      <option name="METHOD_NAME" value="TestAllEffects" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -126,11 +117,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.AllEffectsTest.TestAllEffectsBonus" />
         <item itemvalue="JUnit.ShadowTest" />
         <item itemvalue="JUnit.All in IME5780-E1-9286-4653" />
         <item itemvalue="JUnit.ReflectionRefractionTest" />
-        <item itemvalue="JUnit.AllEffectsTest.TestAllEffects" />
       </list>
     </recent_temporary>
   </component>
