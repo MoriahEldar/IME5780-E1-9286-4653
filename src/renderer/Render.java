@@ -78,8 +78,7 @@ public class Render {
      * @return The color without ambient light, in that point
      */
     private Color calcColor(GeoPoint intersection, Ray inRay, int level, double k) {
-        Color color = _scene.getAmbientLight().getIntensity();
-        color = color.add(intersection.geometry.get_emission());
+        Color color = intersection.geometry.get_emission();
         Vector v = intersection.point.subtract(_scene.getCamera().get_p0()).normalize();
         Vector n = intersection.geometry.getNormal(intersection.point);
         Material material = intersection.geometry.get_material();
@@ -88,11 +87,13 @@ public class Render {
         double ks = material.get_kS();
         for (LightSource lightSource : _scene.getLights()) {
             Vector l = lightSource.getL(intersection.point);
-            double ktr = transparency(lightSource, l, n, intersection);
-            if (ktr * k > MIN_CALC_COLOR_K) {
-                Color lightIntensity = lightSource.getIntensity(intersection.point).scale(ktr);
-                color = color.add(calcDiffusive(kd, l, n, lightIntensity),
-                        calcSpecular(ks, l, n, v, nShininess, lightIntensity));
+            if (n.dotProduct(l) * n.dotProduct(v) > 0) {
+                double ktr = transparency(lightSource, l, n, intersection);
+                if (ktr * k > MIN_CALC_COLOR_K) {
+                    Color lightIntensity = lightSource.getIntensity(intersection.point).scale(ktr);
+                    color = color.add(calcDiffusive(kd, l, n, lightIntensity),
+                            calcSpecular(ks, l, n, v, nShininess, lightIntensity));
+                }
             }
         }
         if (level == 1)

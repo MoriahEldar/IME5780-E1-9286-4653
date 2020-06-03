@@ -53,7 +53,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in IME5780-E1-9286-4653">
+  <component name="RunManager" selected="JUnit.AllEffectsTest.TestAllEffectsBonus">
     <configuration name="All in IME5780-E1-9286-4653" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IME5780-E1-9286-4653" />
       <option name="PACKAGE_NAME" value="" />
@@ -78,6 +78,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AllEffectsTest.TestAllEffectsBonus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="IME5780-E1-9286-4653" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="renderer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="renderer" />
+      <option name="MAIN_CLASS_NAME" value="renderer.AllEffectsTest" />
+      <option name="METHOD_NAME" value="TestAllEffectsBonus" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ReflectionRefractionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IME5780-E1-9286-4653" />
       <extension name="coverage">
@@ -93,7 +109,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShadowTest.SphereTriangleSpot1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ShadowTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IME5780-E1-9286-4653" />
       <extension name="coverage">
         <pattern>
@@ -103,35 +119,18 @@
       </extension>
       <option name="PACKAGE_NAME" value="renderer" />
       <option name="MAIN_CLASS_NAME" value="renderer.ShadowTest" />
-      <option name="METHOD_NAME" value="SphereTriangleSpot1" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ShadowTest.SphereTriangleSpot2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="IME5780-E1-9286-4653" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="renderer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="renderer" />
-      <option name="MAIN_CLASS_NAME" value="renderer.ShadowTest" />
-      <option name="METHOD_NAME" value="SphereTriangleSpot2" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AllEffectsTest.TestAllEffectsBonus" />
+        <item itemvalue="JUnit.ShadowTest" />
         <item itemvalue="JUnit.All in IME5780-E1-9286-4653" />
-        <item itemvalue="JUnit.AllEffectsTest.TestAllEffects" />
         <item itemvalue="JUnit.ReflectionRefractionTest" />
-        <item itemvalue="JUnit.ShadowTest.SphereTriangleSpot2" />
-        <item itemvalue="JUnit.ShadowTest.SphereTriangleSpot1" />
+        <item itemvalue="JUnit.AllEffectsTest.TestAllEffects" />
       </list>
     </recent_temporary>
   </component>
@@ -197,22 +196,22 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="483" y="249" key="Github.ShareDialog/0.0.1280.690@0.0.1280.690" timestamp="1585152230517" />
-    <state width="1238" height="148" key="GridCell.Tab.0.bottom" timestamp="1590266868499">
+    <state width="1238" height="148" key="GridCell.Tab.0.bottom" timestamp="1591125673643">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="148" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1590266868499" />
-    <state width="1238" height="148" key="GridCell.Tab.0.center" timestamp="1590266868499">
+    <state width="1238" height="148" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1591125673643" />
+    <state width="1238" height="148" key="GridCell.Tab.0.center" timestamp="1591125673642">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="148" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1590266868499" />
-    <state width="1238" height="148" key="GridCell.Tab.0.left" timestamp="1590266868499">
+    <state width="1238" height="148" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1591125673642" />
+    <state width="1238" height="148" key="GridCell.Tab.0.left" timestamp="1591125673642">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="148" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1590266868499" />
-    <state width="1238" height="148" key="GridCell.Tab.0.right" timestamp="1590266868499">
+    <state width="1238" height="148" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1591125673642" />
+    <state width="1238" height="148" key="GridCell.Tab.0.right" timestamp="1591125673643">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="148" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1590266868499" />
+    <state width="1238" height="148" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1591125673643" />
     <state width="1238" height="187" key="GridCell.Tab.1.bottom" timestamp="1589064191122">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
@@ -233,10 +232,10 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="143" y="0" key="SettingsEditor/0.0.1280.690@0.0.1280.690" timestamp="1590449463634" />
-    <state x="336" y="180" key="com.intellij.ide.util.TipDialog" timestamp="1589886627185">
+    <state x="336" y="180" key="com.intellij.ide.util.TipDialog" timestamp="1591171370789">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="336" y="180" key="com.intellij.ide.util.TipDialog/0.0.1280.690@0.0.1280.690" timestamp="1589886627185" />
+    <state x="336" y="180" key="com.intellij.ide.util.TipDialog/0.0.1280.690@0.0.1280.690" timestamp="1591171370789" />
     <state x="364" y="239" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1585680970337">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
