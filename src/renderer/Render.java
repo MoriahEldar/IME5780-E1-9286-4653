@@ -5,12 +5,13 @@ import primitives.*;
 import primitives.Color;
 import geometries.Intersectable.GeoPoint;
 import scene.*;
+
 import java.util.List;
 
 import static primitives.Util.alignZero;
 
 /**
- * Render class represents the whole thing, it connects between the imageWriter and the scene
+ * Renderer class is responsible for generating pixel color map from a graphic scene, using ImageWriter class
  * system
  *
  * @author Moriah and Shahar
@@ -30,7 +31,15 @@ public class Render {
      */
     private static final int MAX_CALC_COLOR_LEVEL = 10;
     private static final double MIN_CALC_COLOR_K = 0.001;
+    /**
+     * Is depth of field feature on or off
+     */
+    Boolean _depthField;
 
+    /**
+     * Number of rays to send when calculating depthField. Defines photo and depth field feature quality
+     */
+    int _numOfRays;
 
     /**
      * Render constructor. gets the elements for the render - imageWriter and scene
@@ -41,6 +50,8 @@ public class Render {
     public Render(ImageWriter _imageWriter, Scene _scene) {
         this._imageWriter = _imageWriter;
         this._scene = _scene;
+        this._depthField = false;
+        this._numOfRays = 0;
     }
 
     /**
@@ -51,16 +62,39 @@ public class Render {
             for (int j = 0; j < _imageWriter.getNx(); j++) {
                 Ray ray = _scene.getCamera().constructRayThroughPixel(_imageWriter.getNy(), _imageWriter.getNx(), j, i,
                         _scene.getDistance(), _imageWriter.getHeight(), _imageWriter.getWidth());
-                GeoPoint closestPoint = findClosestIntersection(ray);
-                _imageWriter.writePixel(j, i, closestPoint == null ? _scene.getBackground().getColor() : calcColor(closestPoint, ray).getColor());
+                _imageWriter.writePixel(j, i, calcColor(ray).getColor());
             }
+    }
+
+    /**
+     * Calculates the color that the ray hits in accordance to if the depth of field feature is on.
+     * If it's on, it calculates according to the aperture.
+     *
+     * @param ray the ray the color is all about
+     * @return the color according to the ray and depth of field feature if on
+     */
+    private Color calcColor(Ray ray)
+    {
+        if (!_depthField) {
+            GeoPoint closestPoint = findClosestIntersection(ray);
+            return closestPoint == null ? _scene.getBackground() : calcColor(closestPoint, ray);
+        }
+        else {
+            Color sumColor = Color.BLACK;
+            List<Ray> rays = _scene.getCamera().constructRaysFromAperture(_scene.getDistance(), ray, _numOfRays);
+            for (Ray apertureRay : rays) {
+                GeoPoint closestPoint = findClosestIntersection(apertureRay);
+                sumColor = sumColor.add(closestPoint == null ? _scene.getBackground() : calcColor(closestPoint, apertureRay));
+            }
+            return sumColor.reduce(_numOfRays);
+        }
     }
 
     /**
      * Calculates the color of a point on the object
      *
      * @param gp The point we need to calculate the color on
-     * @param ray The ray from the camera threw a pixel at view plane that we are calculating the color at
+     * @param ray The ray from the camera throw a pixel at view plane that we are calculating the color at
      * @return The color in that point
      */
     private Color calcColor(GeoPoint gp, Ray ray) {
@@ -285,5 +319,47 @@ public class Render {
      */
     public void writeToImage() {
         _imageWriter.writeToImage();
+    }
+
+    /**
+     * Is depth of field feature on or off (_depthField Getter)
+     *
+     * @return _depthField value. True if on, otherwise false
+     */
+    public Boolean isDepthFieldOn() {
+        return _depthField;
+    }
+
+    /**
+     * _depthField Setter (set depth of field feature on or off)
+     *
+     * @param _depthField true if you want to set depth of field feature on, otherwise false.
+     * @throws IllegalArgumentException if _numOfRays is not set yet (is 0)
+     */
+    public void set_depthField(Boolean _depthField) {
+        if (_depthField && _numOfRays == 0)
+            throw new IllegalArgumentException("Cannot use depth of field feature when number of rays to use is 0 (not defined yet)");
+        this._depthField = _depthField;
+    }
+
+    /**
+     * _numOfRays getter
+     *
+     * @return number of rays to construct from the aperture adjuster in depth of field feature
+     */
+    public int get_numOfRays() {
+        return _numOfRays;
+    }
+
+    /**
+     * _numOfRays setter
+     *
+     * @param _numOfRays number of rays to construct from the aperture adjuster in depth of field feature
+     * @throws IllegalArgumentException if input is less than 50
+     */
+    public void set_numOfRays(int _numOfRays) {
+        if (_numOfRays < 50)
+            throw new IllegalArgumentException("To get a good affect, the number of rays should be more than 50");
+        this._numOfRays = _numOfRays;
     }
 }

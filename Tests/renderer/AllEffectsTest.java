@@ -6,6 +6,11 @@ import org.junit.Test;
 import primitives.*;
 import scene.Scene;
 
+/**
+ * Unit tests for renderer.Render class
+ * @author Moriah and Shahar
+ */
+
 public class AllEffectsTest {
     @Test
     /**
@@ -42,55 +47,25 @@ public class AllEffectsTest {
     @Test
     public void TestAllEffectsBonus() {
         Scene scene = new Scene("Test scene");
-        scene.setCamera(new Camera(new Point3D(0, 7000, 300), new Vector(0, -1, 0), new Vector(0, 0, 1)));
+        scene.setCamera(new Camera(new Point3D(0, -7000, 300), new Vector(0, 1, 0), new Vector(0, 0, 1)));
         scene.setDistance(1000);
-        scene.setBackground(new Color(java.awt.Color.BLUE));
+        scene.setBackground(Color.BLACK);
         scene.setAmbientLight(new AmbientLight(Color.BLACK, 0));
 
         scene.addGeometries(
-                new Polygon(new Color(java.awt.Color.YELLOW), new Material(0.5, 0.3, 0, 0.9, 0),
-                        new Point3D(100, 100, 0), new Point3D(100, -100, 0),
-                        new Point3D(-100, -100, 0), new Point3D(-100, 100, 0)),
-                new Polygon(new Color(java.awt.Color.YELLOW), new Material(0.5, 0.3, 0, 0, 0.2),
-                        new Point3D(100, 100, 300), new Point3D(100, -100, 300),
-                        new Point3D(-100, -100, 300), new Point3D(-100, 100, 300)),
-                new Polygon(new Color(java.awt.Color.YELLOW), new Material(0.5, 0.3, 0, 0.9, 0),
-                        new Point3D(100, 100, 0), new Point3D(100, -100, 0),
-                        new Point3D(100, -100, 300), new Point3D(100, 100, 300)),
-                new Polygon(new Color(java.awt.Color.YELLOW), new Material(0.5, 0.3, 0, 0, 0.2),
-                        new Point3D(-100, -100, 0), new Point3D(100, -100, 0),
-                        new Point3D(100, -100, 300), new Point3D(-100, -100, 300)),
-                new Polygon(new Color(java.awt.Color.YELLOW), new Material(0.5, 0.3, 0, 0.9, 0),
-                        new Point3D(100, 100, 0), new Point3D(-100, 100, 0),
-                        new Point3D(-100, 100, 300), new Point3D(100, 100, 300)),
-                new Polygon(new Color(java.awt.Color.YELLOW), new Material(0.5, 0.3, 0, 0.9, 0),
-                        new Point3D(-100, -100, 0), new Point3D(-100, 100, 0),
-                        new Point3D(-100, 100, 300), new Point3D(-100, -100, 300)),
-                new Triangle(new Color(java.awt.Color.RED), new Material(0.5, 0.3, 0, 0, 0.1),
-                        new Point3D(-100, -100, 300), new Point3D(-100, 100, 300),
-                        new Point3D(0, 0, 500)),
-                new Triangle(new Color(java.awt.Color.RED), new Material(0.5, 0.3, 0, 0, 0.1),
-                        new Point3D(100, -100, 300), new Point3D(-100, -100, 300),
-                        new Point3D(0, 0, 500)),
-                new Triangle(new Color(java.awt.Color.RED), new Material(0.5, 0.3, 0, 0, 0.1),
-                        new Point3D(100, 100, 300), new Point3D(100, -100, 300),
-                        new Point3D(0, 0, 500)),
-                new Triangle(new Color(java.awt.Color.RED), new Material(0.5, 0.3, 0, 0, 0.1),
-                        new Point3D(100, 100, 300), new Point3D(-100, -100, 300),
-                        new Point3D(0, 0, 500)),
-                new Plane(new Color(Color.BLACK), new Material(0.5, 0.3, 0),
-                        Point3D.ZERO, new Vector(0, 0, 1)),
-                new Tube(new Color(java.awt.Color.GRAY), new Material(0.2, 0.5, 100, 0, 0.9),
-                        15, new Ray(new Point3D(50, 0, 0), new Vector(0, 0, 1))),
-                new Sphere(new Color(java.awt.Color.CYAN), new Material(0.2, 0.2, 30, 0, 0.4),
-                        60, new Point3D(150, -100, 400)),
-                new Sphere(new Color(java.awt.Color.CYAN), new Material(0.2, 0.2, 30, 0, 0.4),
-                        60, new Point3D(80, -100, 400))
-        );
-        scene.addLights(new SpotLight(new Color(java.awt.Color.GREEN), new Point3D(0, -400, 500), new Vector(0, 11, -3.48), 1,
-                0.0004, 0.0000006),
-                new SpotLight(new Color(java.awt.Color.GREEN), new Point3D(0, 400, 500), new Vector(0, -11, -3.48), 1,
-                        0.0004, 0.0000006)
+                new Plane(new Color(43, 80, 54), new Material(0.3, 0.2, 0), Point3D.ZERO,
+                        new Vector(0, 0, 1)),
+                new Tube(new Color(106, 43, 19), new Material(0.5, 0, 100), 45,
+                        new Ray(new Point3D(-230, 350,0), new Vector(0, 0, 1))),
+                new Polygon(new Color(java.awt.Color.CYAN), new Material(0.9, 0.6, 100, 0.6, 0.6),
+                        new Point3D(-120, -1000, 5), new Point3D(50, -1500, 5), new Point3D(300, -1250, 5),
+                        new Point3D(450, 0, 5), new Point3D(430, 1300, 5), new Point3D(-100, 1350, 5),
+                        new Point3D(-200, -50, 5)),
+                new Sphere(new Color(59, 129, 42), new Material(0.6, 0, 0), 200,
+                        new Point3D(-230, 300, 500))
+                );
+        scene.addLights(new SpotLight(new Color(java.awt.Color.GREEN), new Point3D(-500, 1000, 500),
+                        new Vector(1, -1, -0.5), 1, 0.0004, 0.0000006)
                 );
 
         ImageWriter imageWriter = new ImageWriter("allEffectsBonus", 150, 150, 500, 500);
