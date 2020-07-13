@@ -161,6 +161,16 @@ public class Tube extends RadialGeometry {
         return List.of(new GeoPoint(this, ray.getPoint(t_1)), new GeoPoint(this, ray.getPoint(t_2)));
     }
 
+    /**
+     * Tube is an infinite geometry, therefore it has no box that can capture it, so the box is null
+     *
+     * @return null, because it's an infinite shape
+     */
+    @Override
+    protected BVHBox calcBox() {
+        return null;
+    }
+
     @Override
     public String toString() {
         return "Tube {" +

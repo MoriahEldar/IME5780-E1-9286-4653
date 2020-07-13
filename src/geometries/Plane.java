@@ -181,4 +181,14 @@ public class Plane extends Geometry {
             return null;
         }
     }
+
+    /**
+     * Plane is an infinite geometry, therefore it has no box that can capture it, so the box is null
+     *
+     * @return null, because it's an infinite shape
+     */
+    @Override
+    protected BVHBox calcBox() {
+        return null;
+    }
 }

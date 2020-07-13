@@ -141,6 +141,31 @@ public class Polygon extends Geometry {
         this(Color.BLACK, new Material(0,0, 0), vertices);
     }
 
+    /**
+     * Auxiliary function. Finds the minimal or maximal point for the box
+     *
+     * @param isMin true if we want to get the minimal value, false if maximal
+     * @return the min or max point of the box. (Has min or max X coordinate, min or max Y coordinate, min or max Z coordinate)
+     */
+    private Point3D minOrMaxPoint(boolean isMin) {
+        double maxOrMinX = isMin ? Double.POSITIVE_INFINITY : Double.NEGATIVE_INFINITY;
+        double maxOrMinY = maxOrMinX;
+        double maxOrMinZ = maxOrMinX;
+        for (Point3D vertex : _vertices) {
+            double valueX = vertex.get_x().get();
+            double valueY = vertex.get_y().get();
+            double valueZ = vertex.get_z().get();
+            if (isMin ? valueX < maxOrMinX : valueX > maxOrMinX)
+                maxOrMinX = valueX;
+            if (isMin ? valueY < maxOrMinY : valueY > maxOrMinY)
+                maxOrMinY = valueY;
+            if (isMin ? valueZ < maxOrMinZ : valueZ > maxOrMinZ)
+                maxOrMinZ = valueZ;
+        }
+        return new Point3D(maxOrMinX, maxOrMinY, maxOrMinZ);
+    }
+
+    /*************** Admin *****************/
     @Override
     public Vector getNormal(Point3D point) {
         return _plane.get_normal();
@@ -167,5 +192,10 @@ public class Polygon extends Geometry {
                 return null;
         }
         return List.of(new GeoPoint(this, point.get(0).point));
+    }
+
+    @Override
+    protected BVHBox calcBox() {
+        return new BVHBox(minOrMaxPoint(true), minOrMaxPoint(false));
     }
 }

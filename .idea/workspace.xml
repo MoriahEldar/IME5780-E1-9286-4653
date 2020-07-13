@@ -11,9 +11,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="JUnit4 Test Class" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -45,24 +45,28 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="geometries" />
       <recent name="renderer" />
       <recent name="elements" />
-      <recent name="geometries" />
       <recent name="primitives" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="geometries" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AllEffectsTest.TestAllEffectsBonus">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+  <component name="RunManager" selected="JUnit.AllEffectsTest.TestAllEffects">
+    <configuration name="All in IME5780-E1-9286-4653" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IME5780-E1-9286-4653" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AllEffectsTest.TestAllEffectsBonus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AllEffectsTest.TestAllEffects" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IME5780-E1-9286-4653" />
       <extension name="coverage">
         <pattern>
@@ -72,39 +76,39 @@
       </extension>
       <option name="PACKAGE_NAME" value="renderer" />
       <option name="MAIN_CLASS_NAME" value="renderer.AllEffectsTest" />
-      <option name="METHOD_NAME" value="TestAllEffectsBonus" />
+      <option name="METHOD_NAME" value="TestAllEffects" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeepOfFieldTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BVHBoxTest.anyIntersections" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IME5780-E1-9286-4653" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="renderer.*" />
+          <option name="PATTERN" value="geometries.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="geometries" />
+      <option name="MAIN_CLASS_NAME" value="geometries.BVHBoxTest" />
+      <option name="METHOD_NAME" value="anyIntersections" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DepthOfFieldTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="IME5780-E1-9286-4653" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="geometries.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="renderer" />
-      <option name="MAIN_CLASS_NAME" value="renderer.DeepOfFieldTest" />
+      <option name="MAIN_CLASS_NAME" value="renderer.DepthOfFieldTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DeepOfFieldTest.TestAllEffectsPlusDeepOfField" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="IME5780-E1-9286-4653" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="renderer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="renderer" />
-      <option name="MAIN_CLASS_NAME" value="renderer.DeepOfFieldTest" />
-      <option name="METHOD_NAME" value="TestAllEffectsPlusDeepOfField" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -113,7 +117,7 @@
       <module name="IME5780-E1-9286-4653" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="renderer.*" />
+          <option name="PATTERN" value="geometries.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -127,11 +131,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AllEffectsTest.TestAllEffectsBonus" />
+        <item itemvalue="JUnit.AllEffectsTest.TestAllEffects" />
+        <item itemvalue="JUnit.DepthOfFieldTest" />
         <item itemvalue="JUnit.DepthOfFieldTest.TestDepthOfField" />
-        <item itemvalue="JUnit.DeepOfFieldTest" />
-        <item itemvalue="JUnit.DeepOfFieldTest.TestAllEffectsPlusDeepOfField" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.BVHBoxTest.anyIntersections" />
+        <item itemvalue="JUnit.All in IME5780-E1-9286-4653" />
       </list>
     </recent_temporary>
   </component>
@@ -149,10 +153,6 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="233" y="4" key="#Auto_Import" timestamp="1585858772726">
-      <screen x="0" y="0" width="1280" height="690" />
-    </state>
-    <state x="233" y="4" key="#Auto_Import/0.0.1280.690@0.0.1280.690" timestamp="1585858772726" />
     <state x="233" y="4" key="#Inspections" timestamp="1587907290988">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
@@ -161,74 +161,62 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="236" y="12" key="#LightsTests/0.0.1280.690@0.0.1280.690" timestamp="1588868937512" />
-    <state x="233" y="4" key="#Notifications" timestamp="1585680147028">
-      <screen x="0" y="0" width="1280" height="690" />
-    </state>
-    <state x="233" y="4" key="#Notifications/0.0.1280.690@0.0.1280.690" timestamp="1585680147028" />
-    <state x="233" y="4" key="#Project_Structure" timestamp="1585859753072">
-      <screen x="0" y="0" width="1280" height="690" />
-    </state>
-    <state x="233" y="4" key="#Project_Structure/0.0.1280.690@0.0.1280.690" timestamp="1585859753072" />
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585150828567">
-      <screen x="0" y="0" width="1280" height="690" />
-    </state>
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.690@0.0.1280.690" timestamp="1585150828566" />
     <state x="93" y="93" width="1093" height="503" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1587306338200">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="93" y="93" width="1093" height="503" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1280.690@0.0.1280.690" timestamp="1587306338200" />
-    <state x="438" y="4" key="#com.intellij.ide.util.MemberChooser" timestamp="1591360252490">
+    <state x="438" y="4" key="#com.intellij.ide.util.MemberChooser" timestamp="1593289508308">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="438" y="4" key="#com.intellij.ide.util.MemberChooser/0.0.1280.690@0.0.1280.690" timestamp="1591360252490" />
-    <state x="435" y="205" width="408" height="286" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1591361268595">
+    <state x="438" y="4" key="#com.intellij.ide.util.MemberChooser/0.0.1280.690@0.0.1280.690" timestamp="1593289508308" />
+    <state x="435" y="205" width="408" height="286" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1593102216303">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="435" y="205" width="408" height="286" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.690@0.0.1280.690" timestamp="1591361268595" />
-    <state x="33" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1588890002872">
+    <state x="435" y="205" width="408" height="286" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.690@0.0.1280.690" timestamp="1593102216303" />
+    <state x="33" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1593092006693">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="33" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.690@0.0.1280.690" timestamp="1588890002872" />
-    <state x="422" y="101" key="FileChooserDialogImpl" timestamp="1591793645318">
+    <state x="33" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.690@0.0.1280.690" timestamp="1593092006693" />
+    <state x="371" y="92" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1593102296181">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="422" y="101" key="FileChooserDialogImpl/0.0.1280.690@0.0.1280.690" timestamp="1591793645318" />
-    <state x="483" y="249" key="Github.ShareDialog" timestamp="1585152230517">
+    <state x="371" y="92" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.690@0.0.1280.690" timestamp="1593102296181" />
+    <state x="422" y="101" key="FileChooserDialogImpl" timestamp="1594667268961">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="483" y="249" key="Github.ShareDialog/0.0.1280.690@0.0.1280.690" timestamp="1585152230517" />
-    <state width="1238" height="117" key="GridCell.Tab.0.bottom" timestamp="1591806892308">
+    <state x="422" y="101" key="FileChooserDialogImpl/0.0.1280.690@0.0.1280.690" timestamp="1594667268961" />
+    <state width="1238" height="120" key="GridCell.Tab.0.bottom" timestamp="1594667484807">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="117" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1591806892308" />
-    <state width="1238" height="117" key="GridCell.Tab.0.center" timestamp="1591806892308">
+    <state width="1238" height="120" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1594667484807" />
+    <state width="1238" height="120" key="GridCell.Tab.0.center" timestamp="1594667484806">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="117" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1591806892308" />
-    <state width="1238" height="117" key="GridCell.Tab.0.left" timestamp="1591806892308">
+    <state width="1238" height="120" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1594667484806" />
+    <state width="1238" height="120" key="GridCell.Tab.0.left" timestamp="1594667484806">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="117" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1591806892308" />
-    <state width="1238" height="117" key="GridCell.Tab.0.right" timestamp="1591806892308">
+    <state width="1238" height="120" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1594667484806" />
+    <state width="1238" height="120" key="GridCell.Tab.0.right" timestamp="1594667484806">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="117" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1591806892308" />
-    <state width="1238" height="187" key="GridCell.Tab.1.bottom" timestamp="1591805576977">
+    <state width="1238" height="120" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1594667484806" />
+    <state width="1238" height="187" key="GridCell.Tab.1.bottom" timestamp="1594666768671">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="187" key="GridCell.Tab.1.bottom/0.0.1280.690@0.0.1280.690" timestamp="1591805576977" />
-    <state width="1238" height="187" key="GridCell.Tab.1.center" timestamp="1591805576976">
+    <state width="1238" height="187" key="GridCell.Tab.1.bottom/0.0.1280.690@0.0.1280.690" timestamp="1594666768671" />
+    <state width="1238" height="187" key="GridCell.Tab.1.center" timestamp="1594666768671">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="187" key="GridCell.Tab.1.center/0.0.1280.690@0.0.1280.690" timestamp="1591805576976" />
-    <state width="1238" height="187" key="GridCell.Tab.1.left" timestamp="1591805576976">
+    <state width="1238" height="187" key="GridCell.Tab.1.center/0.0.1280.690@0.0.1280.690" timestamp="1594666768671" />
+    <state width="1238" height="187" key="GridCell.Tab.1.left" timestamp="1594666768671">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="187" key="GridCell.Tab.1.left/0.0.1280.690@0.0.1280.690" timestamp="1591805576976" />
-    <state width="1238" height="187" key="GridCell.Tab.1.right" timestamp="1591805576976">
+    <state width="1238" height="187" key="GridCell.Tab.1.left/0.0.1280.690@0.0.1280.690" timestamp="1594666768671" />
+    <state width="1238" height="187" key="GridCell.Tab.1.right" timestamp="1594666768671">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="187" key="GridCell.Tab.1.right/0.0.1280.690@0.0.1280.690" timestamp="1591805576976" />
+    <state width="1238" height="187" key="GridCell.Tab.1.right/0.0.1280.690@0.0.1280.690" timestamp="1594666768671" />
     <state x="143" y="0" key="SettingsEditor" timestamp="1590449463634">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
@@ -237,22 +225,18 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1280.690@0.0.1280.690" timestamp="1591735792251" />
-    <state x="336" y="180" key="com.intellij.ide.util.TipDialog" timestamp="1592829359143">
+    <state x="336" y="180" key="com.intellij.ide.util.TipDialog" timestamp="1594651844162">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="336" y="180" key="com.intellij.ide.util.TipDialog/0.0.1280.690@0.0.1280.690" timestamp="1592829359143" />
-    <state x="364" y="239" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1585680970337">
-      <screen x="0" y="0" width="1280" height="690" />
-    </state>
-    <state x="364" y="239" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1280.690@0.0.1280.690" timestamp="1585680970337" />
+    <state x="336" y="180" key="com.intellij.ide.util.TipDialog/0.0.1280.690@0.0.1280.690" timestamp="1594651844162" />
     <state x="448" y="262" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590449414199">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="448" y="262" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.690@0.0.1280.690" timestamp="1590449414199" />
-    <state x="358" y="81" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1588442253892">
+    <state x="358" y="81" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1593300120937">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="358" y="81" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1280.690@0.0.1280.690" timestamp="1588442253892" />
+    <state x="358" y="81" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1280.690@0.0.1280.690" timestamp="1593300120937" />
     <state x="493" y="0" width="744" height="690" key="find.popup" timestamp="1591475454803">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
@@ -265,14 +249,14 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="347" y="0" key="refactoring.ChangeSignatureDialog/0.0.1280.690@0.0.1280.690" timestamp="1588884551425" />
-    <state x="305" y="161" key="run.anything.popup" timestamp="1591367574436">
+    <state x="307" y="163" key="run.anything.popup" timestamp="1593301800166">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="305" y="161" key="run.anything.popup/0.0.1280.690@0.0.1280.690" timestamp="1591367574436" />
-    <state x="309" y="17" width="672" height="678" key="search.everywhere.popup" timestamp="1591355463705">
+    <state x="307" y="163" key="run.anything.popup/0.0.1280.690@0.0.1280.690" timestamp="1593301800166" />
+    <state x="311" y="19" width="672" height="678" key="search.everywhere.popup" timestamp="1593104819357">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="309" y="17" width="672" height="678" key="search.everywhere.popup/0.0.1280.690@0.0.1280.690" timestamp="1591355463705" />
+    <state x="311" y="19" width="672" height="678" key="search.everywhere.popup/0.0.1280.690@0.0.1280.690" timestamp="1593104819357" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/IME5780_E1_9286_4653$All_in_IME5780_E1_9286_4653.ic" NAME="All in IME5780-E1-9286-4653 Coverage Results" MODIFIED="1587297150158" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

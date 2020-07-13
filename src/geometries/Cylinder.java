@@ -21,9 +21,9 @@ public class Cylinder extends Tube {
      * sets the _emission (the color shape) as black color
      * Sets the material to (0, 0, 0)
      *
-     * @param _radius double
+     * @param _radius  double
      * @param _axisRay the Ray
-     * @param _height double
+     * @param _height  double
      */
     public Cylinder(double _radius, Ray _axisRay, double _height) {
         this(Color.BLACK, _radius, _axisRay, _height);
@@ -35,9 +35,9 @@ public class Cylinder extends Tube {
      * Sets the material to (0, 0, 0)
      *
      * @param _emission the color
-     * @param _radius double
-     * @param _axisRay the Ray
-     * @param _height double
+     * @param _radius   double
+     * @param _axisRay  the Ray
+     * @param _height   double
      */
     public Cylinder(Color _emission, double _radius, Ray _axisRay, double _height) {
         this(_emission, new Material(0, 0, 0), _radius, _axisRay, _height);
@@ -50,9 +50,9 @@ public class Cylinder extends Tube {
      *
      * @param _emission the color
      * @param _material material, the cylinder material
-     * @param _radius double
-     * @param _axisRay the Ray
-     * @param _height double
+     * @param _radius   double
+     * @param _axisRay  the Ray
+     * @param _height   double
      */
     public Cylinder(Color _emission, Material _material, double _radius, Ray _axisRay, double _height) {
         super(_emission, _material, _radius, _axisRay);
@@ -74,13 +74,13 @@ public class Cylinder extends Tube {
         // Creates the plane that the "lower" base (the base that contains the ray point) is on
         Plane plane = new Plane(_axisRay.get_startPoint(), _axisRay.get_direction());
         // Checks if the given point is on the plane (We know the point is on the cylinder, so if it's on the plane, it's on the base)
-        if(plane.isOnPlane(point))
+        if (plane.isOnPlane(point))
             return _axisRay.get_direction().scale(-1);
         // Creates the plane that the "higher" base (the base that does not contain the ray point) is on
         // The point on the plane (that we give the constructor) is the ray point plus the cylinder height in the ray direction
         plane = new Plane(_axisRay.get_startPoint().add(_axisRay.get_direction().scale(_height)), _axisRay.get_direction());
         // Checks if the given point is on the plane (We know the point is on the cylinder, so if it's on the plane, it's on the base)
-        if(plane.isOnPlane(point))
+        if (plane.isOnPlane(point))
             return _axisRay.get_direction();
         // The point is on the casing
         return super.getNormal(point);
@@ -93,5 +93,15 @@ public class Cylinder extends Tube {
                 ", axisRay = " + _axisRay +
                 ", R = " + _radius +
                 '}';
+    }
+
+    /**
+     * We did not execute cylinder for the scene so this function is irrelevant for cylinder, therefore it returns null
+     *
+     * @return null, because we didn't execute cylinder. Supposed to return the BVHBox
+     **/
+    @Override
+    protected BVHBox calcBox() {
+        return null;
     }
 }

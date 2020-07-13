@@ -108,4 +108,14 @@ public class Sphere extends RadialGeometry {
             return List.of(new GeoPoint(this, ray.getPoint(tm)));
         return List.of(new GeoPoint(this, ray.getPoint(tm + th)), new GeoPoint(this, ray.getPoint(tm - th)));
     }
+
+    @Override
+    protected BVHBox calcBox() {
+        return new BVHBox(new Point3D(_center.get_x().get() - _radius,
+                _center.get_y().get() - _radius,
+                _center.get_z().get() - _radius),
+                new Point3D(_center.get_x().get() + _radius,
+                        _center.get_y().get() + _radius,
+                        _center.get_z().get() + _radius));
+    }
 }

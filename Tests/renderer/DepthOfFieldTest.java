@@ -44,7 +44,6 @@ public class DepthOfFieldTest {
                 new Plane(new Color(java.awt.Color.GRAY), new Material(0.5, 0.3, 0, 0, 1), new Point3D(-50, 60, 100),
                         new Vector(0, 1, 0))
                 );
-
         scene.addLights(new SpotLight(new Color(1000, 600, 0), new Point3D(-300, -300, 4000),
                         new Vector(245, 270, -3800), 0.1, 0.0004, 0.0000006),
                 new SpotLight(new Color(255, 255, 255), new Point3D(-100, 0, -500),
@@ -54,7 +53,7 @@ public class DepthOfFieldTest {
         );
 
         ImageWriter imageWriter = new ImageWriter("DepthOfField", 150, 150, 500, 500);
-        Render render = new Render(imageWriter, scene);
+        Render render = new Render(imageWriter, scene).setMultithreading(3).setDebugPrint();
         render.set_numOfRays(100);
         render.set_depthField(true);
 

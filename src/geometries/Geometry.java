@@ -8,7 +8,7 @@ import primitives.*;
  * @author Moriah and Shahar
  */
 
-public abstract class Geometry implements Intersectable {
+public abstract class Geometry extends Intersectable {
     /**
      * The color of the geometry's shapes
       */
@@ -64,7 +64,13 @@ public abstract class Geometry implements Intersectable {
         return new Color(_emission);
     }
 
+    /**
+     * _material getter
+     *
+     * @return the material of this geometry
+     */
     public Material get_material() {
         return _material;
     }
+
 }

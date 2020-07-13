@@ -11,14 +11,44 @@ import java.util.Objects;
  * @author Moriah and Shahar
  */
 
-public interface Intersectable {
+public abstract class Intersectable {
+    /**
+     * The virtual box for each geometry
+     */
+    protected BVHBox box;
+
+    /**
+     * Default constructor. By default box is null if not yet calculated.
+     */
+    public Intersectable() {
+        box = null;
+    }
+
     /**
      * finds the points where the given ray "hit" the shape
      *
      * @param ray the given ray
      * @return a list of points where the ray "hit" the shape
      */
-    List<GeoPoint> findIntersections(Ray ray);
+    public abstract List<GeoPoint> findIntersections(Ray ray);
+
+    /**
+     * Box Getter. Provides only one calculation of box;
+     *
+     * @return The box for that shape
+     */
+    public final BVHBox getBox() {
+        if (box == null)
+            box = calcBox();
+        return box;
+    }
+
+    /**
+     * Calculates the BVHBox for the specific intersectable geometry.
+     *
+     * @return The calculated BVHBox
+     */
+    protected abstract BVHBox calcBox();
 
     /**
      * GeoPoint is an static help class. represents a point and the geometry the point is on
