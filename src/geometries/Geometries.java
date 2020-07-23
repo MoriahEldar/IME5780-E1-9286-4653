@@ -160,12 +160,11 @@ public class Geometries extends Intersectable {
     public List<GeoPoint> findIntersections(Ray ray) {
         List<GeoPoint> Intersections = new LinkedList<GeoPoint>();
         if (box.anyIntersections(ray))
-            for (Intersectable element : _finalElements)
-                if (element.getBox().anyIntersections(ray)) {
-                    List<GeoPoint> temp = element.findIntersections(ray);
-                    if (temp != null)
+            for (Intersectable element : _finalElements) {
+                List<GeoPoint> temp = element.findIntersections(ray);
+                if (temp != null)
                         Intersections.addAll(temp);
-                }
+            }
         for (Intersectable element : _infinityElements) {
             List<GeoPoint> temp = element.findIntersections(ray);
             if (temp != null)

@@ -84,6 +84,8 @@ public class Sphere extends RadialGeometry {
 
     @Override
     public List<GeoPoint> findIntersections(Ray ray) {
+        if (!getBox().anyIntersections(ray))
+            return null;
         Vector u;
         try {
             u = _center.subtract(ray.get_startPoint());

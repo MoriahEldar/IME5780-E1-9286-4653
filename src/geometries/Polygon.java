@@ -173,6 +173,8 @@ public class Polygon extends Geometry {
 
     @Override
     public List<GeoPoint> findIntersections(Ray ray) {
+        if (!getBox().anyIntersections(ray))
+            return null;
         List<GeoPoint> point = _plane.findIntersections(ray);
         if (point == null)
             return null;
