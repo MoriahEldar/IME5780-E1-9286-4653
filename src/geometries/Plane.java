@@ -165,7 +165,7 @@ public class Plane extends Geometry {
     }
 
     @Override
-    public List<GeoPoint> findIntersections(Ray ray) {
+    public List<GeoPoint> findIntersectionsTemp(Ray ray) {
         double denominator = _normal.dotProduct(ray.get_direction());
         // If ray is parallel to the plane
         if (isZero(denominator))
@@ -180,6 +180,11 @@ public class Plane extends Geometry {
             // _p is the same point as ray.get_startPoint()
             return null;
         }
+    }
+
+    @Override
+    protected boolean shouldFindIntersections(Ray ray) {
+        return true;
     }
 
     /**

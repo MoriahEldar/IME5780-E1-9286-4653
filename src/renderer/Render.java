@@ -155,6 +155,7 @@ public class Render {
      * This function renders image's pixel color map from the scene included with the Renderer object
      */
     public void renderImage() {
+        _scene.autoBVHSeparate();
         final int nX = _imageWriter.getNx();
         final int nY = _imageWriter.getNy();
         final double dist = _scene.getDistance();

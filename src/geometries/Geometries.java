@@ -46,8 +46,6 @@ public class Geometries extends Intersectable {
                 this._infinityElements.add(element);
             else
                 this._finalElements.add(element);
-        box = calcBox();
-        separateToGeometries();
     }
 
     /**
@@ -62,8 +60,6 @@ public class Geometries extends Intersectable {
                 this._infinityElements.add(element);
             else
                 this._finalElements.add(element);
-        box = calcBox();
-        separateToGeometries();
     }
 
     /**
@@ -96,7 +92,8 @@ public class Geometries extends Intersectable {
      * Tries to divide the geometries in the middle according to x axis, to y axis and to z axis
      * and checks which division is the best according to the sum of the boxes volume (the smallest sum)
      */
-    private void separateToGeometries() {
+    public void separateToGeometries() {
+        box = calcBox();
         if (this._finalElements.size() <= 2)
             return;
         List<Intersectable> xSeparation = separateToGeometries('x');
@@ -115,6 +112,10 @@ public class Geometries extends Intersectable {
                 this._finalElements = ySeparation;
             else
                 this._finalElements = zSeparation;
+        if (_finalElements.get(0) instanceof Geometries)
+            ((Geometries) _finalElements.get(0)).separateToGeometries();
+        if (_finalElements.get(1) instanceof Geometries)
+            ((Geometries) _finalElements.get(1)).separateToGeometries();
     }
 
     /**
@@ -147,7 +148,7 @@ public class Geometries extends Intersectable {
                         big.add(element);
         }
         if (small.size() == 0 || big.size() == 0)
-            separateToGeometries(axes);
+            return separateToGeometries(axes);
         if (small.size() == 1)
             return List.of(small.get(0), new Geometries(big.toArray(new Intersectable[big.size()])));
         if (big.size() == 1)
@@ -157,22 +158,31 @@ public class Geometries extends Intersectable {
 
     /*************** Admin *****************/
     @Override
-    public List<GeoPoint> findIntersections(Ray ray) {
-        List<GeoPoint> Intersections = new LinkedList<GeoPoint>();
-        if (box.anyIntersections(ray))
+    public List<GeoPoint> findIntersectionsTemp(Ray ray) {
+        List<GeoPoint> intersections = new LinkedList<GeoPoint>();
+        boolean findFinalElementsIntersections = true;
+        if (!_infinityElements.isEmpty()) { // If we did not check if the ray intersects the box
+            findFinalElementsIntersections = box.anyIntersections(ray);
+            for (Intersectable element : _infinityElements) {
+                List<GeoPoint> temp = element.findIntersections(ray);
+                if (temp != null)
+                    intersections.addAll(temp);
+            }
+        }
+        if (findFinalElementsIntersections)
             for (Intersectable element : _finalElements) {
                 List<GeoPoint> temp = element.findIntersections(ray);
                 if (temp != null)
-                        Intersections.addAll(temp);
+                    intersections.addAll(temp);
             }
-        for (Intersectable element : _infinityElements) {
-            List<GeoPoint> temp = element.findIntersections(ray);
-            if (temp != null)
-                Intersections.addAll(temp);
-        }
-        if (Intersections.isEmpty())
+        if (intersections.isEmpty())
             return null;
-        return Intersections;
+        return intersections;
+    }
+
+    @Override
+    protected boolean shouldFindIntersections(Ray ray) {
+        return !_infinityElements.isEmpty() || box.anyIntersections(ray);
     }
 
     /**

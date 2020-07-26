@@ -83,9 +83,7 @@ public class Sphere extends RadialGeometry {
     }
 
     @Override
-    public List<GeoPoint> findIntersections(Ray ray) {
-        if (!getBox().anyIntersections(ray))
-            return null;
+    public List<GeoPoint> findIntersectionsTemp(Ray ray) {
         Vector u;
         try {
             u = _center.subtract(ray.get_startPoint());
@@ -109,6 +107,11 @@ public class Sphere extends RadialGeometry {
         if (th == 0)
             return List.of(new GeoPoint(this, ray.getPoint(tm)));
         return List.of(new GeoPoint(this, ray.getPoint(tm + th)), new GeoPoint(this, ray.getPoint(tm - th)));
+    }
+
+    @Override
+    protected boolean shouldFindIntersections(Ray ray) {
+        return getBox().anyIntersections(ray);
     }
 
     @Override

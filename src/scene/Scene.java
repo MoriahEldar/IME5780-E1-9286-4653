@@ -76,7 +76,7 @@ public class Scene {
      * @return A collection of the geometries shapes in the scene (a Geometry type variable)
      */
     public Geometries getGeometries() {
-        return new Geometries(_geometries);
+        return _geometries;
     }
 
     /**
@@ -158,5 +158,12 @@ public class Scene {
      */
     public void addLights(LightSource... lights) {
         this._lights.addAll(Arrays.asList(lights));
+    }
+
+    /**
+     * separate _geometries to Geometries for bvh algorithm
+     */
+    public void autoBVHSeparate() {
+        _geometries.separateToGeometries();
     }
 }

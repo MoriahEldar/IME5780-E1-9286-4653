@@ -76,7 +76,7 @@ public class Tube extends RadialGeometry {
     }
 
     @Override
-    public List<GeoPoint> findIntersections(Ray ray) {
+    public List<GeoPoint> findIntersectionsTemp(Ray ray) {
         // ray: (a, b, c) + t(x, y, z)
         // _axisRay: (a1, b1, c1) + t1(x1, y1, z1)
         Point3D dots;
@@ -159,6 +159,11 @@ public class Tube extends RadialGeometry {
         if (t_2 <= 0)
             return List.of(new GeoPoint(this, ray.getPoint(t_1)));
         return List.of(new GeoPoint(this, ray.getPoint(t_1)), new GeoPoint(this, ray.getPoint(t_2)));
+    }
+
+    @Override
+    protected boolean shouldFindIntersections(Ray ray) {
+        return true;
     }
 
     /**
