@@ -195,12 +195,12 @@ public class Camera {
         Point3D focalPoint = _p0.add(basicRay.get_direction().scale(focalPointDistance));
         for (int k = 1; k < numOfRays; k++) {
             Point3D pointInAperture = new Point3D(pointOnPixel);
-            double up = (rand.nextDouble() * _aperture) - (_aperture / 2); // A random between -_aperture/2 and _aperture/2
-            if (!isZero(up))
-                pointInAperture = pointInAperture.add(this._vRight.scale(up));
-            double right = (rand.nextDouble() * _aperture) - (_aperture / 2); // A random between -_aperture/2 and _aperture/2
+            double right = (rand.nextDouble() * _aperture) - (_aperture / 2d); // A random between -_aperture/2 and _aperture/2
             if (!isZero(right))
-                pointInAperture = pointInAperture.add(this._vUp.scale(right));
+                pointInAperture = pointInAperture.add(this._vRight.scale(right));
+            double up = (rand.nextDouble() * _aperture) - (_aperture / 2d); // A random between -_aperture/2 and _aperture/2
+            if (!isZero(up))
+                pointInAperture = pointInAperture.add(this._vUp.scale(up));
             rays.add(new Ray(pointInAperture, focalPoint));
         }
         return rays;

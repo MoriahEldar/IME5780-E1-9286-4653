@@ -57,19 +57,10 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ProjectTest.TestProject">
-    <configuration name="AllEffectsTest.TestAllEffects" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.DepthOfFieldTest">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="IME5780-E1-9286-4653" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="renderer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="renderer" />
-      <option name="MAIN_CLASS_NAME" value="renderer.AllEffectsTest" />
-      <option name="METHOD_NAME" value="TestAllEffects" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -94,7 +85,7 @@
       <module name="IME5780-E1-9286-4653" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="geometries.*" />
+          <option name="PATTERN" value="renderer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -139,11 +130,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DepthOfFieldTest" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.ProjectTest.TestProject" />
         <item itemvalue="JUnit.DepthOfFieldTest.TestDepthOfField" />
         <item itemvalue="JUnit.BVHBoxTest.anyIntersections" />
-        <item itemvalue="JUnit.AllEffectsTest.TestAllEffects" />
-        <item itemvalue="JUnit.DepthOfFieldTest" />
       </list>
     </recent_temporary>
   </component>
@@ -169,10 +160,6 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="236" y="12" key="#LightsTests/0.0.1280.690@0.0.1280.690" timestamp="1588868937512" />
-    <state x="93" y="93" width="1093" height="503" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1587306338200">
-      <screen x="0" y="0" width="1280" height="690" />
-    </state>
-    <state x="93" y="93" width="1093" height="503" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1280.690@0.0.1280.690" timestamp="1587306338200" />
     <state x="438" y="4" key="#com.intellij.ide.util.MemberChooser" timestamp="1595714530684">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
@@ -193,38 +180,38 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="422" y="101" key="FileChooserDialogImpl/0.0.1280.690@0.0.1280.690" timestamp="1594667268961" />
-    <state width="1238" height="120" key="GridCell.Tab.0.bottom" timestamp="1595725494426">
+    <state width="1238" height="187" key="GridCell.Tab.0.bottom" timestamp="1596161708349">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="120" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1595725494426" />
-    <state width="1238" height="120" key="GridCell.Tab.0.center" timestamp="1595725494425">
+    <state width="1238" height="187" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1596161708349" />
+    <state width="1238" height="187" key="GridCell.Tab.0.center" timestamp="1596161708349">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="120" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1595725494425" />
-    <state width="1238" height="120" key="GridCell.Tab.0.left" timestamp="1595725494425">
+    <state width="1238" height="187" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1596161708349" />
+    <state width="1238" height="187" key="GridCell.Tab.0.left" timestamp="1596161708349">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="120" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1595725494425" />
-    <state width="1238" height="120" key="GridCell.Tab.0.right" timestamp="1595725494426">
+    <state width="1238" height="187" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1596161708349" />
+    <state width="1238" height="187" key="GridCell.Tab.0.right" timestamp="1596161708349">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="120" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1595725494426" />
-    <state width="1238" height="187" key="GridCell.Tab.1.bottom" timestamp="1595724747709">
+    <state width="1238" height="187" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1596161708349" />
+    <state width="1238" height="187" key="GridCell.Tab.1.bottom" timestamp="1596161710109">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="187" key="GridCell.Tab.1.bottom/0.0.1280.690@0.0.1280.690" timestamp="1595724747709" />
-    <state width="1238" height="187" key="GridCell.Tab.1.center" timestamp="1595724747709">
+    <state width="1238" height="187" key="GridCell.Tab.1.bottom/0.0.1280.690@0.0.1280.690" timestamp="1596161710109" />
+    <state width="1238" height="187" key="GridCell.Tab.1.center" timestamp="1596161710109">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="187" key="GridCell.Tab.1.center/0.0.1280.690@0.0.1280.690" timestamp="1595724747709" />
-    <state width="1238" height="187" key="GridCell.Tab.1.left" timestamp="1595724747709">
+    <state width="1238" height="187" key="GridCell.Tab.1.center/0.0.1280.690@0.0.1280.690" timestamp="1596161710109" />
+    <state width="1238" height="187" key="GridCell.Tab.1.left" timestamp="1596161710108">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="187" key="GridCell.Tab.1.left/0.0.1280.690@0.0.1280.690" timestamp="1595724747709" />
-    <state width="1238" height="187" key="GridCell.Tab.1.right" timestamp="1595724747709">
+    <state width="1238" height="187" key="GridCell.Tab.1.left/0.0.1280.690@0.0.1280.690" timestamp="1596161710108" />
+    <state width="1238" height="187" key="GridCell.Tab.1.right" timestamp="1596161710109">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="187" key="GridCell.Tab.1.right/0.0.1280.690@0.0.1280.690" timestamp="1595724747709" />
+    <state width="1238" height="187" key="GridCell.Tab.1.right/0.0.1280.690@0.0.1280.690" timestamp="1596161710109" />
     <state x="143" y="0" key="SettingsEditor" timestamp="1590449463634">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
@@ -233,10 +220,10 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1280.690@0.0.1280.690" timestamp="1591735792251" />
-    <state x="336" y="180" key="com.intellij.ide.util.TipDialog" timestamp="1595711909210">
+    <state x="336" y="180" key="com.intellij.ide.util.TipDialog" timestamp="1596146019972">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="336" y="180" key="com.intellij.ide.util.TipDialog/0.0.1280.690@0.0.1280.690" timestamp="1595711909210" />
+    <state x="336" y="180" key="com.intellij.ide.util.TipDialog/0.0.1280.690@0.0.1280.690" timestamp="1596146019972" />
     <state x="448" y="262" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590449414199">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
@@ -270,14 +257,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/geometries/Geometries.java</url>
-          <line>184</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/renderer/Render.java</url>
-          <line>414</line>
-          <option name="timeStamp" value="10" />
+          <line>205</line>
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
