@@ -201,7 +201,12 @@ public class Camera {
             double right = (rand.nextDouble() * _aperture) - (_aperture / 2); // A random between -_aperture/2 and _aperture/2
             if (!isZero(right))
                 pointInAperture = pointInAperture.add(this._vUp.scale(right));
-            rays.add(new Ray(pointInAperture, focalPoint));
+            Vector rayVector = focalPoint.subtract(pointInAperture).normalized();
+            // We want to find the point on the ray in the camera plane
+            // The reason is that we are missing all the part of the scene that is between the camera and the view plane,
+            // so we want that the beginning of these rays would be at the same plane as the camera
+            Point3D pointOnCameraPlane = pointInAperture.add(rayVector.scale(-1 * screenDistance / (rayVector.dotProduct(_vTo))));
+            rays.add(new Ray(pointOnCameraPlane, rayVector));
         }
         return rays;
     }
