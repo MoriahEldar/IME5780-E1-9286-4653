@@ -13,7 +13,7 @@ public class ProjectTest {
      */
     public void TestProject() {
         Scene scene = new Scene("Test scene");
-        scene.setCamera(new Camera(new Point3D(10, 0, 0), new Vector(-1, 0, 0), new Vector(0, 0, 1), 2.6, 170));
+        scene.setCamera(new Camera(new Point3D(30, 0, 0), new Vector(-1, 0, 0), new Vector(0, 0, 1), 2.6, 170));
         scene.setDistance(100);
         scene.setBackground(new Color(java.awt.Color.GRAY));
         scene.setAmbientLight(new AmbientLight(Color.BLACK, 0));
@@ -63,6 +63,8 @@ public class ProjectTest {
                 new Sphere(Color.BLACK, new Material(0, 1, 100, 0, 1),
                         0.332, new Point3D(0.137, -1.85, 0.396)),
                 new Sphere(Color.BLACK, new Material(0, 1, 100, 0, 1),
+                        0.332, new Point3D(0.137, -1.69, 0.486 )),
+                new Sphere(Color.BLACK, new Material(0, 1, 100, 0, 1),
                         0.307, new Point3D(0.137, -1.96, 0.589)),
                 new Sphere(Color.BLACK, new Material(0, 1, 100, 0, 1),
                         0.294, new Point3D(0.137, -2.02, 0.888)),
@@ -95,6 +97,64 @@ public class ProjectTest {
         for (int i = 0; i < 3600; i++)
             scene.addGeometries(new Sphere(Color.BLACK, new Material(0, 1, 100, 0, 1),
                     0.288/2, new Point3D(1.1*Math.cos(i/10.0), 1.1*Math.sin(i/10.0), -1.81)));
+
+        // table
+        // top of table
+        for (int i = 0; i < 3599; i++)
+            scene.addGeometries(new Triangle(Color.BLACK, new Material(0.2, 0.8, 100, 0.3, 0.3),
+                    new Point3D(8*Math.cos(i/10.0), 8*Math.sin(i/10.0), -1.85),
+                    new Point3D(8*Math.cos((i + 1)/10.0), 8*Math.sin((i + 1)/10.0), -1.85), new Point3D(0, 0, -1.85)));
+        for (int i = 0; i < 3599; i++)
+            scene.addGeometries(new Triangle(Color.BLACK, new Material(0.2, 0.8, 100, 0.3, 0.3),
+                    new Point3D(8*Math.cos(i/10.0), 8*Math.sin(i/10.0), -1.95),
+                    new Point3D(8*Math.cos((i + 1)/10.0), 8*Math.sin((i + 1)/10.0), -1.95), new Point3D(0, 0, -1.95)));
+        for (int i = 0; i < 3599; i++)
+            scene.addGeometries(new Polygon(Color.BLACK, new Material(0.2, 0.8, 100),
+                    new Point3D(8*Math.cos(i/10.0), 8*Math.sin(i/10.0), -1.95),
+                    new Point3D(8*Math.cos((i + 1)/10.0), 8*Math.sin((i + 1)/10.0), -1.95),
+                    new Point3D(8*Math.cos((i + 1)/10.0), 8*Math.sin((i + 1)/10.0), -1.85),
+                    new Point3D(8*Math.cos(i/10.0), 8*Math.sin(i/10.0), -1.85)));
+
+        // table leg
+        scene.addGeometries(new Sphere(Color.BLACK, new Material(0.4, 0.8, 40),
+                1.183, new Point3D(0, 0, -2.96)),
+                new Sphere(Color.BLACK, new Material(0.4, 0.8, 40),
+                        1.048, new Point3D(0, 0, -3.24)),
+                new Sphere(Color.BLACK, new Material(0.4, 0.8, 40),
+                        0.859, new Point3D(0, 0, -3.73)),
+                new Sphere(Color.BLACK, new Material(0.4, 0.8, 40),
+                        0.787, new Point3D(0, 0, -3.98)),
+                new Sphere(Color.BLACK, new Material(0.4, 0.8, 40),
+                        0.72, new Point3D(0, 0, -4.16)),
+                new Sphere(Color.BLACK, new Material(0.4, 0.8, 40),
+                        0.605, new Point3D(0, 0, -4.44)),
+                new Sphere(Color.BLACK, new Material(0.4, 0.8, 40),
+                        0.494, new Point3D(0, 0, -4.75)),
+                new Sphere(Color.BLACK, new Material(0.4, 0.8, 40),
+                        0.468, new Point3D(0, 0, -4.99)),
+                new Sphere(Color.BLACK, new Material(0.4, 0.8, 40),
+                        0.468, new Point3D(0, 0, -5.06))
+                );
+        for (int i = 0; i < 3600; i++)
+            scene.addGeometries(new Sphere(Color.BLACK, new Material(0.4, 0.8, 40),
+                    0.298/2, new Point3D(0.465*Math.cos(i/10.0), 0.465*Math.sin(i/10.0), -5.17)));
+        for (int i = 0; i < 3600; i++)
+            scene.addGeometries(new Sphere(Color.BLACK, new Material(0.4, 0.8, 40),
+                    0.38/2, new Point3D(0.593*Math.cos(i/10.0), 0.593*Math.sin(i/10.0), -5.47)));
+        for (int i = 0; i < 3600; i++)
+            scene.addGeometries(new Sphere(Color.BLACK, new Material(0.4, 0.8, 40),
+                    0.333/2, new Point3D(0.519*Math.cos(i/10.0), 0.519*Math.sin(i/10.0), -5.27)));
+        for (int i = 0; i < 3600; i++)
+            scene.addGeometries(new Sphere(Color.BLACK, new Material(0.4, 0.8, 40),
+                    0.363/2, new Point3D(0.566*Math.cos(i/10.0), 0.566*Math.sin(i/10.0), -5.36)));
+        for (int i = 0; i < 3600; i++)
+            scene.addGeometries(new Sphere(Color.BLACK, new Material(0.4, 0.8, 40),
+                    0.247/2, new Point3D(0.647*Math.cos(i/10.0), 0.647*Math.sin(i/10.0), -5.59)));
+        for (int i = 0; i < 3599; i++)
+            scene.addGeometries(new Triangle(Color.BLACK, new Material(0.4, 0.8, 40),
+                    new Point3D(2*Math.cos(i/10.0), 2*Math.sin(i/10.0), -5.66),
+                    new Point3D(2*Math.cos((i + 1)/10.0), 2*Math.sin((i + 1)/10.0), -5.66), new Point3D(0, 0, -5.66)));
+
 
 
         scene.addLights(new SpotLight(new Color(1000, 600, 0), new Point3D(-300, -300, 4000),
