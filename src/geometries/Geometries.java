@@ -25,11 +25,18 @@ public class Geometries extends Intersectable {
     private List<Intersectable> _infinityElements;
 
     /**
+     * A list of all elements. In order to turn off the BVH improvement
+     */
+    private List<Intersectable> _elements;
+
+    /**
      * Geometries default constructor. Puts in elements an empty list
      */
     public Geometries() {
         this._finalElements = new LinkedList<Intersectable>();
         this._infinityElements = new LinkedList<Intersectable>();
+        this._elements = new LinkedList<Intersectable>();
+        _improvementBVH = false;
     }
 
     /**
@@ -39,6 +46,7 @@ public class Geometries extends Intersectable {
      * @param geometries - list of intersectable elements
      */
     public Geometries(Intersectable... geometries) {
+        this._elements = List.of(geometries);
         this._finalElements = new LinkedList<Intersectable>();
         this._infinityElements = new LinkedList<Intersectable>();
         for (Intersectable element : geometries)
@@ -55,6 +63,7 @@ public class Geometries extends Intersectable {
      * @param geometries - list of intersectable elements
      */
     public void add(Intersectable... geometries) {
+        this._elements.addAll(List.of(geometries));
         for (Intersectable element : geometries)
             if (element.getBox() == null)
                 this._infinityElements.add(element);
@@ -93,7 +102,6 @@ public class Geometries extends Intersectable {
      * and checks which division is the best according to the sum of the boxes volume (the smallest sum)
      */
     public void separateToGeometries() {
-        box = calcBox();
         if (this._finalElements.size() <= 2)
             return;
         List<Intersectable> xSeparation = separateToGeometries('x');
@@ -113,9 +121,13 @@ public class Geometries extends Intersectable {
             else
                 this._finalElements = zSeparation;
         if (_finalElements.get(0) instanceof Geometries)
-            ((Geometries) _finalElements.get(0)).separateToGeometries();
+            ((Geometries) _finalElements.get(0)).set_improvementBVH(true);
+        else
+            _finalElements.get(0).set_improvementBVH(true);
         if (_finalElements.get(1) instanceof Geometries)
-            ((Geometries) _finalElements.get(1)).separateToGeometries();
+            ((Geometries) _finalElements.get(1)).set_improvementBVH(true);
+        else
+            _finalElements.get(1).set_improvementBVH(true);
     }
 
     /**
@@ -129,13 +141,15 @@ public class Geometries extends Intersectable {
     private List<Intersectable> separateToGeometries(char axes) {
         if (axes != 'x' && axes != 'y' & axes != 'z')
             throw new IllegalArgumentException("Axes must be x, y, z");
-        double middle = ((axes == 'x' ? box.min.get_x() : axes == 'y'? box.min.get_y() : box.min.get_z()).get() +
-                (axes == 'x'? box.max.get_x() : axes == 'y'? box.max.get_y() : box.max.get_z()).get()) / 2;
+        double middle = ((axes == 'x' ? getBox().min.get_x() : axes == 'y'? getBox().min.get_y() : getBox().min.get_z()).get() +
+                (axes == 'x'? getBox().max.get_x() : axes == 'y'? getBox().max.get_y() : getBox().max.get_z()).get()) / 2;
         List<Intersectable> small = new LinkedList<Intersectable>();
         List<Intersectable> big = new LinkedList<Intersectable>();
         for (Intersectable element : this._finalElements) {
-            double elementMid = ((axes == 'x' ? element.getBox().max.get_x() : axes == 'y' ? element.getBox().max.get_y() : element.getBox().max.get_z()).get() +
-                    (axes == 'x' ? element.getBox().min.get_x() : axes == 'y' ? element.getBox().min.get_y() : element.getBox().min.get_z()).get());
+            double elementMid = ((axes == 'x' ? element.getBox().max.get_x() : axes == 'y' ?
+                    element.getBox().max.get_y() : element.getBox().max.get_z()).get() +
+                    (axes == 'x' ? element.getBox().min.get_x() : axes == 'y' ?
+                            element.getBox().min.get_y() : element.getBox().min.get_z()).get());
             if (elementMid / 2 < middle)
                 small.add(element);
             else
@@ -153,36 +167,58 @@ public class Geometries extends Intersectable {
             return List.of(small.get(0), new Geometries(big.toArray(new Intersectable[big.size()])));
         if (big.size() == 1)
             return List.of(big.get(0), new Geometries(small.toArray(new Intersectable[small.size()])));
-        return List.of(new Geometries(small.toArray(new Intersectable[small.size()])), new Geometries(big.toArray(new Intersectable[big.size()])));
+        return List.of(new Geometries(small.toArray(new Intersectable[small.size()])),
+                new Geometries(big.toArray(new Intersectable[big.size()])));
     }
 
     /*************** Admin *****************/
     @Override
     public List<GeoPoint> findIntersectionsTemp(Ray ray) {
-        List<GeoPoint> intersections = new LinkedList<GeoPoint>();
-        boolean findFinalElementsIntersections = true;
-        if (!_infinityElements.isEmpty()) { // If we did not check if the ray intersects the box
-            findFinalElementsIntersections = box.anyIntersections(ray);
-            for (Intersectable element : _infinityElements) {
-                List<GeoPoint> temp = element.findIntersections(ray);
-                if (temp != null)
-                    intersections.addAll(temp);
+        if (_improvementBVH) {
+            List<GeoPoint> intersections = new LinkedList<GeoPoint>();
+            boolean findFinalElementsIntersections = true;
+            if (!_infinityElements.isEmpty()) { // If we did not check if the ray intersects the box
+                findFinalElementsIntersections = getBox().anyIntersections(ray);
+                for (Intersectable element : _infinityElements) {
+                    List<GeoPoint> temp = element.findIntersections(ray);
+                    if (temp != null)
+                        intersections.addAll(temp);
+                }
             }
+            if (findFinalElementsIntersections)
+                for (Intersectable element : _finalElements) {
+                    List<GeoPoint> temp = element.findIntersections(ray);
+                    if (temp != null)
+                        intersections.addAll(temp);
+                }
+            if (intersections.isEmpty())
+                return null;
+            return intersections;
         }
-        if (findFinalElementsIntersections)
-            for (Intersectable element : _finalElements) {
+        else {
+            List<GeoPoint> Intersections = new LinkedList<GeoPoint>();
+            for (Intersectable element : _elements) {
+                element.set_improvementBVH(false);
                 List<GeoPoint> temp = element.findIntersections(ray);
                 if (temp != null)
-                    intersections.addAll(temp);
+                    Intersections.addAll(temp);
             }
-        if (intersections.isEmpty())
-            return null;
-        return intersections;
+            if (Intersections.size() == 0)
+                return null;
+            return Intersections;
+        }
     }
 
     @Override
     protected boolean shouldFindIntersections(Ray ray) {
-        return !_infinityElements.isEmpty() || box.anyIntersections(ray);
+        return !_infinityElements.isEmpty() || getBox().anyIntersections(ray);
+    }
+
+    @Override
+    public void set_improvementBVH(boolean _improvementBVH) {
+        this._improvementBVH = _improvementBVH;
+        if (_improvementBVH)
+            separateToGeometries();
     }
 
     /**

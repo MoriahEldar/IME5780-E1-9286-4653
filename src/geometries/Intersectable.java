@@ -15,24 +15,30 @@ public abstract class Intersectable {
     /**
      * The virtual box for each geometry
      */
-    protected BVHBox box;
+    private BVHBox box;
+
+    /**
+     * BVH (Bounding Volume Hierarchy) ray tracing improvement on or off
+     */
+    protected boolean _improvementBVH;
 
     /**
      * Default constructor. By default box is null if not yet calculated.
      */
     public Intersectable() {
         box = null;
+        _improvementBVH = false;
     }
 
     /**
      * finds the points where the given ray "hit" the shape
-     * Checks first if the box is hit
+     * Checks first if the box is hit, and if the improvement is on
      *
      * @param ray the given ray
      * @return a list of points where the ray "hit" the shape
      */
     public final List<GeoPoint> findIntersections(Ray ray) {
-        if (shouldFindIntersections(ray))
+        if (!_improvementBVH || shouldFindIntersections(ray))
             return findIntersectionsTemp(ray);
         return null;
     }
@@ -74,6 +80,24 @@ public abstract class Intersectable {
      * @return The calculated BVHBox
      */
     protected abstract BVHBox calcBox();
+
+    /**
+     * Is BVH ray tracing improvement on or off (_improvementBVH Getter)
+     *
+     * @return _improvementBVH value. True if on, otherwise false
+     */
+    public boolean isImprovementBVHOn() {
+        return _improvementBVH;
+    }
+
+    /**
+     * _improvementBVH Setter (set BVH ray tracing improvement on or off)
+     *
+     * @param _improvementBVH true if you want to set BVH ray tracing improvement on, otherwise false.
+     */
+    public void set_improvementBVH(boolean _improvementBVH) {
+        this._improvementBVH = _improvementBVH;
+    }
 
     /**
      * GeoPoint is an static help class. represents a point and the geometry the point is on

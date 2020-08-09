@@ -35,12 +35,13 @@ public class Render {
     /**
      * Is depth of field feature on or off
      */
-    Boolean _depthField;
+    boolean _depthField;
 
     /**
      * Number of rays to send when calculating depthField. Defines photo and depth field feature quality
      */
     int _numOfRays;
+
     /**
      * For multithreading
      */
@@ -149,13 +150,13 @@ public class Render {
         this._scene = _scene;
         this._depthField = false;
         this._numOfRays = 0;
+        _scene.set_improvementBVH(false);
     }
 
     /**
      * This function renders image's pixel color map from the scene included with the Renderer object
      */
     public void renderImage() {
-        _scene.autoBVHSeparate();
         final int nX = _imageWriter.getNx();
         final int nY = _imageWriter.getNy();
         final double dist = _scene.getDistance();
@@ -516,5 +517,23 @@ public class Render {
     public Render setDebugPrint() {
         _print = true;
         return this;
+    }
+
+    /**
+     * Is BVH ray tracing improvement on or off (_improvementBVH Getter)
+     *
+     * @return _improvementBVH value. True if on, otherwise false
+     */
+    public boolean isImprovementBVHOn() {
+        return _scene.getGeometries().isImprovementBVHOn();
+    }
+
+    /**
+     * _improvementBVH Setter (set BVH ray tracing improvement on or off)
+     *
+     * @param _improvementBVH true if you want to set BVH ray tracing improvement on, otherwise false.
+     */
+    public void set_improvementBVH(boolean _improvementBVH) {
+        _scene.set_improvementBVH(_improvementBVH);
     }
 }

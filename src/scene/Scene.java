@@ -163,7 +163,8 @@ public class Scene {
     /**
      * separate _geometries to Geometries for bvh algorithm
      */
-    public void autoBVHSeparate() {
-        _geometries.separateToGeometries();
+    public void set_improvementBVH(boolean _improvementBVH) {
+        _geometries.set_improvementBVH(_improvementBVH);
     }
+
 }
