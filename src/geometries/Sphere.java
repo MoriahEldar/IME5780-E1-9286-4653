@@ -110,11 +110,6 @@ public class Sphere extends RadialGeometry {
     }
 
     @Override
-    protected boolean shouldFindIntersections(Ray ray) {
-        return getBox().anyIntersections(ray);
-    }
-
-    @Override
     protected BVHBox calcBox() {
         return new BVHBox(new Point3D(_center.get_x().get() - _radius,
                 _center.get_y().get() - _radius,

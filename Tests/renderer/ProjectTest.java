@@ -1,22 +1,22 @@
 package renderer;
 
-        import elements.*;
-        import geometries.*;
-        import org.junit.Test;
-        import primitives.*;
-        import scene.Scene;
+import elements.*;
+import geometries.*;
+import org.junit.Test;
+import primitives.*;
+import scene.Scene;
 
-        import java.util.ArrayList;
-        import java.util.List;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ProjectTest {
     @Test
     /**
-     * Make a picture from all the effects we did, with many geometries, many light source and the feature
+     * Make a picture from all the effects we did, with 8 geometries, 3 light source and the feature
      */
     public void TestProject() {
         Scene scene = new Scene("Test scene");
-        scene.setCamera(new Camera(new Point3D(20, 0, 0), new Vector(-1, 0, 0), new Vector(0, 0, 1), 6, 3.349));
+        scene.setCamera(new Camera(new Point3D(20, 0, 0), new Vector(-1, 0, 0), new Vector(0, 0, 1), 0.2, 3.349));
         scene.setDistance(15);
         scene.setBackground(new Color(97, 158, 255));
         scene.setAmbientLight(new AmbientLight(Color.BLACK, 0));
@@ -104,11 +104,11 @@ public class ProjectTest {
         // table
         // top of table
         for (int i = 0; i < 3599; i++)
-            scene.addGeometries(new Triangle(Color.BLACK, new Material(0.2, 0.8, 100, 0.1, 0.15),
+            scene.addGeometries(new Triangle(Color.BLACK, new Material(0.2, 0.8, 100, 0.3, 0.35),
                     new Point3D(8*Math.cos(i/10.0), 8*Math.sin(i/10.0), -1.85),
                     new Point3D(8*Math.cos((i + 1)/10.0), 8*Math.sin((i + 1)/10.0), -1.85), new Point3D(0, 0, -1.85)));
         for (int i = 0; i < 3599; i++)
-            scene.addGeometries(new Triangle(Color.BLACK, new Material(0.2, 0.8, 100, 0.1, 0.15),
+            scene.addGeometries(new Triangle(Color.BLACK, new Material(0.2, 0.8, 100, 0.3, 0.35),
                     new Point3D(8*Math.cos(i/10.0), 8*Math.sin(i/10.0), -1.95),
                     new Point3D(8*Math.cos((i + 1)/10.0), 8*Math.sin((i + 1)/10.0), -1.95), new Point3D(0, 0, -1.95)));
         for (int i = 0; i < 3599; i++)
@@ -165,30 +165,30 @@ public class ProjectTest {
             );
 
         // background
-        Color [] colors = {new Color(0, 79, 0), new Color(2, 126, 3),
-                new Color(2, 126, 91), new Color(11, 58, 10), new Color(173, 219, 69), Color.BLACK};
-        for(int i = -100; i < 100; i++)
-            scene.addGeometries(new Sphere(colors[Math.abs(i % colors.length)], new Material(0.3, 0.3, 0), 15,
-                            new Point3D(-165, i, -20)),
-                    new Sphere(colors[Math.abs(i % colors.length)], new Material(0.3, 0.3, 0), (Math.abs(i / 10.0) + Math.abs(i % (colors.length - 1)) + 10),
-                            new Point3D(-165, i, 5 + Math.abs(i / 10.0) + Math.abs(i % (colors.length - 1)))));
+        Color [] colors = {new Color(2, 126, 3), new Color(2, 126, 91),
+                new Color(11, 58, 10), new Color(173, 219, 69)};
+        for(int i = -5000, j = -50; i < 5000; i += 100, j++)
+            scene.addGeometries(new Sphere(colors[Math.abs(j % colors.length)], new Material(0.3, 0.3, 0), 800,
+                            new Point3D(-10000, i, -1100)),
+                    new Sphere(colors[Math.abs(j % colors.length)], new Material(0.3, 0.3, 0), (Math.abs(i / 10.0) + Math.abs(j % (colors.length - 1)) * 5 + 795),
+                            new Point3D(-10000, i, 495 + Math.abs(i / 10.0) + Math.abs(j % (colors.length - 1)) * 5)));
         scene.addGeometries(new Sphere(new Color(242, 243, 243), new Material(0, 0, 0),
-                        10, new Point3D(-365, 100, 70)),
+                        250, new Point3D(-12000, 2400, 2700)),
                 new Sphere(new Color(242, 243, 243), new Material(0.4, 0.1, 0),
-                        10, new Point3D(-365, 110, 73)),
+                        250, new Point3D(-12000, 2650, 2800)),
                 new Sphere(new Color(242, 243, 243), new Material(0.4, 0.1, 0),
-                        10, new Point3D(-365, 100, 80)),
+                        250, new Point3D(-12000, 2400, 2950)),
                 new Sphere(new Color(242, 243, 243), new Material(0.4, 0.1, 0),
-                        10, new Point3D(-365, 90, 73)),
+                        250, new Point3D(-12000, 2150, 2800)),
                 //
                 new Sphere(new Color(242, 243, 243), new Material(0.4, 0.1, 0),
-                        10, new Point3D(-365, -60, 120)),
+                        250, new Point3D(-12000, -1400, 3900)),
                 new Sphere(new Color(242, 243, 243), new Material(0.4, 0.1, 0),
-                        10, new Point3D(-365, -70, 123)),
+                        250, new Point3D(-12000, -1650, 4000)),
                 new Sphere(new Color(242, 243, 243), new Material(0.4, 0.1, 0),
-                        10, new Point3D(-365, -60, 130)),
+                        250, new Point3D(-12000, -1400, 4150)),
                 new Sphere(new Color(242, 243, 243), new Material(0.4, 0.1, 0),
-                        10, new Point3D(-365, -50, 123)));
+                        250, new Point3D(-12000, -1150, 4000)));
 
         scene.addLights(new SpotLight(new Color(255, 255, 255), new Point3D(0,4, 50),
                         new Vector(0, -4, -50), 1, 0.00004, 0.000002),
@@ -199,7 +199,7 @@ public class ProjectTest {
                 new SpotLight(new Color(173, 123, 0), new Point3D(0, -30, -4),
                         new Vector(0.5, 20, -1), 1, 0.0006,0.00002));
 
-        ImageWriter imageWriter = new ImageWriter("ProjectTestEnd", 15, 15, 500, 500);
+        ImageWriter imageWriter = new ImageWriter("ProjectWithDepthOfField", 15, 15, 500, 500);
         Render render = new Render(imageWriter, scene).setMultithreading(3).setDebugPrint();
         render.set_numOfRays(100);
         render.set_depthField(true);

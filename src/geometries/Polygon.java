@@ -195,11 +195,6 @@ public class Polygon extends Geometry {
     }
 
     @Override
-    protected boolean shouldFindIntersections(Ray ray) {
-        return getBox().anyIntersections(ray);
-    }
-
-    @Override
     protected BVHBox calcBox() {
         return new BVHBox(minOrMaxPoint(true), minOrMaxPoint(false));
     }

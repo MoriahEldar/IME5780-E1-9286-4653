@@ -12,7 +12,7 @@ import primitives.*;
  */
 
 public class BVHBox {
-    // A parallel box to the axis can be represented by 2 points
+    // A parallel box to the axes can be represented by 2 points
     /**
      * Min point of the box. (Has min X coordinate, min Y coordinate, min Z coordinate)
      */

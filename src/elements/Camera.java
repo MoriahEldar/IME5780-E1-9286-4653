@@ -188,19 +188,37 @@ public class Camera {
         // distance is the distance from the point on the view screen (that the aperture is around it) to the camera
         double distance = screenDistance/(_vTo.dotProduct(basicRay.get_direction()));
         Point3D pointOnPixel = _p0.add(basicRay.get_direction().scale(distance));
-        List<Ray> rays = new LinkedList<>(List.of(new Ray(pointOnPixel, basicRay.get_direction())));
+        // rays is the list of all the rays we check because of depth of field
+        List<Ray> rays = new LinkedList<>(List.of(basicRay));
         double distanceBetweenCameraAndFocalPlane = screenDistance + _focusDistance;
         // focalPointDistance is the distance from the focalPoint to the camera
         double focalPointDistance = distanceBetweenCameraAndFocalPlane/(_vTo.dotProduct(basicRay.get_direction()));
         Point3D focalPoint = _p0.add(basicRay.get_direction().scale(focalPointDistance));
+        // calculating all the rays from the aperture to the focal point
+        // scattered randomly over the aperture square
         for (int k = 1; k < numOfRays; k++) {
+            /* The way we chose a point:
+               We thought about the aperture square as a 2d coordinate system (with right as x and up as y),
+               and the 0 point is the middle point on the aperture (and on the pixel).
+               Therefore, each axis can get numbers between -_aperture/2 and _aperture/2
+               We found a random number for x (right) between -_aperture/2 and _aperture/2 and a random number for y (up) between -_aperture/2 and _aperture/2,
+               and that's how we worried that the points will be scattered randomly over the aperture square
+             */
+            // get the middle point on the aperture
             Point3D pointInAperture = new Point3D(pointOnPixel);
+            // get a random number that symbolizes how much we need to move right (or left if the number is negative) over the aperture square
             double right = (rand.nextDouble() * _aperture) - (_aperture / 2); // A random between -_aperture/2 and _aperture/2
             if (!isZero(right))
+                // move the middle point according to the random number we got before, rightwards (or leftwards if the number is negative)
+                // adds to the middle point, the vector _vRight in length of the random number
                 pointInAperture = pointInAperture.add(this._vRight.scale(right));
+            // get a random number that symbolizes how much we need to move up (or down if the number is negative) over the aperture square
             double up = (rand.nextDouble() * _aperture) - (_aperture / 2); // A random between -_aperture/2 and _aperture/2
             if (!isZero(up))
+                // move the point (after we moved it rightwards) according to the random number we got before, upwards (or downwards if the number is negative)
+                // adds to the point (after we moved it rightwards), the vector _vUp in length of the random number
                 pointInAperture = pointInAperture.add(this._vUp.scale(up));
+            // calculate rays vector. The vector from the point on the aperture to the focal point
             Vector rayVector = focalPoint.subtract(pointInAperture).normalized();
             // We want to find the point on the ray in the camera plane
             // The reason is that we are missing all the part of the scene that is between the camera and the view plane,

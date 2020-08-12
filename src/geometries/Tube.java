@@ -161,11 +161,6 @@ public class Tube extends RadialGeometry {
         return List.of(new GeoPoint(this, ray.getPoint(t_1)), new GeoPoint(this, ray.getPoint(t_2)));
     }
 
-    @Override
-    protected boolean shouldFindIntersections(Ray ray) {
-        return true;
-    }
-
     /**
      * Tube is an infinite geometry, therefore it has no box that can capture it, so the box is null
      *

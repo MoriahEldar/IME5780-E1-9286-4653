@@ -182,11 +182,6 @@ public class Plane extends Geometry {
         }
     }
 
-    @Override
-    protected boolean shouldFindIntersections(Ray ray) {
-        return true;
-    }
-
     /**
      * Plane is an infinite geometry, therefore it has no box that can capture it, so the box is null
      *

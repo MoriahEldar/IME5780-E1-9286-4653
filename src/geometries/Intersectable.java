@@ -37,8 +37,8 @@ public abstract class Intersectable {
      * @param ray the given ray
      * @return a list of points where the ray "hit" the shape
      */
-    public final List<GeoPoint> findIntersections(Ray ray) {
-        if (!_improvementBVH || shouldFindIntersections(ray))
+    public List<GeoPoint> findIntersections(Ray ray) {
+        if (!_improvementBVH || getBox().anyIntersections(ray) || getBox() == null)
             return findIntersectionsTemp(ray);
         return null;
     }
@@ -51,17 +51,6 @@ public abstract class Intersectable {
      * @return a list of points where the ray "hit" the shape
      */
     protected abstract List<GeoPoint> findIntersectionsTemp(Ray ray);
-
-    /**
-     * Helps findIntersections function
-     * For infinite shapes, will return true
-     * For finite shapes, will check if the ray intersects the box
-     * For Geometries, will check if Geometries has any infinite shapes, if none it will check if the ray intersects the box
-     *
-     * @param ray the ray to calculate the intersection with
-     * @return true if we need to calculate the intersection with the shape. otherwise, false
-     */
-    protected abstract boolean shouldFindIntersections(Ray ray);
 
     /**
      * Box Getter. Provides only one calculation of box;
