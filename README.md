@@ -6,4 +6,4 @@ The project is well documented in the code
 
 Our pictures are built in the tests. The final picture is projectTest picture and is built from over 80,000 shapes.
 
-I did the project with shaharmona.
+Co-Authored-By: shaharmona <shaharmona@users.noreply.github.com>
