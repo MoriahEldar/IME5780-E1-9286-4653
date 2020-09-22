@@ -41,7 +41,7 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.notifications" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -57,7 +57,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ProjectTest.TestProject">
+  <component name="RunManager" selected="JUnit.BVHBoxTest.anyIntersections">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="IME5780-E1-9286-4653" />
@@ -130,11 +130,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BVHBoxTest.anyIntersections" />
         <item itemvalue="JUnit.ProjectTest.TestProject" />
         <item itemvalue="JUnit.DepthOfFieldTest" />
         <item itemvalue="JUnit.DepthOfFieldTest.TestDepthOfField" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.BVHBoxTest.anyIntersections" />
       </list>
     </recent_temporary>
   </component>
@@ -152,10 +152,6 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="236" y="12" key="#LightsTests" timestamp="1588868937512">
-      <screen x="0" y="0" width="1280" height="690" />
-    </state>
-    <state x="236" y="12" key="#LightsTests/0.0.1280.690@0.0.1280.690" timestamp="1588868937512" />
     <state x="438" y="4" key="#com.intellij.ide.util.MemberChooser" timestamp="1596588011591">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
@@ -172,30 +168,30 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="371" y="92" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.690@0.0.1280.690" timestamp="1593102296181" />
-    <state x="398" y="84" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1597263353250">
+    <state x="398" y="84" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1600800238158">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="398" y="84" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.690@0.0.1280.690" timestamp="1597263353250" />
-    <state x="422" y="101" key="FileChooserDialogImpl" timestamp="1597256894407">
+    <state x="398" y="84" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.690@0.0.1280.690" timestamp="1600800238158" />
+    <state x="422" y="101" key="FileChooserDialogImpl" timestamp="1600800430047">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="422" y="101" key="FileChooserDialogImpl/0.0.1280.690@0.0.1280.690" timestamp="1597256894407" />
-    <state width="1238" height="103" key="GridCell.Tab.0.bottom" timestamp="1597296570297">
+    <state x="422" y="101" key="FileChooserDialogImpl/0.0.1280.690@0.0.1280.690" timestamp="1600800430047" />
+    <state width="1238" height="187" key="GridCell.Tab.0.bottom" timestamp="1600800632247">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="103" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1597296570297" />
-    <state width="1238" height="103" key="GridCell.Tab.0.center" timestamp="1597296570297">
+    <state width="1238" height="187" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1600800632247" />
+    <state width="1238" height="187" key="GridCell.Tab.0.center" timestamp="1600800632247">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="103" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1597296570297" />
-    <state width="1238" height="103" key="GridCell.Tab.0.left" timestamp="1597296570297">
+    <state width="1238" height="187" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1600800632247" />
+    <state width="1238" height="187" key="GridCell.Tab.0.left" timestamp="1600800632247">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="103" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1597296570297" />
-    <state width="1238" height="103" key="GridCell.Tab.0.right" timestamp="1597296570297">
+    <state width="1238" height="187" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1600800632247" />
+    <state width="1238" height="187" key="GridCell.Tab.0.right" timestamp="1600800632247">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1238" height="103" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1597296570297" />
+    <state width="1238" height="187" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1600800632247" />
     <state width="1238" height="187" key="GridCell.Tab.1.bottom" timestamp="1597184205912">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
@@ -212,38 +208,18 @@
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state width="1238" height="187" key="GridCell.Tab.1.right/0.0.1280.690@0.0.1280.690" timestamp="1597184205912" />
-    <state x="121" y="0" key="SettingsEditor" timestamp="1597261895000">
+    <state x="121" y="0" key="SettingsEditor" timestamp="1600800454842">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="121" y="0" key="SettingsEditor/0.0.1280.690@0.0.1280.690" timestamp="1597261895000" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1591735792251">
+    <state x="121" y="0" key="SettingsEditor/0.0.1280.690@0.0.1280.690" timestamp="1600800454842" />
+    <state x="336" y="180" key="com.intellij.ide.util.TipDialog" timestamp="1600800216660">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1280.690@0.0.1280.690" timestamp="1591735792251" />
-    <state x="336" y="180" key="com.intellij.ide.util.TipDialog" timestamp="1597254607825">
-      <screen x="0" y="0" width="1280" height="690" />
-    </state>
-    <state x="336" y="180" key="com.intellij.ide.util.TipDialog/0.0.1280.690@0.0.1280.690" timestamp="1597254607825" />
-    <state x="448" y="262" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590449414199">
-      <screen x="0" y="0" width="1280" height="690" />
-    </state>
-    <state x="448" y="262" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.690@0.0.1280.690" timestamp="1590449414199" />
+    <state x="336" y="180" key="com.intellij.ide.util.TipDialog/0.0.1280.690@0.0.1280.690" timestamp="1600800216660" />
     <state x="358" y="81" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1595537508063">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="358" y="81" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1280.690@0.0.1280.690" timestamp="1595537508063" />
-    <state x="493" y="0" width="744" height="690" key="find.popup" timestamp="1591475454803">
-      <screen x="0" y="0" width="1280" height="690" />
-    </state>
-    <state x="493" y="0" width="744" height="690" key="find.popup/0.0.1280.690@0.0.1280.690" timestamp="1591475454803" />
-    <state width="602" height="414" key="javadoc.popup" timestamp="1589061839649">
-      <screen x="0" y="0" width="1280" height="690" />
-    </state>
-    <state width="602" height="414" key="javadoc.popup/0.0.1280.690@0.0.1280.690" timestamp="1589061839649" />
-    <state x="347" y="0" key="refactoring.ChangeSignatureDialog" timestamp="1588884551426">
-      <screen x="0" y="0" width="1280" height="690" />
-    </state>
-    <state x="347" y="0" key="refactoring.ChangeSignatureDialog/0.0.1280.690@0.0.1280.690" timestamp="1588884551425" />
     <state x="315" y="171" key="run.anything.popup" timestamp="1596582150137">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
