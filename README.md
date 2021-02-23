@@ -1,4 +1,4 @@
-# Ray-tracing
+# Virtual-3-dimensional-Graphic-Scene
 
 This project is based on designing, modeling and rendering a virtual 3-dimensional graphical scene, with most of the physics involved (light
 source, rays, reflections, refractions, color, occlusions etc). We added a depth of field feature (in mp1), and BVH runtime improvement feature (in mp2). 
